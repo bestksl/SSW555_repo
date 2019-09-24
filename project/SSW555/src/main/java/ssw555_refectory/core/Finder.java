@@ -1,7 +1,11 @@
-package ssw555_refectory.utils;
+package ssw555_refectory.core;
 
 import ssw555_refectory.bean.Family;
 import ssw555_refectory.bean.Individual;
+import ssw555_refectory.utils.AgeUtils;
+import ssw555_refectory.utils.FileUtils;
+import ssw555_refectory.utils.tableutils.TextForm;
+import ssw555_refectory.utils.tableutils.TextFormBulider;
 
 import java.io.IOException;
 import java.util.*;
