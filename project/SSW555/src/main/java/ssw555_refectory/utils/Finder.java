@@ -4,9 +4,7 @@ import ssw555_refectory.bean.Family;
 import ssw555_refectory.bean.Individual;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author HaoxuanLi  Github:bestksl
@@ -14,8 +12,8 @@ import java.util.List;
  */
 public class Finder {
     private List<String> fileList;
-    private List<Individual> individuals = new ArrayList<>();
-    private List<Family> families = new ArrayList<>();
+    private Map<String, Individual> individuals = new HashMap<>();
+    private Map<String, Family> families = new HashMap<>();
 
     public Finder(String filePath) throws IOException {
         fileList = FileUtils.readFile(filePath);
@@ -28,13 +26,12 @@ public class Finder {
         for (String line : fileList) {
             String[] elements = line.split(" ");
             if ("0".equals(elements[0]) && ((flag.equals("FAM")) || flag.equals("INDI"))) {
-                if (flag.equals("FAM")) {
+                if (temp.get(0)[2].equals("FAM")) {
                     addFamily(temp);
                 } else {
                     addIndividual(temp);
                 }
                 temp.clear();
-                flag = "false";
             } else if ("FAM".equals(elements[2]) && "0".equals(elements[0])) {
                 flag = "FAM";
             } else if ("INDI".equals(elements[2]) && "0".equals(elements[0])) {
@@ -48,92 +45,124 @@ public class Finder {
         }
     }
 
-    private void addFamily(List<String[]> familyList) {
-        Family family = new Family();
-        for (String[] element : familyList) {
-            if (element.length < 4) {
-                continue;
-            }
-            switch (element[2]) {
-                case "FAM":
-                    family.setId(element[3]);
-                case "MARR":
-                    family.setMarried(element[3]);
-                case "HUSB":
-                    family.setHusbandID(element[3]);
-                case "WIFE":
-                    family.setWifeID(element[3]);
-                case "CHIL":
-                    family.addChildren(element[3]);
-                case "DIV":
-                    family.setDivorced(element[3]);
-                case "DATE":
-                    family.setDate(element[3]);
-            }
-        }
-        families.add(family);
-    }
-
-    public void printFamilies() {
-        for (Family family : families) {
-            ;
-        }
-    }
 
     private void addIndividual(List<String[]> individualList) {
-        Individual individual = new Individual();
+        Individual i = new Individual();
         boolean flag = false;
-        String date = null;
-        String argName = null;
-        for (String[] element : individualList) {
-            if (element.length < 4 && !element[2].equals("BIRT")) {
-                flag = false;
-                date = null;
-                argName = null;
-                continue;
-            }
-            if (flag) {
-                element[2] = argName;
-                System.out.println(Arrays.toString(element));
-                date = element.length>4?element[3] + "/" + element[4] + "/" + element[5]:"N/A";
-            }
-            if (((element[2].equals("BIRT") || (element[2].equals("DEAT") && element[3].equals("Y"))) && date == null)) {
-                flag = true;
-                argName = element[2];
-                continue;
-            }
-            switch (element[2]) {
-                case "INDI":
-                    individual.setId(element[3]);
-                case "NAME":
-                    individual.setName(element[3]);
-                case "SEX":
-                    individual.setGender(element[3]);
-                case "BIRT":
-                    individual.setBirt(date);
-                    argName = null;
-                    date = null;
-                case "DEAT":
-                    individual.setDeath(date);
-                    argName = null;
-                    date = null;
-                case "FAMC":
-                    individual.setChild(element[3]);
-                case "FAMS":
-                    individual.setSpouse(element[3]);
+        String arg = "";
+        for (String[] e : individualList) {
+            if (e.length >= 3 || e[2].equals("BIRT") || e[2].equals("DEAT")) {
+                if (flag) {
+                    e[2] = arg;
+                    e[3] = e.length > 4 ? e[3] + "-" + e[4] + "-" + e[5] : "N/A";
+                }
+                if ((e[2].equals("BIRT") || e[2].equals("DEAT")) && !flag) {
+                    flag = true;
+                    arg = e[2];
+                    continue;
+                }
+                switch (e[2]) {
+                    case "NAME":
+                        i.setName(e[3]);
+                        break;
+                    case "INDI":
+                        i.setId(e[3]);
+                        break;
+                    case "SEX":
+                        i.setGender(e[3]);
+                        break;
+                    case "BIRT":
+                        i.setBirt(e[3]);
+                        flag = false;
+                        arg = "";
+                        break;
+                    case "DEAT":
+                        i.setDeath(e[3]);
+                        flag = false;
+                        arg = "";
+                        break;
+                    case "FAMC":
+                        i.setChild(e[3]);
+                        break;
+                    case "FAMS":
+                        i.setSpouse(e[3]);
+                        break;
+                }
             }
         }
-        individuals.add(individual);
+        try {
+            i.setAlive(i.getDeath() == null);
+            if (i.getBirt() != null) {
+                if (!i.isAlive()) {
+                    i.setAge((AgeUtils.getAge(i.getBirt()) - AgeUtils.getAge(i.getDeath()) + ""));
+                } else {
+                    i.setAge(AgeUtils.getAge(i.getBirt()) + "");
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (i.getId() != null) {
+            individuals.put(i.getId(), i);
+        }
+    }
 
+    private void addFamily(List<String[]> familyList) {
+        Family f = new Family();
+        boolean flag = false;
+        String arg = "";
+        for (String[] e : familyList) {
+            if (e.length >= 3 || e[2].equals("MARR") || e[2].equals("DIV")) {
+                if (flag) {
+                    e[2] = arg;
+                    e[3] = e.length > 4 ? e[3] + "-" + e[4] + "-" + e[5] : "N/A";
+                }
+                if ((e[2].equals("MARR") || e[2].equals("DIV")) && !flag) {
+                    flag = true;
+                    arg = e[2];
+                    continue;
+                }
+                switch (e[2]) {
+                    case "FAM":
+                        f.setId(e[3]);
+                        break;
+                    case "MARR":
+                        f.setDate(e[3]);
+                        flag = false;
+                        arg = "";
+                        break;
+                    case "HUSB":
+                        f.setHusbandID(e[3]);
+                        f.setHusbandName(individuals.get(e[3]).getName());
+                        break;
+                    case "WIFE":
+                        f.setWifeID(e[3]);
+                        f.setWifeName(individuals.get(e[3]).getName());
+                        break;
+                    case "DIV":
+                        f.setDivorced(e[3]);
+                        flag = false;
+                        arg = "";
+                        break;
+                    case "CHIL":
+                        f.addChildren(e[3]);
+                        break;
+                    case "DIsV":
+                        f.setDivorced(e[3]);
+                        break;
+                }
+            }
+        }
+        families.put(f.getId(), f);
     }
 
     public void printIndividuals() {
 
         TextFormBulider bulider = TextForm.bulider();
         bulider.title("ID", "NAME", "Gender", "Birthday", "Age", "Alive", "Death", "Child", "Spouse");
-        for (Individual i : individuals) {
-            bulider.addRow(i.getId() == null ? "N/A" : i.getId(), i.getName() == null ? "N/A" : i.getName(), i.getGender() == null ? "N/A" : i.getGender(),
-                    i.getBirt() == null ? "N/A" : i.getBirt(), i.getAge() == null ? "N/A" : i.getAge(), "没完成", i.getDeath() == null ? "N / A" : i.getDeath(), i.getChild() == null ? "N/A" : i.getChild(), i.getSpouse() == null ? "N/A" : i.getSpouse());
+        for (Individual i : individuals.values()) {
+            bulider.addRow(i.getId(), i.getName() == null ? "N/A" : i.getName(), i.getGender() == null ? "N/A" : i.getGender(),
+                    i.getBirt() == null ? "N/A" : i.getBirt(), i.getAge() == null ? "N/A" : i.getAge(), i.isAlive() + "", i.getDeath() == null ? "N / A" : i.getDeath(), i.getChild() == null ? "N/A" : i.getChild(), i.getSpouse() == null ? "N/A" : i.getSpouse());
         }
         TextForm textForm = bulider.finish();
         bulider.paddingL(2);
@@ -141,6 +170,22 @@ public class Finder {
         bulider.separator('.');
         textForm.printFormat();
 
+    }
+
+    public void printFamilies() {
+
+        TextFormBulider bulider = TextForm.bulider();
+        bulider.title("ID", "Married", "Divorced", "HusbandID", "HusbandName", "Wife ID", "Wife Name", "Children");
+        for (Family f : families.values()) {
+            bulider.addRow(f.getId(), f.getDate() == null ? "N/A" : f.getDate(), f.getDivorced() == null ? "N/A" : f.getDivorced(),
+                    f.getHusbandID() == null ? "N/A" : f.getHusbandID(), f.getHusbandName() == null ? "N/A" : f.getHusbandName(),
+                    f.getWifeID() == null ? "N/A" : f.getWifeID(), f.getWifeName() == null ? "N / A" : f.getWifeName(), f.getChildren() == null ? "N/A" : f.getChildren().toString());
+        }
+        TextForm textForm = bulider.finish();
+        bulider.paddingL(2);
+        bulider.paddingR(2);
+        bulider.separator('.');
+        textForm.printFormat();
 
     }
 }

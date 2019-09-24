@@ -42,7 +42,7 @@ public class TextForm {
     /**
      * 每个单元格最大字符数
      */
-    protected int colMaxLength = 8;
+    protected int colMaxLength = 13;
 
     /**
      * 表格组成符号

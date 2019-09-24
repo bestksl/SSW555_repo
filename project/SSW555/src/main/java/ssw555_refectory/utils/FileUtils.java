@@ -51,7 +51,7 @@ public class FileUtils {
         for (int i = 0; i < result.size(); i++) {
             sb.append(result.get(i) + " ");
         }
-        System.out.println(sb.toString());
-        return sb.toString();
+        ;
+        return sb.toString().replace("@", "");
     }
 }
