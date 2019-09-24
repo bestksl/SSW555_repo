@@ -30,6 +30,7 @@ public class Classify {
          analysisIndividual(line);
       }
       draw("Individual");
+      draw("Family");
    
      
    
@@ -184,7 +185,7 @@ public class Classify {
    
   
 
-   String[][] IterateMap(){
+   String[][] IterateIndividualMap(){
       String[][] tableDataIndividual = new String[idToIndividual.size()][9];
       int level = 0;
       for (Map.Entry<String,Individual> entry : idToIndividual.entrySet()){  
@@ -202,28 +203,59 @@ public class Classify {
       }
       return tableDataIndividual;
    }
-
-   JFrame f;
-   JTable j;
-   void draw(String type){
-      f = new JFrame();
-      f.setTitle("Individual");
-      IterateMap();
-      String[][] tableDataIndividual = IterateMap();
-      String[] columnNames = { "ID", "Name", "Gender", "Birthday", "Age", "Alive",
-         "Death", "Child", "Spouse"}; 
-      j = new JTable(tableDataIndividual, columnNames); 
-      j.setBounds(30, 40, 200, 300); 
-      JScrollPane sp = new JScrollPane(j); 
-      f.add(sp); 
-        // Frame Size 
-      f.setSize(500, 200); 
-        // Frame Visible = true 
-      f.setVisible(true);
+   
+   String[][] IterateFamilyMap(){
+      String[][] tableDataFamily = new String[idToFamily.size()][8];
+      int level = 0;
+      for (Map.Entry<String,Family> entry : idToFamily.entrySet()){  
+         Family member = entry.getValue();
+         tableDataFamily[level][0] = member.id();
+         tableDataFamily[level][1] = member.married();
+         tableDataFamily[level][2] = member.divorced();
+         tableDataFamily[level][3] = member.husbandID();
+         tableDataFamily[level][4] = member.husbandName();
+         tableDataFamily[level][5] = member.wifeID();
+         tableDataFamily[level][6] = member.wifeName();
+         tableDataFamily[level][7] = ChildrensToString(member.children());
+         
+         level++;        
+      }
+      return tableDataFamily;
    }
 
-   
+   String ChildrensToString(ArrayList<String> list){
+      StringBuilder sb = new StringBuilder();
+      sb.append("{");
+      for(String s: list){
+         sb.append(s+",");
+      }
+      sb.setLength(sb.length() - 1);
+      sb.append("}");
+      return sb.toString();
+   }
 
+   JTable j;
+   JFrame f;
+   void draw(String type){
+      f = new JFrame();
+      if(type.equals("Family")){
+         f.setTitle("Family");
+         String[] columns = {"ID", "Married", "Divorced", "Husband ID", "Husband Name", 
+            "Wife ID", "Wife Name", "Children"}; 
+         j = new JTable(IterateFamilyMap(), columns);
+      }else{
+         f.setTitle("Individual");
+         String[] columns = {"ID", "Name", "Gender", "Birthday", "Age", "Alive",
+            "Death", "Child", "Spouse"}; 
+         j = new JTable(IterateIndividualMap(), columns);
+      }
+      j.setBounds(30, 40, 200, 300); 
+      JScrollPane sp = new JScrollPane(j);      
+      f.add(sp);
+      f.setSize(600, 200); 
+      f.setVisible(true);       
+   }
+      
    public static void main(String[] args) throws IOException {
       new Classify().readFile();
       
