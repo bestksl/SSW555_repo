@@ -1,32 +1,31 @@
-import java.io.*;
+package ssw555_refectory.utils;
+
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author HaoxuanLi  Github:bestksl
- * @version created date：2019-09-12 16:44
+ * @version created date：2019-09-23 21:31
  */
-public class HelloSSW555 {
-    private BufferedReader bfr;
+public class FileUtils {
 
-    {
-        try {
-            bfr = new BufferedReader(new FileReader("/Users/haoxuanli/Documents/SSW555_Repo/SSW555_repo/project/SSW555/src/main/java/my.ged"));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-    }
 
-    void readFile() throws IOException {
+    public static List<String> readFile(String filePath) throws IOException {
+        BufferedReader bfr = new BufferedReader(new FileReader(filePath));
+        List<String> stringList = new ArrayList<>();
         String line;
         while ((line = bfr.readLine()) != null) {
-            System.out.println("--> " + line);
-            System.out.println("<-- " + analysis(line));
+            stringList.add(analysis(line));
         }
+        return stringList;
 
     }
-//
-    String analysis(String line) {
+
+    private static String analysis(String line) {
         String[] elements = line.split(" ");
         ArrayList<String> result = new ArrayList<String>();
         int index = -1;
@@ -50,19 +49,9 @@ public class HelloSSW555 {
         }
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < result.size(); i++) {
-            if (i == 0 || i == 1) {
-                sb.append(result.get(i) + "|");
-            } else {
-                sb.append(result.get(i) + " ");
-            }
-
+            sb.append(result.get(i) + " ");
         }
+        System.out.println(sb.toString());
         return sb.toString();
     }
-
-    public static void main(String[] args) throws IOException {
-        new HelloSSW555().readFile();
-
-    }
 }
-
