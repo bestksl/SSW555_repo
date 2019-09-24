@@ -1,4 +1,4 @@
-package ssw555_refectory.utils;
+package ssw555_refectory.utils.tableutils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
 public class TextFormBulider {
     private TextForm textForm;
 
-    protected TextFormBulider(TextForm textForm) {
+    TextFormBulider(TextForm textForm) {
         this.textForm = textForm;
     }
 
@@ -29,19 +29,16 @@ public class TextFormBulider {
         return this;
     }
 
-    public TextFormBulider paddingL(int paddingL) {
+    public void paddingL(int paddingL) {
         textForm.paddingL = paddingL;
-        return this;
     }
 
-    public TextFormBulider paddingR(int paddingR) {
+    public void paddingR(int paddingR) {
         textForm.paddingR = paddingR;
-        return this;
     }
 
-    public TextFormBulider separator(char separator) {
+    public void separator(char separator) {
         textForm.separator = separator;
-        return this;
     }
 
     public TextFormBulider colMaxLength(int colMaxLength) {
@@ -49,7 +46,7 @@ public class TextFormBulider {
         return this;
     }
 
-    public TextFormBulider addRow(String... cols) {
+    public void addRow(String... cols) {
         if (textForm.maxCol < cols.length) {
             textForm.maxCol = cols.length;
         }
@@ -61,7 +58,6 @@ public class TextFormBulider {
             list.add(col);
         }
         textForm.datas.add(list);
-        return this;
     }
 
     public TextForm finish() {

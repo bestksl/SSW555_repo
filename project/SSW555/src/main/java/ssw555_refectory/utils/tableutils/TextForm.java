@@ -1,4 +1,4 @@
-package ssw555_refectory.utils;
+package ssw555_refectory.utils.tableutils;
 
 import java.util.*;
 import java.util.regex.Matcher;
@@ -17,37 +17,37 @@ public class TextForm {
     /**
      * 左边距
      */
-    protected int paddingL = 1;
+    int paddingL = 1;
 
     /**
      * 右边距
      */
-    protected int paddingR = 1;
+    int paddingR = 1;
 
     /**
      * 标题
      */
-    protected List<String> title = new ArrayList<>();
+    List<String> title = new ArrayList<>();
 
     /**
      * 数据
      */
-    protected List<List<String>> datas = new ArrayList<>();
+    List<List<String>> datas = new ArrayList<>();
 
     /**
      * 最大列数
      */
-    protected int maxCol = 0;
+    int maxCol = 0;
 
     /**
      * 每个单元格最大字符数
      */
-    protected int colMaxLength = 13;
+    int colMaxLength = 13;
 
     /**
      * 表格组成符号
      */
-    protected char separator = '.';
+    char separator = '.';
 
     private TextForm() {
     }
@@ -65,8 +65,7 @@ public class TextForm {
         formData.add(title);
         formData.addAll(datas);
         Map<Integer, Integer> colMaxLengthMap = colMaxLength(formData);
-        for (int i = 0; i < formData.size(); i++) {
-            List<String> row = formData.get(i);
+        for (List<String> row : formData) {
             for (int j = 0; j < row.size(); j++) {
                 Formatter formatter = new Formatter();
                 String str = row.get(j);
@@ -80,8 +79,7 @@ public class TextForm {
             }
         }
         Map<Integer, Integer> colMinBlankLengthMap = colMinBlankLength(formData);
-        for (int i = 0; i < formData.size(); i++) {
-            List<String> row = formData.get(i);
+        for (List<String> row : formData) {
             for (int j = 0; j < row.size(); j++) {
                 String val = row.get(j);
                 Integer minBlankLength = colMinBlankLengthMap.get(j);
@@ -115,9 +113,9 @@ public class TextForm {
      */
     private Map<Integer, Integer> colMaxLength(List<List<String>> formData) {
         Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < formData.size(); i++) {
+        for (List<String> formDatum : formData) {
             int col = 0;
-            List<String> strings = formData.get(i);
+            List<String> strings = formDatum;
             while (strings.size() > col) {
                 String val = strings.get(col);
                 if (val.length() > colMaxLength) {
@@ -147,11 +145,10 @@ public class TextForm {
      */
     private Map<Integer, Integer> colMinBlankLength(List<List<String>> formData) {
         Map<Integer, Integer> map = new HashMap<>();
-        for (int i = 0; i < formData.size(); i++) {
+        for (List<String> formDatum : formData) {
             int col = 0;
-            List<String> strings = formData.get(i);
-            while (strings.size() > col) {
-                String val = strings.get(col);
+            while (formDatum.size() > col) {
+                String val = formDatum.get(col);
                 int length = 0;
                 for (int i1 = val.length() - 1; i1 >= 0; i1--) {
                     if (val.charAt(i1) == ' ') {
@@ -191,7 +188,6 @@ public class TextForm {
         while (matcher.find()) {
             list.add(matcher.group());
         }
-        int size = list.size();
-        return size;
+        return list.size();
     }
 }

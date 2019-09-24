@@ -1,6 +1,6 @@
 package ssw555_refectory;
 
-import ssw555_refectory.utils.Finder;
+import ssw555_refectory.core.Finder;
 
 /**
  * @author HaoxuanLi  Github:bestksl
