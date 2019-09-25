@@ -184,12 +184,12 @@
         <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/bean/Individual.java" />
         <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/my.ged" />
         <option value="$PROJECT_DIR$/target/classes/ssw555_refectory/my.ged" />
-        <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/main.java" />
         <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Finder.java" />
         <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/core/Finder.java" />
         <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/table/TextFormBulider.java" />
         <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/tableutils/TextForm.java" />
         <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/tableutils/TextFormBulider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/main.java" />
       </list>
     </option>
   </component>
@@ -276,20 +276,12 @@
             <path>
               <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
               <item name="SSW555" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="ssw555_refectory" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="tableutils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -389,7 +381,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36799000" />
+    <option name="totallyTimeSpent" value="37200000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -402,16 +394,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1916972" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1916972" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993895" visible="true" weight="0.6102041" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4993895" visible="true" weight="0.53163266" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -548,17 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/bean/Individual.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
-          <folding>
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#934#935#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/my.ged">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -629,6 +609,17 @@
             <element signature="method#addFamily#0;class#Finder#0" />
             <element signature="method#printIndividuals#0;class#Finder#0" />
             <element signature="method#printFamilies#0;class#Finder#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/bean/Individual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+          <folding>
+            <element signature="e#904#905#0" expanded="true" />
+            <element signature="e#934#935#0" expanded="true" />
           </folding>
         </state>
       </provider>
