@@ -1,7 +1,6 @@
 import java.util.*;
 public class Family{
 
-   String id;
    String married;
    String divorced;
    String husbandID;
