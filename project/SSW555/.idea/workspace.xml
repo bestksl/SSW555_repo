@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="931a4472-fb27-400f-b97a-c51c9c5b64e3" name="Default Changelist" comment="" />
+    <list default="true" id="931a4472-fb27-400f-b97a-c51c9c5b64e3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +20,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/my.ged">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
+            <state relative-caret-position="624">
               <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
             </state>
           </provider>
@@ -27,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/core/Finder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="432">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#findAllThings#0;class#Finder#0" />
@@ -44,7 +46,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/FileUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
+            <state relative-caret-position="800">
               <caret line="54" column="45" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -65,7 +67,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/AgeUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
+            <state relative-caret-position="160">
               <caret line="14" column="81" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -77,15 +79,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/tableutils/TextFormBulider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="54" column="30" lean-forward="true" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+            <state relative-caret-position="720">
+              <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
               <folding>
                 <element signature="e#718#719#0" expanded="true" />
                 <element signature="e#762#763#0" expanded="true" />
-                <element signature="e#836#837#0" expanded="true" />
-                <element signature="e#880#881#0" expanded="true" />
-                <element signature="e#957#958#0" expanded="true" />
-                <element signature="e#1003#1004#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,7 +92,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/tableutils/TextForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
+            <state relative-caret-position="2944">
               <caret line="190" column="8" selection-start-line="190" selection-start-column="8" selection-end-line="190" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -278,10 +276,7 @@
               <item name="SSW555" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ssw555_refectory" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-              <item name="tableutils" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -377,11 +372,13 @@
       <updated>1568321026630</updated>
       <workItem from="1568321027991" duration="293000" />
       <workItem from="1568759951680" duration="7000" />
+      <workItem from="1569541580777" duration="239000" />
+      <workItem from="1569567787936" duration="203000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37200000" />
+    <option name="totallyTimeSpent" value="38241000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -394,15 +391,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1916972" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1965812" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4993895" visible="true" weight="0.53163266" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993895" weight="0.53163266" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -475,35 +473,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ValidArguemnts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Individual.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ValidArguemnts.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Individual.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/bean.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Family.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Classify.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="103" column="23" lean-forward="true" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Family.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Classify.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -511,17 +485,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSSW555.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="42" column="28" lean-forward="true" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#839#847#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/HelloSSW555.java" />
     <entry file="file://$PROJECT_DIR$/target/classes/ssw555_refectory/my.ged">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="752">
@@ -529,36 +493,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/bean/Family.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-          <folding>
-            <element signature="e#549#550#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/my.ged">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
+        <state relative-caret-position="624">
           <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/AgeUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/core/Finder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="14" column="81" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="81" />
+        <state relative-caret-position="432">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#findAllThings#0;class#Finder#0" />
+            <element signature="method#addIndividual#0;class#Finder#0" />
+            <element signature="method#addFamily#0;class#Finder#0" />
+            <element signature="method#printIndividuals#0;class#Finder#0" />
+            <element signature="method#printFamilies#0;class#Finder#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/FileUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
+        <state relative-caret-position="800">
           <caret line="54" column="45" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -573,10 +532,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/tableutils/TextForm.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/AgeUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="190" column="8" selection-start-line="190" selection-start-column="8" selection-end-line="190" selection-end-column="8" />
+        <state relative-caret-position="160">
+          <caret line="14" column="81" selection-start-line="14" selection-start-column="81" selection-end-line="14" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -585,30 +544,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/tableutils/TextFormBulider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="54" column="30" lean-forward="true" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+        <state relative-caret-position="720">
+          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
           <folding>
             <element signature="e#718#719#0" expanded="true" />
             <element signature="e#762#763#0" expanded="true" />
-            <element signature="e#836#837#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#957#958#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/core/Finder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/tableutils/TextForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="2944">
+          <caret line="190" column="8" selection-start-line="190" selection-start-column="8" selection-end-line="190" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#findAllThings#0;class#Finder#0" />
-            <element signature="method#addIndividual#0;class#Finder#0" />
-            <element signature="method#addFamily#0;class#Finder#0" />
-            <element signature="method#printIndividuals#0;class#Finder#0" />
-            <element signature="method#printFamilies#0;class#Finder#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/bean/Family.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding>
+            <element signature="e#549#550#0" expanded="true" />
           </folding>
         </state>
       </provider>
