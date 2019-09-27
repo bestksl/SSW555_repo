@@ -48,8 +48,8 @@ public class FileUtils {
             result.add(elements[i]);
         }
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < result.size(); i++) {
-            sb.append(result.get(i) + " ");
+        for (String s : result) {
+            sb.append(s).append(" ");
         }
         ;
         return sb.toString().replace("@", "");
