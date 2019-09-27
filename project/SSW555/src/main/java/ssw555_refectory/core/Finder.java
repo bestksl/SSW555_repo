@@ -2,7 +2,7 @@ package ssw555_refectory.core;
 
 import ssw555_refectory.bean.Family;
 import ssw555_refectory.bean.Individual;
-import ssw555_refectory.utils.AgeUtils;
+import ssw555_refectory.utils.TimeUtils;
 import ssw555_refectory.utils.FileUtils;
 import ssw555_refectory.utils.tableutils.TextForm;
 import ssw555_refectory.utils.tableutils.TextFormBulider;
@@ -98,9 +98,9 @@ public class Finder {
             i.setAlive(i.getDeath() == null);
             if (i.getBirt() != null) {
                 if (!i.isAlive()) {
-                    i.setAge((AgeUtils.getAge(i.getBirt()) - AgeUtils.getAge(i.getDeath()) + ""));
+                    i.setAge((TimeUtils.getAge(i.getBirt()) - TimeUtils.getAge(i.getDeath()) + ""));
                 } else {
-                    i.setAge(AgeUtils.getAge(i.getBirt()) + "");
+                    i.setAge(TimeUtils.getAge(i.getBirt()) + "");
                 }
             }
         } catch (Exception e) {

@@ -2,54 +2,83 @@ package ssw555_refectory.utils;
 
 import ssw555_refectory.bean.Family;
 import ssw555_refectory.bean.Individual;
-import java.util.Map;
+
+import java.util.*;
+
 public class CheckAll {
-    Map<String, Individual> individuals;
-    Map<String, Family> familys;
+    private Map<String, Individual> individuals;
+    private Map<String, Family> familys;
 
 
-    public CheckAll(Map<String, Individual> individuals, Map<String, Family> familys){
-        this.individuals =  individuals;
+    public CheckAll(Map<String, Individual> individuals, Map<String, Family> familys) {
+        this.individuals = individuals;
         this.familys = familys;
     }
 
 
-    public void CheckAll(){
-        for (Individual individuals : individuals.values()) {
+    public boolean CheckMain() throws Exception {
 
-
+        boolean result = true;
+        for (Individual i : individuals.values()) {
+            checkBirthBeforeDeath(i);
         }
 
-        for(Family familys : familys.values()){
-
+        for (Family f : familys.values()) {
+            uniqueFirstname(f);
         }
+
+        return result;
     }
 
-    public void CheckMarrige(){
-
-    }
-
-    public void CheckBirthBeforeDeath(){
-
-    }
-
-    public void birthAfterParentsMarriges(){
+    public void checkMarrige() {
 
     }
 
-    public void ageOld(){
+
+    //Haoxuan Li
+    private boolean checkBirthBeforeDeath(Individual i) throws Exception {
+        if (i.getBirt() != null && i.getDeath() != null) {
+            return TimeUtils.getAge(i.getBirt()) - TimeUtils.getAge(i.getDeath()) >= 0;
+        }
+        return true;
+    }
+
+    public void birthAfterParentsMarriges() {
 
     }
 
-    public void  Unique(){
+    public void ageOld() {
 
     }
 
-    public void FamilyMaleLastName(){
+    private boolean uniqueFirstname(Family f) {
+        Set<String> nameSet = new HashSet<>();
+        List<String> idList = new ArrayList<>();
+
+        String husId = f.getHusbandID();
+        if (husId != null) {
+            idList.add(husId);
+        }
+        String wifeId = f.getWifeID();
+        if (wifeId != null) {
+            idList.add(wifeId);
+        }
+        if (f.getChildren().size() != 0) {
+            idList.addAll(f.getChildren());
+        }
+        for (String id : idList) {
+            if (individuals.get(id).getName() != null) {
+                nameSet.add(individuals.get(id).getName());
+            }
+        }
+        return nameSet.size() == idList.size();
+    }
+
+    public void familyMaleLastName() {
 
     }
 
-    public void UniqueId(){
+    public void uniqueId() {
 
     }
 }
