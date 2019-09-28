@@ -55,11 +55,11 @@ public class Checker {
         }
         for (String id : idList) {
             if (individuals.get(id).getName() != null) {
-                nameSet.add(individuals.get(id).getName());
+                nameSet.add(individuals.get(id).getFirstName());
             }
         }
         if (!(nameSet.size() == idList.size())) {
-            throw new IllegalArgumentException("First name should be same in one family");
+            throw new IllegalArgumentException("First name should not be same in one family");
         }
     }
 
