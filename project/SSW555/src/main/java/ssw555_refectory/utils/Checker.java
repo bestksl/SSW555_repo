@@ -5,12 +5,12 @@ import ssw555_refectory.bean.Individual;
 
 import java.util.*;
 
-public class CheckAll {
+public class Checker {
     private Map<String, Individual> individuals;
     private Map<String, Family> familys;
 
 
-    public CheckAll(Map<String, Individual> individuals, Map<String, Family> familys) {
+    public Checker(Map<String, Individual> individuals, Map<String, Family> familys) {
         this.individuals = individuals;
         this.familys = familys;
     }
