@@ -1,5 +1,6 @@
 package ssw555_refectory.utils;
 
+import com.sun.jdi.Value;
 import ssw555_refectory.bean.Family;
 import ssw555_refectory.bean.Individual;
 
@@ -16,7 +17,7 @@ public class CheckAll {
     }
 
 
-    public boolean CheckMain() throws Exception {
+    public boolean check() throws Exception {
 
         boolean result = true;
         for (Individual i : individuals.values()) {
@@ -26,32 +27,19 @@ public class CheckAll {
         for (Family f : familys.values()) {
             uniqueFirstname(f);
         }
-
-        return result;
-    }
-
-    public void checkMarrige() {
-
-    }
-
-
-    //Haoxuan Li
-    private boolean checkBirthBeforeDeath(Individual i) throws Exception {
-        if (i.getBirt() != null && i.getDeath() != null) {
-            return TimeUtils.getAge(i.getBirt()) - TimeUtils.getAge(i.getDeath()) >= 0;
-        }
         return true;
     }
 
-    public void birthAfterParentsMarriges() {
-
+    //Haoxuan Li
+    private void checkBirthBeforeDeath(Individual i) throws Exception {
+        if (i.getBirt() != null && i.getDeath() != null) {
+            if (!(TimeUtils.getAge(i.getBirt()) - TimeUtils.getAge(i.getDeath()) >= 0)) {
+                throw new IllegalArgumentException("Birth date should earlier than death date!");
+            }
+        }
     }
 
-    public void ageOld() {
-
-    }
-
-    private boolean uniqueFirstname(Family f) {
+    private void uniqueFirstname(Family f) {
         Set<String> nameSet = new HashSet<>();
         List<String> idList = new ArrayList<>();
 
@@ -71,14 +59,31 @@ public class CheckAll {
                 nameSet.add(individuals.get(id).getName());
             }
         }
-        return nameSet.size() == idList.size();
+        if (!(nameSet.size() == idList.size())) {
+            throw new IllegalArgumentException("First name should be same in one family");
+        }
+        ;
     }
 
-    public void familyMaleLastName() {
+    private void checkMarrige() {
 
     }
 
-    public void uniqueId() {
+
+    private void birthAfterParentsMarriges() {
+
+    }
+
+    private void ageOld() {
+
+    }
+
+
+    private void familyMaleLastName() {
+
+    }
+
+    private void uniqueId() {
 
     }
 }

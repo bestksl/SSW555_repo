@@ -24,6 +24,14 @@ public class Finder {
         findAllThings();
     }
 
+    public Map<String, Individual> getIndividuals() {
+        return individuals;
+    }
+
+    public Map<String, Family> getFamilies() {
+        return families;
+    }
+
     private void findAllThings() {
         String flag = "false";
         List<String[]> temp = new ArrayList<>();
