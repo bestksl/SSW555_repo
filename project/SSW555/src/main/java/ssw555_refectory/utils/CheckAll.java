@@ -1,6 +1,5 @@
 package ssw555_refectory.utils;
 
-import com.sun.jdi.Value;
 import ssw555_refectory.bean.Family;
 import ssw555_refectory.bean.Individual;
 
@@ -18,7 +17,7 @@ public class CheckAll {
 
 
     public boolean check() throws Exception {
-        //如果有1项不通过就会被throw的异常打断进程 
+        //如果有1项不通过就会被throw的异常打断进程
         for (Individual i : individuals.values()) {
             checkBirthBeforeDeath(i);
         }
@@ -38,6 +37,7 @@ public class CheckAll {
         }
     }
 
+    //Haoxuan Li
     private void uniqueFirstname(Family f) {
         Set<String> nameSet = new HashSet<>();
         List<String> idList = new ArrayList<>();
@@ -61,7 +61,6 @@ public class CheckAll {
         if (!(nameSet.size() == idList.size())) {
             throw new IllegalArgumentException("First name should be same in one family");
         }
-        ;
     }
 
     private void checkMarrige() {
