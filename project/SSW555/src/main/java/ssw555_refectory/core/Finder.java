@@ -67,7 +67,8 @@ public class Finder {
                 }
                 switch (e[2]) {
                     case "NAME":
-                        i.setName(e[3]);
+                        i.setFirstName(e[3]);
+                        i.setLastName(e[4].split("/")[1]);
                         break;
                     case "INDI":
                         i.setId(e[3]);
