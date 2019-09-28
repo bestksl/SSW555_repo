@@ -3,14 +3,31 @@ package ssw555_refectory.bean;
 public class Individual {
 
     private String id;
-    private String name;
     private String gender;
     private String birth;
     private String age;
     private String death;
     private String child;
     private String spouse;
+    private String lastName;
+    private String firstName;
     private boolean alive;
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
     public String getId() {
         return id;
@@ -21,12 +38,9 @@ public class Individual {
     }
 
     public String getName() {
-        return name;
+        return this.firstName + " " + this.lastName;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getGender() {
         return gender;
