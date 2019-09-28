@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="931a4472-fb27-400f-b97a-c51c9c5b64e3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/CheckAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/CheckAll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/CheckAll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -44,7 +45,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/CheckAll.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="704">
               <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
@@ -189,6 +190,7 @@
         <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/core/Finder.java" />
         <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/main.java" />
         <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/CheckAll.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" />
       </list>
     </option>
   </component>
@@ -383,7 +385,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45104000" />
+    <option name="totallyTimeSpent" value="45303000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -608,7 +610,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/CheckAll.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="704">
           <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
