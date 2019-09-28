@@ -18,8 +18,7 @@ public class CheckAll {
 
 
     public boolean check() throws Exception {
-
-        boolean result = true;
+        //如果有1项不通过就会被throw的异常打断进程 
         for (Individual i : individuals.values()) {
             checkBirthBeforeDeath(i);
         }
