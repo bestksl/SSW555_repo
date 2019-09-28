@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="931a4472-fb27-400f-b97a-c51c9c5b64e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/sprint1/demo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,20 +51,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+            <state relative-caret-position="260">
+              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#537#538#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+            <state relative-caret-position="256">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -126,11 +125,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+            <state relative-caret-position="304">
+              <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -192,10 +191,10 @@
         <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/CheckAll.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/TimeUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" />
         <option value="$PROJECT_DIR$/src/main/test/sprint1/Sprint.java" />
         <option value="$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/main.java" />
       </list>
     </option>
   </component>
@@ -392,12 +391,12 @@
       <workItem from="1568759951680" duration="7000" />
       <workItem from="1569541580777" duration="239000" />
       <workItem from="1569567787936" duration="203000" />
-      <workItem from="1569703525802" duration="2153000" />
+      <workItem from="1569703525802" duration="2637000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49424000" />
+    <option name="totallyTimeSpent" value="49908000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -600,30 +599,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        <state relative-caret-position="260">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        <state relative-caret-position="256">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

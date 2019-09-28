@@ -11,8 +11,9 @@ import static org.junit.Assert.*;
  */
 public class Sprint1Test {
 
+
     @Test
     public void testCheckBirthBeforeDeath() {
-        
+
     }
 }
