@@ -7,7 +7,7 @@ import ssw555_refectory.utils.Checker;
  * @author SSW555 group  Github:https://github.com/bestksl/SSW555_repo
  * @version created date：2019-09-23 21:15
  */
-public class main {
+public class Main {
 
 
     public static void main(String[] args) throws Exception {
@@ -16,6 +16,9 @@ public class main {
         if (checker.check()) {
             finder.printFamilies();
             finder.printIndividuals();
+        } else {
+            System.out.println(checker.getErrList());
+
         }
     }
 

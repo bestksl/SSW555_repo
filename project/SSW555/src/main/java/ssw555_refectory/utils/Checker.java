@@ -16,6 +16,10 @@ public class Checker {
     }
 
 
+    public List<String> getErrList() {
+        return errList;
+    }
+
     public boolean check() throws Exception {
         //如果有不通过的项会将err信息加入到errList
         for (Individual i : individuals.values()) {
