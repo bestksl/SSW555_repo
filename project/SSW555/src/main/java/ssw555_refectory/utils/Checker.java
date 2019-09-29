@@ -111,10 +111,44 @@ public class Checker {
 
 
     private void familyMaleLastName() {
-
+        HashMap<String,String> hash_setINDI = new HashMap<>();
+        HashMap<String,String> hash_setSEX = new HashMap<>();
+        String Fname;
+        ArrayList<String> Sname = new ArrayList<>();
+        for (Individual individuals : individuals.values()) {
+            hash_setINDI.put(individuals.getId(), individuals.getLastName());
+            hash_setSEX.put(individuals.getId(), individuals.getGender());
+        }
+        for(Family familys : families.values()){
+            Fname = hash_setINDI.get(familys.getHusbandID());
+            Sname = familys.getChildren();
+            for( int i = 0; i < Sname.size(); i++)
+            {
+                String childLastname, childgender;
+                childLastname = hash_setINDI.get(Sname.get(i));
+                childgender = hash_setSEX.get(Sname.get(i));
+                if(childgender.equals("M")&& !childLastname.equals(Fname))
+                {
+                    errList.add(Sname.get(i) + hash_setINDI.get(Sname.get(i)) + "The last name for Male person in a family is not the same!");
+                }
+            }
+        }
     }
 
     private void uniqueId() {
-
+        Set<String> hash_setI = new HashSet<String>();
+        Set<String> hash_setF = new HashSet<String>();
+        for (Individual individuals : individuals.values()) {
+            if(!hash_setI.add(individuals.getId()))
+            {
+                errList.add("The individuals ID "+ individuals.getId() +" is not unique, please check again!");
+            }
+        }
+        for(Family familys : families.values()){
+            if(!hash_setI.add(familys.getId()))
+            {
+                errList.add("The family ID"+ familys.getId() +"is not unique, please check again!");
+            }
+        }
     }
 }
