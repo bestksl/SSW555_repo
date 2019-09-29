@@ -8,7 +8,7 @@ import java.util.*;
 public class Checker {
     private Map<String, Individual> individuals;
     private Map<String, Family> families;
-    private List<String> errList = new ArrayList<>();
+    private static List<String> errList = new ArrayList<>();
 
     public Checker(Map<String, Individual> individuals, Map<String, Family> familys) {
         this.individuals = individuals;
@@ -16,8 +16,8 @@ public class Checker {
     }
 
 
-    public List<String> getErrList() {
-        return errList;
+    public static void addErr(String errMsg) {
+        errList.add(errMsg);
     }
 
     public boolean check() throws Exception {
@@ -28,6 +28,8 @@ public class Checker {
 
         for (Family f : families.values()) {
             uniqueFirstname(f);
+            checkMarrige(f);
+            birthAfterParentsMarriges(f);
         }
 
 
@@ -38,7 +40,7 @@ public class Checker {
     private void checkBirthBeforeDeath(Individual i) throws Exception {
         if (i.getBirt() != null && i.getDeath() != null) {
             if (!(TimeUtils.getAge(i.getBirt()) - TimeUtils.getAge(i.getDeath()) >= 0)) {
-                errList.add(i.getId() + "birth date should earlier than death dates");
+                errList.add(i.getId() + ":  birth date should earlier than death dates");
             }
         }
     }
@@ -65,28 +67,41 @@ public class Checker {
             }
         }
         if (!(nameSet.size() == idList.size())) {
-            errList.add(f.getId() + "family member's first name should be unique!");
+            errList.add(f.getId() + ":  family member's first name should be unique!");
         }
     }
 
-    private void checkMarrige(Family F) throws Exception {
-        int DivorceData = TimeUtils.getAge(F.getDivorced());
-        int MarriageData = TimeUtils.getAge(F.getMarried());
-        if(DivorceData > MarriageData){
-            errList.add(F.getId()+"Divorce before Marriage");
+    private void checkMarrige(Family f) throws Exception {
+        if (f.getMarried() == null || f.getDivorced() == null) {
+            return;
+        }
+        int DivorceData = TimeUtils.getAge(f.getDivorced());
+        int MarriageData = TimeUtils.getAge(f.getMarried());
+
+        if (DivorceData > MarriageData) {
+            errList.add(f.getId() + ":  Divorce before Marriage");
         }
     }
 
     // Jeff
-    private void birthAfterParentsMarriges(Family F) throws Exception {
-        ArrayList<String> children = F.getChildren();
-        int marriagePeriod = TimeUtils.getAge(F.getMarried());
-        for(String child: children){
+    private void birthAfterParentsMarriges(Family f) throws Exception {
+        ArrayList<String> children = f.getChildren();
+        if (f.getMarried() == null) {
+            return;
+        }
+        int marriagePeriod = TimeUtils.getAge(f.getMarried());
+        for (String child : children) {
             Individual eachChild = individuals.get(child);
             int age = TimeUtils.getAge(eachChild.getBirt());
-            if(age >= marriagePeriod){
-                errList.add(eachChild.getName()+" is born before Family "+F.getId());
+            if (age >= marriagePeriod) {
+                errList.add(eachChild.getName() + " is born before Family " + f.getId());
             }
+        }
+    }
+
+    public static void printErr() {
+        for (String err : errList) {
+            System.out.println(err);
         }
     }
 
