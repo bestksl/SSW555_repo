@@ -2,6 +2,7 @@ package ssw555_refectory.utils;
 
 import ssw555_refectory.bean.Family;
 import ssw555_refectory.bean.Individual;
+import sun.nio.cs.ext.MacArabic;
 
 import java.util.*;
 
@@ -24,6 +25,10 @@ public class Checker {
 
         for (Family f : familys.values()) {
             uniqueFirstname(f);
+            checkMarrige(f);
+            birthAfterParentsMarriges(f);
+
+
         }
         return true;
     }
@@ -63,13 +68,26 @@ public class Checker {
         }
     }
 
-    private void checkMarrige() {
-
+    // Jeff
+    private void checkMarrige(Family F) throws Exception {
+        int DivorceData = TimeUtils.getAge(F.getDivorced());
+        int MarriageData = TimeUtils.getAge(F.getMarried());
+        if(DivorceData > MarriageData){
+            throw new IllegalArgumentException("Family "+F.getId()+"Divorce before Marriage");
+        }
     }
 
-
-    private void birthAfterParentsMarriges() {
-
+    // Jeff
+    private void birthAfterParentsMarriges(Family F) throws Exception {
+        ArrayList<String> children = F.getChildren();
+        int marriagePeriod = TimeUtils.getAge(F.getMarried());
+        for(String child: children){
+            Individual eachChild = individuals.get(child);
+            int age = TimeUtils.getAge(eachChild.getBirt());
+            if(age >= marriagePeriod){
+                throw new IllegalArgumentException(eachChild.getName()+" is born before Family "+F.getId());
+            }
+        }
     }
 
     private void ageOld() {
