@@ -69,13 +69,25 @@ public class Checker {
         }
     }
 
-    private void checkMarrige() {
-
+    private void checkMarrige(Family F) throws Exception {
+        int DivorceData = TimeUtils.getAge(F.getDivorced());
+        int MarriageData = TimeUtils.getAge(F.getMarried());
+        if(DivorceData > MarriageData){
+            errList.add(F.getId()+"Divorce before Marriage");
+        }
     }
 
-
-    private void birthAfterParentsMarriges() {
-
+    // Jeff
+    private void birthAfterParentsMarriges(Family F) throws Exception {
+        ArrayList<String> children = F.getChildren();
+        int marriagePeriod = TimeUtils.getAge(F.getMarried());
+        for(String child: children){
+            Individual eachChild = individuals.get(child);
+            int age = TimeUtils.getAge(eachChild.getBirt());
+            if(age >= marriagePeriod){
+                errList.add(eachChild.getName()+" is born before Family "+F.getId());
+            }
+        }
     }
 
     private void ageOld() {
