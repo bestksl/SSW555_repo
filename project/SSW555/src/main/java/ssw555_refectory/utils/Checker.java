@@ -24,14 +24,15 @@ public class Checker {
         //如果有不通过的项会将err信息加入到errList
         for (Individual i : individuals.values()) {
             checkBirthBeforeDeath(i);
-           
+            ageOld(i);
         }
 
         for (Family f : families.values()) {
             uniqueFirstname(f);
             checkMarrige(f);
             birthAfterParentsMarriges(f);
-            
+            parentsNotTooOld(f);
+
         }
 
 
@@ -96,7 +97,7 @@ public class Checker {
             Individual eachChild = individuals.get(child);
             int age = TimeUtils.getAge(eachChild.getBirt());
             if (age >= marriagePeriod) {
-                errList.add(eachChild.getName() + " is born before Family " + f.getId());
+                errList.add(f.getId() + ":  " + eachChild.getName() + " is born before Family " + f.getId());
             }
         }
     }
@@ -107,28 +108,24 @@ public class Checker {
         }
     }
 
-    
-
 
     private void familyMaleLastName() {
-        HashMap<String,String> hash_setINDI = new HashMap<>();
-        HashMap<String,String> hash_setSEX = new HashMap<>();
+        HashMap<String, String> hash_setINDI = new HashMap<>();
+        HashMap<String, String> hash_setSEX = new HashMap<>();
         String Fname;
         ArrayList<String> Sname = new ArrayList<>();
         for (Individual individuals : individuals.values()) {
             hash_setINDI.put(individuals.getId(), individuals.getLastName());
             hash_setSEX.put(individuals.getId(), individuals.getGender());
         }
-        for(Family familys : families.values()){
+        for (Family familys : families.values()) {
             Fname = hash_setINDI.get(familys.getHusbandID());
             Sname = familys.getChildren();
-            for( int i = 0; i < Sname.size(); i++)
-            {
+            for (int i = 0; i < Sname.size(); i++) {
                 String childLastname, childgender;
                 childLastname = hash_setINDI.get(Sname.get(i));
                 childgender = hash_setSEX.get(Sname.get(i));
-                if(childgender.equals("M")&& !childLastname.equals(Fname))
-                {
+                if (childgender.equals("M") && !childLastname.equals(Fname)) {
                     errList.add(Sname.get(i) + hash_setINDI.get(Sname.get(i)) + "The last name for Male person in a family is not the same!");
                 }
             }
@@ -139,40 +136,38 @@ public class Checker {
         Set<String> hash_setI = new HashSet<String>();
         Set<String> hash_setF = new HashSet<String>();
         for (Individual individuals : individuals.values()) {
-            if(!hash_setI.add(individuals.getId()))
-            {
-                errList.add("The individuals ID "+ individuals.getId() +" is not unique, please check again!");
+            if (!hash_setI.add(individuals.getId())) {
+                errList.add("The individuals ID " + individuals.getId() + " is not unique, please check again!");
             }
         }
-        for(Family familys : families.values()){
-            if(!hash_setI.add(familys.getId()))
-            {
-                errList.add("The family ID"+ familys.getId() +"is not unique, please check again!");
-            }
-        }
-    }
-
-    //Zihan Li
-    private void ageOld(Individual i)throws Exception{
-        if(i.getBirt()!=null&&i.getDeath()!=null){
-            if(TimeUtils.getAge(i.getBirt())-TimeUtils.getAge(i.getDeath())>=150){
-                errList.add(i.getId()+": one person should less than 150 years old");
+        for (Family familys : families.values()) {
+            if (!hash_setI.add(familys.getId())) {
+                errList.add("The family ID" + familys.getId() + "is not unique, please check again!");
             }
         }
     }
 
     //Zihan Li
-    private void parentsNotTooOld(Family f)throws Exception{
-        ArrayList<String> children=f.getChildren();
-        String father=f.getHusbandID();
-        String mother=f.getWifeID();
-        Individual dad=individuals.get(father);
-        Individual mom=individuals.get(mother);
-        for(String child: children){
-            Individual eachchildren=individuals.get(child);
-            if(eachchildren.getBirt()!=null){
-                if((TimeUtils.getAge(dad.getBirt())-TimeUtils.getAge(eachchildren.getBirt())>=80)||(TimeUtils.getAge(mom.getBirt())-TimeUtils.getAge(eachchildren.getBirt())>=60)){
-                    errList.add(f.getId()+": Mother should be less than 60 years older than her children and father should be less than 80 years older than his children");
+    private void ageOld(Individual i) throws Exception {
+        if (i.getBirt() != null && i.getDeath() != null) {
+            if (TimeUtils.getAge(i.getBirt()) - TimeUtils.getAge(i.getDeath()) >= 150) {
+                errList.add(i.getId() + ":  one person should less than 150 years old");
+            }
+        }
+    }
+
+    //Zihan Li
+    private void parentsNotTooOld(Family f) throws Exception {
+        ArrayList<String> children = f.getChildren();
+        String father = f.getHusbandID();
+        String mother = f.getWifeID();
+        Individual dad = individuals.get(father);
+        Individual mom = individuals.get(mother);
+        for (String child : children) {
+            Individual eachchildren = individuals.get(child);
+            if (eachchildren.getBirt() != null) {
+                if ((TimeUtils.getAge(dad.getBirt()) - TimeUtils.getAge(eachchildren.getBirt()) >= 80) || (TimeUtils.getAge(mom.getBirt()) - TimeUtils.getAge(eachchildren.getBirt()) >= 60)) {
+                    errList.add(f.getId() + ":  Mother should be less than 60 years older than her children and father should be less than 80 years older than his children");
                 }
             }
         }
