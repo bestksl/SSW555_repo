@@ -151,4 +151,30 @@ public class Checker {
             }
         }
     }
+
+    //Zihan Li
+    private void ageOld(Individual i)throws Exception{
+        if(i.getBirt()!=null&&i.getDeath()!=null){
+            if(TimeUtils.getAge(i.getBirt())-TimeUtils.getAge(i.getDeath())>=150){
+                errList.add(i.getId()+": one person should less than 150 years old");
+            }
+        }
+    }
+
+    //Zihan Li
+    private void parentsNotTooOld(Family f)throws Exception{
+        ArrayList<String> children=f.getChildren();
+        String father=f.getHusbandID();
+        String mother=f.getWifeID();
+        Individual dad=individuals.get(father);
+        Individual mom=individuals.get(mother);
+        for(String child: children){
+            Individual eachchildren=individuals.get(child);
+            if(eachchildren.getBirt()!=null){
+                if((TimeUtils.getAge(dad.getBirt())-TimeUtils.getAge(eachchildren.getBirt())>=80)||(TimeUtils.getAge(mom.getBirt())-TimeUtils.getAge(eachchildren.getBirt())>=60)){
+                    errList.add(f.getId()+": Mother should be less than 60 years older than her children and father should be less than 80 years older than his children");
+                }
+            }
+        }
+    }
 }
