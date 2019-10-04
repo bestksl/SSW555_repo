@@ -20,8 +20,12 @@ public class Finder {
     private Map<String, Individual> individuals = new HashMap<>();
     private Map<String, Family> families = new HashMap<>();
 
-    public Finder(String filePath) throws IOException {
-        fileList = FileUtils.readFile(filePath);
+    public Finder(String filePath) {
+        try {
+            fileList = FileUtils.readFile(filePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         findAllThings();
     }
 

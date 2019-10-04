@@ -40,12 +40,14 @@ public class Checker {
     }
 
     //Haoxuan Li
-    private void checkBirthBeforeDeath(Individual i) throws Exception {
+    public String checkBirthBeforeDeath(Individual i) throws Exception {
         if (i.getBirt() != null && i.getDeath() != null) {
             if (!(TimeUtils.getAge(i.getBirt()) - TimeUtils.getAge(i.getDeath()) >= 0)) {
                 errList.add(i.getId() + ":  birth date should earlier than death dates");
+                return i.getId() + ":  birth date should earlier than death dates";
             }
         }
+        return null;
     }
 
     //Haoxuan Li
