@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="931a4472-fb27-400f-b97a-c51c9c5b64e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/core/Finder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/core/Finder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/core/Finder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/core/Finder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sprint1/Sprint1Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sprint1/Sprint1Test.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/FileUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            <state relative-caret-position="208">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -32,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/core/Finder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="161" column="31" selection-start-line="161" selection-start-column="31" selection-end-line="161" selection-end-column="31" />
+            <state relative-caret-position="416">
+              <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#findAllThings#0;class#Finder#0" />
@@ -44,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="99" column="44" selection-start-line="99" selection-start-column="44" selection-end-line="99" selection-end-column="44" />
+            <state relative-caret-position="315">
+              <caret line="49" column="20" lean-forward="true" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#522#523#0" expanded="true" />
@@ -60,20 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/wrong.ged">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1120">
-              <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="432">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="240">
+              <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -164,7 +159,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/core/Finder.java" />
         <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" />
+        <option value="$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java" />
       </list>
     </option>
   </component>
@@ -254,6 +251,16 @@
               <item name="SSW555" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ssw555_refectory" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="tableutils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -319,7 +326,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.Sprint1Test.testCheckBirthBeforeDeath">
     <configuration name="Classify" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Classify" />
       <module name="SSW555" />
@@ -360,13 +367,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Sprint1Test.testCheckBirthBeforeDeath" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSW555" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sprint1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sprint1" />
+      <option name="MAIN_CLASS_NAME" value="sprint1.Sprint1Test" />
+      <option name="METHOD_NAME" value="testCheckBirthBeforeDeath" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Sprint1Test.testCheckBirthBeforeDeath" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.main" />
         <item itemvalue="Application.HelloSSW555" />
         <item itemvalue="Application.Classify" />
-        <item itemvalue="Application.main" />
       </list>
     </recent_temporary>
   </component>
@@ -389,8 +412,22 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Sprint1Test_testCheckBirthBeforeDeath - 2019.10.03 at 20h 32m 18s.xml">
+      <configuration name="Sprint1Test.testCheckBirthBeforeDeath" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Sprint1Test_testCheckBirthBeforeDeath - 2019.10.03 at 20h 33m 13s.xml">
+      <configuration name="Sprint1Test.testCheckBirthBeforeDeath" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Sprint1Test_testCheckBirthBeforeDeath - 2019.10.03 at 20h 33m 21s.xml">
+      <configuration name="Sprint1Test.testCheckBirthBeforeDeath" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Sprint1Test_testCheckBirthBeforeDeath - 2019.10.03 at 20h 34m 38s.xml">
+      <configuration name="Sprint1Test.testCheckBirthBeforeDeath" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57299000" />
+    <option name="totallyTimeSpent" value="58889000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -420,7 +457,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32959184" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32959184" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50061053" side_tool="true" weight="0.4255102" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32959184" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -494,10 +531,20 @@
     </option>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="240">
+          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -506,8 +553,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/core/Finder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="161" column="31" selection-start-line="161" selection-start-column="31" selection-end-line="161" selection-end-column="31" />
+        <state relative-caret-position="416">
+          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#findAllThings#0;class#Finder#0" />
@@ -517,16 +564,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/wrong.ged">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1120">
+          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/tableutils/TextFormBulider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="99" column="44" selection-start-line="99" selection-start-column="44" selection-end-line="99" selection-end-column="44" />
+        <state relative-caret-position="315">
+          <caret line="49" column="20" lean-forward="true" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#522#523#0" expanded="true" />
             <element signature="e#557#558#0" expanded="true" />
             <element signature="e#4490#4498#0" expanded="true" />
             <element signature="e#4545#4553#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
