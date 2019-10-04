@@ -151,8 +151,8 @@ public class Checker {
 
     //Zihan Li
     private void ageOld(Individual i) throws Exception {
-        if (i.getBirt() != null && i.getDeath() != null) {
-            if (TimeUtils.getAge(i.getBirt()) - TimeUtils.getAge(i.getDeath()) >= 150) {
+        if (i.getBirt() != null ) {
+            if ((i.getDeath()==null?TimeUtils.getAge(i.getBirt()):TimeUtils.getAge(i.getBirt())- TimeUtils.getAge(i.getDeath()))>= 150) {
                 errList.add(i.getId() + ":  one person should less than 150 years old");
             }
         }
