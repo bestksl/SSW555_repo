@@ -26,4 +26,17 @@ public class Sprint1Test {
         assertEquals("I7:  birth date should earlier than death dates", checker.checkBirthBeforeDeath(individuals.get("I7")));
         assertNull(checker.checkBirthBeforeDeath(individuals.get("I6")));
     }
+
+    public void testCheckMarrige() throws Exception {
+        assertEquals("F1:  Divorce before Marriage", checker.CheckMarrige(families.get("F1")));
+        assertNull(checker.CheckMarrige(families.get("F2")));
+        assertNull(checker.CheckMarrige(families.get("F3")));
+    }
+
+    // Jeff User story Test: Marriage Date
+    public void TestBirthAfterParentsMarriges() throws Exception {
+        assertEquals("F2:  Duan Xiao is born before Family F2", checker.CheckMarrige(families.get("F2")));
+        assertNull(checker.CheckMarrige(families.get("F1")));
+        assertNull(checker.CheckMarrige(families.get("F3")));
+    }
 }
