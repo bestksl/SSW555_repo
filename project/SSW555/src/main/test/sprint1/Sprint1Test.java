@@ -30,15 +30,16 @@ public class Sprint1Test {
     @Test
     public void testCheckMarrige() throws Exception {
         assertEquals("F1:  Divorce before Marriage", checker.checkMarrige(families.get("F1")));
-        assertNull(checker.CheckMarrige(families.get("F2")));
-        assertNull(checker.CheckMarrige(families.get("F3")));
+        assertNull(checker.checkMarrige(families.get("F2")));
+        assertNull(checker.checkMarrige(families.get("F3")));
     }
 
     @Test
     // Jeff User story Test: Marriage Date
     public void TestBirthAfterParentsMarriges() throws Exception {
-        assertEquals("F2:  Duan Xiao is born before Family F2", checker.checkMarrige(families.get("F2")));
-        assertNull(checker.CheckMarrige(families.get("F1")));
-        assertNull(checker.CheckMarrige(families.get("F3")));
+
+        assertEquals("F2:  Duan Xiao is born before Family F2", checker.birthAfterParentsMarriges(families.get("F2")).get(0));
+        assertNull(checker.birthAfterParentsMarriges(families.get("F1")));
+        assertNull(checker.birthAfterParentsMarriges(families.get("F3")));
     }
 }
