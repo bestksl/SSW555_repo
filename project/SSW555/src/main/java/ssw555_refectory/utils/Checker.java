@@ -76,20 +76,22 @@ public class Checker {
         }
     }
 
-    private void checkMarrige(Family f) throws Exception {
+    public String checkMarrige(Family f) throws Exception {
         if (f.getMarried() == null || f.getDivorced() == null) {
-            return;
+            return null;
         }
         int DivorceData = TimeUtils.getAge(f.getDivorced());
         int MarriageData = TimeUtils.getAge(f.getMarried());
 
         if (DivorceData > MarriageData) {
             errList.add(f.getId() + ":  Divorce before Marriage");
+            return f.getId() + ":  Divorce before Marriage";
         }
+        return null;
     }
 
     // Jeff
-    private void birthAfterParentsMarriges(Family f) throws Exception {
+    public void birthAfterParentsMarriges(Family f) throws Exception {
         ArrayList<String> children = f.getChildren();
         if (f.getMarried() == null) {
             return;
@@ -151,8 +153,8 @@ public class Checker {
 
     //Zihan Li
     private void ageOld(Individual i) throws Exception {
-        if (i.getBirt() != null ) {
-            if ((i.getDeath()==null?TimeUtils.getAge(i.getBirt()):TimeUtils.getAge(i.getBirt())- TimeUtils.getAge(i.getDeath()))>= 150) {
+        if (i.getBirt() != null) {
+            if ((i.getDeath() == null ? TimeUtils.getAge(i.getBirt()) : TimeUtils.getAge(i.getBirt()) - TimeUtils.getAge(i.getDeath())) >= 150) {
                 errList.add(i.getId() + ":  one person should less than 150 years old");
             }
         }
