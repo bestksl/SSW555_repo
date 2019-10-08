@@ -118,7 +118,8 @@ public class Finder {
             e.printStackTrace();
         }
         if (individuals.get(i.getId()) != null) {
-            Checker.addErr(i.getId() + ":  individual ID should be unique");
+            i.setId("."+i.getId());
+            individuals.put(i.getId(), i);
             return;
         }
         if (i.getId() != null) {
@@ -174,7 +175,11 @@ public class Finder {
             }
         }
         if (families.get(f.getId()) != null) {
-            Checker.addErr(f.getId() + ":  family ID should be unique");
+            if (families.get(f.getId()) != null) {
+                f.setId("."+f.getId());
+                families.put(f.getId(), f);
+                return;
+            }
             return;
         }
         families.put(f.getId(), f);
