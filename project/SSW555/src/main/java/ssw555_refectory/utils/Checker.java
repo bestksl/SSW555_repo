@@ -91,19 +91,26 @@ public class Checker {
     }
 
     // Jeff
-    public void birthAfterParentsMarriges(Family f) throws Exception {
+    public List<String> birthAfterParentsMarriges(Family f) throws Exception {
         ArrayList<String> children = f.getChildren();
-        if (f.getMarried() == null) {
-            return;
+        if (f.getMarried() == null || f.getChildren().size() == 0) {
+            return null;
         }
         int marriagePeriod = TimeUtils.getAge(f.getMarried());
+        //StringBuilder sb = new StringBuilder();
+        ArrayList<String> res = new ArrayList<>();
         for (String child : children) {
             Individual eachChild = individuals.get(child);
             int age = TimeUtils.getAge(eachChild.getBirt());
             if (age >= marriagePeriod) {
                 errList.add(f.getId() + ":  " + eachChild.getName() + " is born before Family " + f.getId());
+                res.add(f.getId() + ":  " + eachChild.getName() + " is born before Family " + f.getId());
+                //sb.append(f.getId()).append(":  ").append(eachChild.getName()).append(" is born before Family ").append(f.getId());
             }
         }
+        if(res.size() == 0) return null;
+        return res;
+
     }
 
     public static void printErr() {

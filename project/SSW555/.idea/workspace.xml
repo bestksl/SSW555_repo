@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="931a4472-fb27-400f-b97a-c51c9c5b64e3" name="Default Changelist" comment="">
+    <list default="true" id="688ca501-a66f-4ac8-8094-9ee11bf20f66" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/haoxuanli.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,174 +17,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="30" column="53" lean-forward="true" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="80" column="23" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>F1</find>
-      <find>I7</find>
-      <find>I6</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
-    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$/../.." value="backup9.27" />
-      </map>
-    </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" />
-      </list>
-    </option>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
-  </component>
-  <component name="ProjectId" id="1RiGKnIfcm4YAQ6hvYbOcAHuvz0" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ssw555_refectory" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ssw555_refectory" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="sprint1" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
+  <component name="ProjectId" id="1RvqwxBMtcOL0tFCHRWdcWQtRvs" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.6229885" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/target/classes/ssw555_refectory" />
-      <recent name="$PROJECT_DIR$/src/main/java" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ssw555_refectory" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/ssw555_refectory" />
-    </key>
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -192,29 +40,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Sprint1Test">
-    <configuration name="HelloSSW555" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="HelloSSW555" />
-      <module name="SSW555" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ssw555_refectory.Main" />
-      <module name="SSW555" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ssw555_refectory.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ssw555_refectory.main" />
       <module name="SSW555" />
       <extension name="coverage">
         <pattern>
@@ -241,7 +69,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sprint1Test.testCheckBirthBeforeDeath" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Sprint1Test.TestBirthAfterParentsMarriges" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SSW555" />
       <extension name="coverage">
         <pattern>
@@ -251,7 +79,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="sprint1" />
       <option name="MAIN_CLASS_NAME" value="sprint1.Sprint1Test" />
-      <option name="METHOD_NAME" value="testCheckBirthBeforeDeath" />
+      <option name="METHOD_NAME" value="TestBirthAfterParentsMarriges" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -259,11 +87,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Sprint1Test" />
-        <item itemvalue="JUnit.Sprint1Test.testCheckBirthBeforeDeath" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.main" />
-        <item itemvalue="Application.HelloSSW555" />
+        <item itemvalue="JUnit.Sprint1Test" />
+        <item itemvalue="JUnit.Sprint1Test.TestBirthAfterParentsMarriges" />
       </list>
     </recent_temporary>
   </component>
@@ -272,131 +98,23 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="931a4472-fb27-400f-b97a-c51c9c5b64e3" name="Default Changelist" comment="" />
-      <created>1568321026630</created>
+      <changelist id="688ca501-a66f-4ac8-8094-9ee11bf20f66" name="Default Changelist" comment="" />
+      <created>1570558159103</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1568321026630</updated>
-      <workItem from="1568321027991" duration="293000" />
-      <workItem from="1568759951680" duration="7000" />
-      <workItem from="1569541580777" duration="239000" />
-      <workItem from="1569567787936" duration="203000" />
-      <workItem from="1569703525802" duration="2637000" />
-      <workItem from="1569784160743" duration="4602000" />
-      <workItem from="1570499188165" duration="369000" />
+      <updated>1570558159103</updated>
     </task>
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="Sprint1Test_testCheckBirthBeforeDeath - 2019.10.03 at 20h 32m 18s.xml">
-      <configuration name="Sprint1Test.testCheckBirthBeforeDeath" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Sprint1Test_testCheckBirthBeforeDeath - 2019.10.03 at 20h 33m 13s.xml">
-      <configuration name="Sprint1Test.testCheckBirthBeforeDeath" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Sprint1Test_testCheckBirthBeforeDeath - 2019.10.03 at 20h 33m 21s.xml">
-      <configuration name="Sprint1Test.testCheckBirthBeforeDeath" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Sprint1Test_testCheckBirthBeforeDeath - 2019.10.03 at 20h 34m 38s.xml">
-      <configuration name="Sprint1Test.testCheckBirthBeforeDeath" configurationId="JUnit" />
-    </history-entry>
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59258000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Messages" visible="true" weight="0.32959184" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" column="53" lean-forward="true" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="80" column="23" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
