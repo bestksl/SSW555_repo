@@ -57,7 +57,7 @@ public class Checker {
     }
 
     //Haoxuan Li
-    private void uniqueFirstname(Family f) {
+    public String uniqueFirstname(Family f) {
         Set<String> nameSet = new HashSet<>();
         List<String> idList = new ArrayList<>();
 
@@ -78,8 +78,10 @@ public class Checker {
             }
         }
         if (!(nameSet.size() == idList.size())) {
-            errList.add(f.getId() + ":  family member's first name should be unique!");
+            errList.add("ERROR: INDIVIDUAL: US03: " + f.getId() + ":  family member's first name should be unique!");
+            return "ERROR: INDIVIDUAL: US03: " + f.getId() + ":  family member's first name should be unique!";
         }
+        return null;
     }
 
     public String checkMarrige(Family f) throws Exception {
