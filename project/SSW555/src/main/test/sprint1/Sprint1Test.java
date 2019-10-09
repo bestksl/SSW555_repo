@@ -45,22 +45,21 @@ public class Sprint1Test {
     //Shiwei Ding
     @Test
     public void TestUniqueID() throws Exception {
-//        assertEquals("I2:  individual ID is not unique", checker.uniqueIdINDI(individuals.get("I2")));
-//        assertEquals("F3:  family ID is not unique", checker.uniqueIdFAM(families.get("F3")));
-//        assertNull(checker.uniqueIdINDI(individuals.get("I1")));
-//        assertNull(checker.uniqueIdINDI(individuals.get("I3")));
-//        assertNull(checker.uniqueIdINDI(individuals.get("I4")));
-//        assertNull(checker.uniqueIdINDI(individuals.get("I5")));
-//        assertNull(checker.uniqueIdINDI(individuals.get("I6")));
-//        assertNull(checker.uniqueIdFAM(families.get("F1")));
-//        assertNull(checker.uniqueIdFAM(families.get("F2")));
+        assertEquals("ERROR: INDIVIDUAL: US22: I2  individual ID is not unique", checker.uniqueIdINDI(individuals.get(".I2")));
+        assertEquals("ERROR: FAMILY: US22: F3  family ID is not unique", checker.uniqueIdFAM(families.get(".F3")));
+        assertNull(checker.uniqueIdINDI(individuals.get("I3")));
+        assertNull(checker.uniqueIdINDI(individuals.get("I4")));
+        assertNull(checker.uniqueIdINDI(individuals.get("I5")));
+        assertNull(checker.uniqueIdINDI(individuals.get("I6")));
+        assertNull(checker.uniqueIdFAM(families.get("F1")));
+        assertNull(checker.uniqueIdFAM(families.get("F2")));
     }
 
     // Shiwei Ding
     @Test
     public void TestMaleLastname() throws Exception {
-//        assertEquals("F1:  The last name for Male person in a family is not the same!", checker.familyMaleLastName(families.get("F1")));
-//        assertEquals("F3:  The last name for Male person in a family is not the same!", checker.familyMaleLastName(families.get("F3")));
-//        assertNull(checker.familyMaleLastName(families.get("F2")));
+        assertEquals("ERROR: FAMILY: US16: F1  The last name for Male person in a family I2 and I4 is not the same!", checker.familyMaleLastName(families.get("F1")));
+        assertEquals("ERROR: FAMILY: US16: F3  The last name for Male person in a family I2 and I4 is not the same!", checker.familyMaleLastName(families.get("F3")));
+        assertNull(checker.familyMaleLastName(families.get("F2")));
     }
 }

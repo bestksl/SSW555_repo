@@ -163,16 +163,20 @@ public class Checker {
             errList.add("ERROR: INDIVIDUAL: US22: " + str + "  individual ID is not unique");
             return "ERROR: INDIVIDUAL: US22: " + str + "  individual ID is not unique";
         }
-        return null;
+        else {
+            return null;
+        }
     }
 
     public String uniqueIdFAM(Family f)  throws Exception {
         if (f.getId().startsWith(".")){
             String str = f.getId().replace(".","");
-            errList.add("ERROR: FAMILY: US22 " + str + "  family ID is not unique");
-            return  "ERROR: FAMILY: US22 " + str + "  family ID is not unique";
+            errList.add("ERROR: FAMILY: US22: " + str + "  family ID is not unique");
+            return  "ERROR: FAMILY: US22: " + str + "  family ID is not unique";
         }
-        return null;
+        else {
+            return null;
+        }
     }
 
     //Zihan Li

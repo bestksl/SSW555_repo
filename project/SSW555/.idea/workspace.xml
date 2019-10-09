@@ -44,7 +44,31 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Android JUnit.All in SSW555">
+    <configuration name="All in SSW555" type="AndroidJUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSW555" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sprint1Test.TestUniqueID" type="AndroidJUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSW555" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sprint1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sprint1" />
+      <option name="MAIN_CLASS_NAME" value="sprint1.Sprint1Test" />
+      <option name="METHOD_NAME" value="TestUniqueID" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ssw555_refectory.Main" />
       <module name="SSW555" />
@@ -60,6 +84,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Android JUnit.All in SSW555" />
+        <item itemvalue="Android JUnit.Sprint1Test.TestUniqueID" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -93,5 +119,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
