@@ -69,4 +69,20 @@ public class Sprint1Test {
         assertEquals("ERROR: FAMILY: US16: F3  The last name for Male person in a family I2 and I4 is not the same!", checker.familyMaleLastName(families.get("F3")));
         assertNull(checker.familyMaleLastName(families.get("F2")));
     }
+
+
+    @Test
+    public void ageOld()throws Exception{
+        assertEquals("ERROR: INDIVIDUAL: US07: I6:  Rui Liu should less than 150 years old",checker.ageOld(individuals.get("I6")));
+        assertNull(checker.ageOld(individuals.get("I7")));
+        // assertNull(checker.uniqueFirstname(individuals.get("F3")));
+    }
+
+    @Test
+    public void parentsNotTooOld()throws Exception{
+        assertEquals("ERROR: FAMILY: US12: F1:  Mother should be less than 60 years older than her children and father should be less than 80 years older than his children",checker.parentsNotTooOld(families.get("F1")));
+        assertEquals("ERROR: FAMILY: US12: F2:  Mother should be less than 60 years older than her children and father should be less than 80 years older than his children",checker.parentsNotTooOld(families.get("F2")));
+        assertNull(checker.parentsNotTooOld(families.get("F3")));
+    }
+
 }
