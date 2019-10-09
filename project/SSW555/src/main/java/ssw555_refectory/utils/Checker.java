@@ -47,8 +47,10 @@ public class Checker {
     public String checkBirthBeforeDeath(Individual i) throws Exception {
         if (i.getBirt() != null && i.getDeath() != null) {
             if (!(TimeUtils.getAge(i.getBirt()) - TimeUtils.getAge(i.getDeath()) >= 0)) {
-                errList.add(i.getId() + ":  birth date should earlier than death dates");
-                return i.getId() + ":  birth date should earlier than death dates";
+                errList.add("ERROR: INDIVIDUAL: US03: "+i.getId() + " "+i.getName()+
+                        "'s birth date "+i.getBirt()+ " occurs after death dates "+i.getDeath());
+                return "ERROR: INDIVIDUAL: US03: "+i.getId() + " "+i.getName()+
+                        "'s birth date "+i.getBirt()+ " occurs after death dates "+i.getDeath();
             }
         }
         return null;
@@ -88,8 +90,8 @@ public class Checker {
         int MarriageData = TimeUtils.getAge(f.getMarried());
 
         if (DivorceData > MarriageData) {
-            errList.add(f.getId() + ":  Divorce before Marriage");
-            return f.getId() + ":  Divorce before Marriage";
+            errList.add("ERROR: FAMILY: US04: "+ f.getId() + " Divorce:"+f.getDivorced()+ " before Marriage "+f.getMarried());
+            return "ERROR: FAMILY: US04: "+ f.getId() + " Divorce:"+f.getDivorced()+ " before Marriage "+f.getMarried();
         }
         return null;
     }
@@ -106,8 +108,8 @@ public class Checker {
             Individual eachChild = individuals.get(child);
             int age = TimeUtils.getAge(eachChild.getBirt());
             if (age >= marriagePeriod) {
-                errList.add(f.getId() + ":  " + eachChild.getName() + " is born before Family " + f.getId());
-                sb.append(f.getId() + ":  " + eachChild.getName() + " is born before Family " + f.getId() + " || ");
+                errList.add("ERROR: FAMILY: US08: Child "+ eachChild.getName() + " born "+eachChild.getBirt()+" before Marriage on " + f.getMarried());
+                sb.append("ERROR: FAMILY: US08: Child "+ eachChild.getName() + " born "+eachChild.getBirt()+" before Marriage on " + f.getMarried() + " || ");
             }
         }
         if(sb.length() == 0) return null;
@@ -177,7 +179,7 @@ public class Checker {
     public void ageOld(Individual i) throws Exception {
         if (i.getBirt() != null) {
             if ((i.getDeath() == null ? TimeUtils.getAge(i.getBirt()) : TimeUtils.getAge(i.getBirt()) - TimeUtils.getAge(i.getDeath())) >= 150) {
-                errList.add(i.getId() + ":  one person should less than 150 years old");
+                errList.add(i.getId() + ":  "+i.getName()+" should less than 150 years old");
             }
         }
     }

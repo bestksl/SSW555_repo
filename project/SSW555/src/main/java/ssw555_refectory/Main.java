@@ -17,6 +17,8 @@ public class Main {
             finder.printFamilies();
             finder.printIndividuals();
         } else {
+            //finder.printFamilies();
+            //finder.printIndividuals();
             Checker.printErr();
 
         }
