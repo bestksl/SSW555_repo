@@ -178,16 +178,20 @@ public class Checker {
     }
 
     //Zihan Li
-    public void ageOld(Individual i) throws Exception {
+    public String ageOld(Individual i) throws Exception {
         if (i.getBirt() != null) {
             if ((i.getDeath() == null ? TimeUtils.getAge(i.getBirt()) : TimeUtils.getAge(i.getBirt()) - TimeUtils.getAge(i.getDeath())) >= 150) {
                 errList.add("ERROR: INDIVIDUAL: US07: "+i.getId() + ":  "+i.getName()+" should less than 150 years old");
+                return "ERROR: INDIVIDUAL: US07: "+i.getId() + ":  "+i.getName()+" should less than 150 years old";
             }
+            return null;
         }
+        return null;
     }
 
     //Zihan Li
-    public void parentsNotTooOld(Family f) throws Exception {
+    //Zihan Li
+    public String parentsNotTooOld(Family f) throws Exception {
         ArrayList<String> children = f.getChildren();
         String father = f.getHusbandID();
         String mother = f.getWifeID();
@@ -198,8 +202,12 @@ public class Checker {
             if (eachchildren.getBirt() != null) {
                 if ((TimeUtils.getAge(dad.getBirt()) - TimeUtils.getAge(eachchildren.getBirt()) >= 80) || (TimeUtils.getAge(mom.getBirt()) - TimeUtils.getAge(eachchildren.getBirt()) >= 60)) {
                     errList.add("ERROR: FAMILY: US12: "+f.getId() + ":  Mother should be less than 60 years older than her children and father should be less than 80 years older than his children");
+                    return "ERROR: FAMILY: US12: "+f.getId() + ":  Mother should be less than 60 years older than her children and father should be less than 80 years older than his children";
                 }
+
             }
+
         }
+        return null;
     }
 }
