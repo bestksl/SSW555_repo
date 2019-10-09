@@ -3,6 +3,7 @@ package ssw555_refectory.utils;
 import ssw555_refectory.bean.Family;
 import ssw555_refectory.bean.Individual;
 
+import java.security.spec.RSAOtherPrimeInfo;
 import java.util.*;
 
 public class Checker {
@@ -46,8 +47,10 @@ public class Checker {
     public String checkBirthBeforeDeath(Individual i) throws Exception {
         if (i.getBirt() != null && i.getDeath() != null) {
             if (!(TimeUtils.getAge(i.getBirt()) - TimeUtils.getAge(i.getDeath()) >= 0)) {
-                errList.add(i.getId() + ":  birth date should earlier than death dates");
-                return i.getId() + ":  birth date should earlier than death dates";
+                errList.add("ERROR: INDIVIDUAL: US03: "+i.getId() + " "+i.getName()+
+                        "'s birth date "+i.getBirt()+ " occurs after death dates "+i.getDeath());
+                return "ERROR: INDIVIDUAL: US03: "+i.getId() + " "+i.getName()+
+                        "'s birth date "+i.getBirt()+ " occurs after death dates "+i.getDeath();
             }
         }
         return null;
@@ -87,31 +90,31 @@ public class Checker {
         int MarriageData = TimeUtils.getAge(f.getMarried());
 
         if (DivorceData > MarriageData) {
-            errList.add(f.getId() + ":  Divorce before Marriage");
-            return f.getId() + ":  Divorce before Marriage";
+            errList.add("ERROR: FAMILY: US04: "+ f.getId() + " Divorce:"+f.getDivorced()+ " before Marriage "+f.getMarried());
+            return "ERROR: FAMILY: US04: "+ f.getId() + " Divorce:"+f.getDivorced()+ " before Marriage "+f.getMarried();
         }
         return null;
     }
 
     // Jeff
-    public List<String> birthAfterParentsMarriges(Family f) throws Exception {
+    private StringBuilder sb = new StringBuilder();
+    public String birthAfterParentsMarriges(Family f) throws Exception {
         ArrayList<String> children = f.getChildren();
         if (f.getMarried() == null || f.getChildren().size() == 0) {
             return null;
         }
         int marriagePeriod = TimeUtils.getAge(f.getMarried());
-        //StringBuilder sb = new StringBuilder();
-        ArrayList<String> res = new ArrayList<>();
         for (String child : children) {
             Individual eachChild = individuals.get(child);
             int age = TimeUtils.getAge(eachChild.getBirt());
             if (age >= marriagePeriod) {
-                errList.add(f.getId() + ":  " + eachChild.getName() + " is born before Family " + f.getId());
-                res.add(f.getId() + ":  " + eachChild.getName() + " is born before Family " + f.getId());
-                //sb.append(f.getId()).append(":  ").append(eachChild.getName()).append(" is born before Family ").append(f.getId());
+                errList.add("ERROR: FAMILY: US08: Child "+ eachChild.getName() + " born "+eachChild.getBirt()+" before Marriage on " + f.getMarried());
+                sb.append("ERROR: FAMILY: US08: Child "+ eachChild.getName() + " born "+eachChild.getBirt()+" before Marriage on " + f.getMarried() + " || ");
             }
         }
-        if(res.size() == 0) return null;
+        if(sb.length() == 0) return null;
+        String res = sb.toString();
+        sb.setLength(0);
         return res;
 
     }
@@ -123,7 +126,7 @@ public class Checker {
     }
 
 
-    private String familyMaleLastName(Family f)  throws Exception {
+    public String familyMaleLastName(Family f)  throws Exception {
         HashMap<String, String> hash_setINDI = new HashMap<>();
         HashMap<String, String> hash_setSEX = new HashMap<>();
         String Fname;
@@ -145,8 +148,8 @@ public class Checker {
                     if(childgender.equals("M") && !childLastname.equals(fatherLastname))
                     {
                         String str = f.getId().replace(".","");
-                        errList.add(str + ":  The last name for Male person in a family is not the same!");
-                        return str + ":  The last name for Male person in a family is not the same!";
+                        errList.add("ERROR: FAMILY: US16: " + str + " The last name for Male person in a family "+ Fname +" and "+ individuals.getId() + " is not the same!");
+                        return "ERROR: FAMILY: US16: " + str + " The last name for Male person in a family "+ Fname +" and "+ individuals.getId() + " is not the same!";
                     }
                 }
             }
@@ -154,35 +157,35 @@ public class Checker {
         return null;
     }
 
-    private String uniqueIdINDI(Individual i)  throws Exception {
+    public String uniqueIdINDI(Individual i)  throws Exception {
         if (i.getId().startsWith(".")){
             String str = i.getId().replace(".","");
-            errList.add( str + ":  individual ID is not unique");
-            return str + ":  individual ID is not unique";
+            errList.add("ERROR: INDIVIDUAL: US22: " + str + " individual ID is not unique");
+            return "ERROR: INDIVIDUAL: US22: " + str + " individual ID is not unique";
         }
         return null;
     }
 
-    private String uniqueIdFAM(Family f)  throws Exception {
+    public String uniqueIdFAM(Family f)  throws Exception {
         if (f.getId().startsWith(".")){
             String str = f.getId().replace(".","");
-            errList.add( str + ":  family ID is not unique");
-            return  str + ":  family ID is not unique";
+            errList.add("ERROR: FAMILY: US22 " + str + " family ID is not unique");
+            return  "ERROR: FAMILY: US22 " + str + " family ID is not unique";
         }
         return null;
     }
 
     //Zihan Li
-    private void ageOld(Individual i) throws Exception {
+    public void ageOld(Individual i) throws Exception {
         if (i.getBirt() != null) {
             if ((i.getDeath() == null ? TimeUtils.getAge(i.getBirt()) : TimeUtils.getAge(i.getBirt()) - TimeUtils.getAge(i.getDeath())) >= 150) {
-                errList.add(i.getId() + ":  one person should less than 150 years old");
+                errList.add(i.getId() + ":  "+i.getName()+" should less than 150 years old");
             }
         }
     }
 
     //Zihan Li
-    private void parentsNotTooOld(Family f) throws Exception {
+    public void parentsNotTooOld(Family f) throws Exception {
         ArrayList<String> children = f.getChildren();
         String father = f.getHusbandID();
         String mother = f.getWifeID();
