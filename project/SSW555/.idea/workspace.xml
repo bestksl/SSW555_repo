@@ -27,7 +27,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -44,7 +44,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Sprint1Test.testUniqueFirstName">
+  <component name="RunManager" selected="Android JUnit.All in SSW555">
+    <configuration name="All in SSW555" type="AndroidJUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSW555" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ssw555_refectory.Main" />
       <module name="SSW555" />
@@ -91,6 +99,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Android JUnit.All in SSW555" />
         <item itemvalue="JUnit.Sprint1Test.testUniqueFirstName" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.Sprint1Test" />
