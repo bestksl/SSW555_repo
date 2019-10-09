@@ -179,7 +179,7 @@ public class Checker {
     public void ageOld(Individual i) throws Exception {
         if (i.getBirt() != null) {
             if ((i.getDeath() == null ? TimeUtils.getAge(i.getBirt()) : TimeUtils.getAge(i.getBirt()) - TimeUtils.getAge(i.getDeath())) >= 150) {
-                errList.add(i.getId() + ":  "+i.getName()+" should less than 150 years old");
+                errList.add("ERROR: INDIVIDUAL: US07: "+i.getId() + ":  "+i.getName()+" should less than 150 years old");
             }
         }
     }
@@ -195,7 +195,7 @@ public class Checker {
             Individual eachchildren = individuals.get(child);
             if (eachchildren.getBirt() != null) {
                 if ((TimeUtils.getAge(dad.getBirt()) - TimeUtils.getAge(eachchildren.getBirt()) >= 80) || (TimeUtils.getAge(mom.getBirt()) - TimeUtils.getAge(eachchildren.getBirt()) >= 60)) {
-                    errList.add(f.getId() + ":  Mother should be less than 60 years older than her children and father should be less than 80 years older than his children");
+                    errList.add("ERROR: FAMILY: US12: "+f.getId() + ":  Mother should be less than 60 years older than her children and father should be less than 80 years older than his children");
                 }
             }
         }
