@@ -99,12 +99,12 @@ public class Checker {
     }
 
     // Jeff
-    private StringBuilder sb = new StringBuilder();
     public String birthAfterParentsMarriges(Family f) throws Exception {
         ArrayList<String> children = f.getChildren();
         if (f.getMarried() == null || f.getChildren().size() == 0) {
             return null;
         }
+        StringBuilder sb = new StringBuilder();
         int marriagePeriod = TimeUtils.getAge(f.getMarried());
         for (String child : children) {
             Individual eachChild = individuals.get(child);
