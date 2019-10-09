@@ -35,6 +35,12 @@ public class Sprint1Test {
     }
 
     @Test
+    public void testUniqueFirstName(){
+        assertEquals("ERROR: INDIVIDUAL: US03: F1:  family member's first name should be unique!",checker.uniqueFirstname(families.get("F1")));
+        assertNull(checker.uniqueFirstname(families.get("F3")));
+    }
+
+    @Test
     // Jeff User story Test: Marriage Date
     public void TestBirthAfterParentsMarriges() throws Exception {
         assertEquals("ERROR: FAMILY: US08: Child Duan Xiao born 14-APR-1938 before Marriage on 6-MAY-2016 || ", checker.birthAfterParentsMarriges(families.get("F2")));
