@@ -172,7 +172,7 @@ public class Checker {
         if (f.getId().startsWith(".")){
             String str = f.getId().replace(".","");
             errList.add("ERROR: FAMILY: US22 " + str + "  family ID is not unique");
-            return  "ERROR: FAMILY: US22 " + str + "  family ID is not unique";
+            return  "ERROR: FAMILY: US22: " + str + "  family ID is not unique";
         }
         return null;
     }
