@@ -23,13 +23,13 @@ public class Sprint1Test {
 
     @Test
     public void testCheckBirthBeforeDeath() throws Exception {
-        assertEquals("I7:  birth date should earlier than death dates", checker.checkBirthBeforeDeath(individuals.get("I7")));
+        assertEquals("ERROR: INDIVIDUAL: US03: I7 Jie Deng's birth date 5-MAR-2006 occurs after death dates 14-JUL-1985", checker.checkBirthBeforeDeath(individuals.get("I7")));
         assertNull(checker.checkBirthBeforeDeath(individuals.get("I6")));
     }
 
     @Test
     public void testCheckMarrige() throws Exception {
-        assertEquals("F1:  Divorce before Marriage", checker.checkMarrige(families.get("F1")));
+        assertEquals("ERROR: FAMILY: US04: F1 Divorce:5-MAR-1990 before Marriage 5-MAR-1992", checker.checkMarrige(families.get("F1")));
         assertNull(checker.checkMarrige(families.get("F2")));
         assertNull(checker.checkMarrige(families.get("F3")));
     }
@@ -37,7 +37,7 @@ public class Sprint1Test {
     @Test
     // Jeff User story Test: Marriage Date
     public void TestBirthAfterParentsMarriges() throws Exception {
-        assertEquals("F2:  Duan Xiao is born before Family F2 || ", checker.birthAfterParentsMarriges(families.get("F2")));
+        assertEquals("ERROR: FAMILY: US08: Child Duan Xiao born 14-APR-1938 before Marriage on 6-MAY-2016 || ", checker.birthAfterParentsMarriges(families.get("F2")));
         assertNull(checker.birthAfterParentsMarriges(families.get("F1")));
         assertNull(checker.birthAfterParentsMarriges(families.get("F3")));
     }
