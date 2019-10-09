@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e9f2759-f5a0-4f3a-a101-cfe9af30a1b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java" afterDir="false" />
-    </list>
+    <list default="true" id="6e9f2759-f5a0-4f3a-a101-cfe9af30a1b7" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +40,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Sprint1Test.testUniqueFirstName">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ssw555_refectory.Main" />
       <module name="SSW555" />
@@ -91,8 +87,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Sprint1Test.testUniqueFirstName" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.Sprint1Test.testUniqueFirstName" />
         <item itemvalue="JUnit.Sprint1Test" />
       </list>
     </recent_temporary>
