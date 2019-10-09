@@ -148,8 +148,8 @@ public class Checker {
                     if(childgender.equals("M") && !childLastname.equals(fatherLastname))
                     {
                         String str = f.getId().replace(".","");
-                        errList.add("ERROR: FAMILY: US16: " + str + " The last name for Male person in a family "+ Fname +" and "+ individuals.getId() + " is not the same!");
-                        return "ERROR: FAMILY: US16: " + str + " The last name for Male person in a family "+ Fname +" and "+ individuals.getId() + " is not the same!";
+                        errList.add("ERROR: FAMILY: US16: " + str + "  The last name for Male person in a family "+ Fname +" and "+ individuals.getId() + " is not the same!");
+                        return "ERROR: FAMILY: US16: " + str + "  The last name for Male person in a family "+ Fname +" and "+ individuals.getId() + " is not the same!";
                     }
                 }
             }
@@ -160,8 +160,8 @@ public class Checker {
     public String uniqueIdINDI(Individual i)  throws Exception {
         if (i.getId().startsWith(".")){
             String str = i.getId().replace(".","");
-            errList.add("ERROR: INDIVIDUAL: US22: " + str + " individual ID is not unique");
-            return "ERROR: INDIVIDUAL: US22: " + str + " individual ID is not unique";
+            errList.add("ERROR: INDIVIDUAL: US22: " + str + "  individual ID is not unique");
+            return "ERROR: INDIVIDUAL: US22: " + str + "  individual ID is not unique";
         }
         return null;
     }
@@ -169,8 +169,8 @@ public class Checker {
     public String uniqueIdFAM(Family f)  throws Exception {
         if (f.getId().startsWith(".")){
             String str = f.getId().replace(".","");
-            errList.add("ERROR: FAMILY: US22 " + str + " family ID is not unique");
-            return  "ERROR: FAMILY: US22 " + str + " family ID is not unique";
+            errList.add("ERROR: FAMILY: US22 " + str + "  family ID is not unique");
+            return  "ERROR: FAMILY: US22 " + str + "  family ID is not unique";
         }
         return null;
     }
