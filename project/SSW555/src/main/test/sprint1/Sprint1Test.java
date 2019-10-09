@@ -37,23 +37,24 @@ public class Sprint1Test {
     @Test
     // Jeff User story Test: Marriage Date
     public void TestBirthAfterParentsMarriges() throws Exception {
-
-        assertEquals("F2:  Duan Xiao is born before Family F2", checker.birthAfterParentsMarriges(families.get("F2")).get(0));
+        assertEquals("F2:  Duan Xiao is born before Family F2 || ", checker.birthAfterParentsMarriges(families.get("F2")));
         assertNull(checker.birthAfterParentsMarriges(families.get("F1")));
         assertNull(checker.birthAfterParentsMarriges(families.get("F3")));
     }
+
+
     public void TestUniqueID() throws Exception {
-        assertEquals("I2:  individual ID should be unique", checker.uniqueIdINDI(families.get("I2")));
+        assertEquals("I2:  individual ID should be unique", checker.uniqueIdINDI(individuals.get("I2")));
         assertEquals("F3:  family ID should be unique", checker.uniqueIdFAM(families.get("F3")));
-        assertNull(checker.uniqueIdINDI(families.get("I1")));
-        assertNull(checker.uniqueIdINDI(families.get("I3")));
-        assertNull(checker.uniqueIdINDI(families.get("I4")));
-        assertNull(checker.uniqueIdINDI(families.get("I5")));
-        assertNull(checker.uniqueIdINDI(families.get("I6")));
+        assertNull(checker.uniqueIdINDI(individuals.get("I1")));
+        assertNull(checker.uniqueIdINDI(individuals.get("I3")));
+        assertNull(checker.uniqueIdINDI(individuals.get("I4")));
+        assertNull(checker.uniqueIdINDI(individuals.get("I5")));
+        assertNull(checker.uniqueIdINDI(individuals.get("I6")));
         assertNull(checker.uniqueIdFAM(families.get("F1")));
         assertNull(checker.uniqueIdFAM(families.get("F2")));
     }
-    
+
     public void TestMaleLastname() throws Exception {
         assertEquals("F1:  The last name for Male person in a family is not the same!", checker.familyMaleLastName(families.get("F1")));
         assertEquals("F3:  The last name for Male person in a family is not the same!", checker.familyMaleLastName(families.get("F3")));
