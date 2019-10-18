@@ -23,6 +23,11 @@ public class Checker {
 
     public boolean check() throws Exception {
         //如果有不通过的项会将err信息加入到errList
+
+        // whole Individuals map test
+        UniqueNameAndBirthdate();
+
+
         for (Individual i : individuals.values()) {
             uniqueIdINDI(i);
             checkBirthBeforeDeath(i);
@@ -84,6 +89,7 @@ public class Checker {
         return null;
     }
 
+    // Jeff
     public String checkMarrige(Family f) throws Exception {
         if (f.getMarried() == null || f.getDivorced() == null) {
             return null;
@@ -190,7 +196,6 @@ public class Checker {
     }
 
     //Zihan Li
-    //Zihan Li
     public String parentsNotTooOld(Family f) throws Exception {
         ArrayList<String> children = f.getChildren();
         String father = f.getHusbandID();
@@ -210,4 +215,38 @@ public class Checker {
         }
         return null;
     }
+
+    // Jeff
+    public String UniqueNameAndBirthdate(){
+        Map<String, List<Individual>> map = new HashMap<>();
+        StringBuilder sbs = new StringBuilder();
+        for (Map.Entry<String,Individual> entry : individuals.entrySet()) {
+            Individual each = entry.getValue();
+            String nameAndBirth = entry.getValue().getName()+""+entry.getValue().getBirt();
+            List<Individual> cur = map.get(nameAndBirth);
+            if(map.containsKey(nameAndBirth)){
+                cur.add(each);
+                map.put(nameAndBirth, cur);
+            }else{
+                cur = new ArrayList<Individual>();
+                cur.add(each);
+                map.put(nameAndBirth, cur);
+            }
+        }
+        for (Map.Entry<String,List<Individual>> entry : map.entrySet()) {
+            if(entry.getValue().size() > 1){
+
+                StringBuilder sb = new StringBuilder();
+                for(Individual each: entry.getValue()){
+                    sb.append(each.getId()+" ");
+                }
+                errList.add("ERROR: INDIVIDUAL: US23: name and birth "+entry.getKey()+"appear in "+sb.toString());
+                sbs.append("ERROR: INDIVIDUAL: US23: name and birth "+entry.getKey()+"appear in "+sb.toString()+"||");
+            }
+        }
+
+        return sbs.toString();
+    }
+
+
 }
