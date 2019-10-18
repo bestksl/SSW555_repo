@@ -12,7 +12,7 @@ import java.util.Locale;
  */
 public class TimeUtils {
     private static Date parse(String strDate) throws ParseException {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH);
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
         return sdf.parse(strDate);
     }
 
