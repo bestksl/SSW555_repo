@@ -12,7 +12,8 @@ import java.util.Locale;
  */
 public class TimeUtils {
     private static Date parse(String strDate) throws ParseException {
-        SimpleDateFormat sdf = new SimpleDateFormat("DD-MMM-YYYY", Locale.ENGLISH);
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH);
+        System.out.println(" 方法内"+sdf.parse(strDate));
         return sdf.parse(strDate);
     }
 
@@ -43,4 +44,16 @@ public class TimeUtils {
     }
 
 
+    public static long getDaysFromDate(String strDate) throws Exception {
+        Date day = parse(strDate);
+        System.out.println("after;"+day);
+        Calendar cal = Calendar.getInstance();
+        if (cal.before(day)) { //出生日期晚于当前时间，无法计算
+            return -1;
+        }
+        System.out.println((cal.getTimeInMillis() - day.getTime()) / (60 * 60 * 1000 * 24));
+        System.out.println(cal.getTime());
+
+        return ((System.currentTimeMillis() - day.getTime()) / (60 * 60 * 1000 * 24));
+    }
 }
