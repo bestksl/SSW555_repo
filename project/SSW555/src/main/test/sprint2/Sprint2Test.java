@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
  * @version created date：2019-09-28 18:49
  */
 public class Sprint2Test {
-    private Finder finder = new Finder("src/main/java/ssw555_refectory/wrong.ged");
+    private Finder finder = new Finder("src/main/java/ssw555_refectory/Sprint1_test.ged");
     private Map<String, Individual> individuals = finder.getIndividuals();
     private Map<String, Family> families = finder.getFamilies();
     private Checker checker = new Checker(individuals, families);
