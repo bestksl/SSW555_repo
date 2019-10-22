@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07a68e61-c3db-4206-af37-d96e1743bebd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" afterDir="false" />
+    <list default="true" id="4117be75-47b5-4b0e-b8be-c228de7849a1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/SSW555/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSW555/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SSW555/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSW555/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SSW555/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSW555/src/main/java/ssw555_refectory/utils/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/SSW555/src/main/java/ssw555_refectory/utils/Checker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SSW555/src/main/java/ssw555_refectory/utils/tableutils/TextForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/SSW555/src/main/java/ssw555_refectory/utils/tableutils/TextForm.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,14 +17,22 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/../.." value="master" />
+        <entry key="$PROJECT_DIR$/.." value="master" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="1SXXXMzJFdNuWLNCVXI5P3BwTo5" />
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1SB1keZPXS4bpeoMFMF4hmrfmyR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -45,11 +54,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="07a68e61-c3db-4206-af37-d96e1743bebd" name="Default Changelist" comment="" />
-      <created>1571710952962</created>
+      <changelist id="4117be75-47b5-4b0e-b8be-c228de7849a1" name="Default Changelist" comment="" />
+      <created>1571022318212</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1571710952962</updated>
+      <updated>1571022318212</updated>
     </task>
     <servers />
   </component>
@@ -58,7 +67,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

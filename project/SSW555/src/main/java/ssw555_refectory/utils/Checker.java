@@ -137,7 +137,8 @@ public class Checker {
                 if (years == 0) {
                     years = TimeUtils.getAge(child.getBirt()) - TimeUtils.getAge(wife.getDeath()) < 0 ? TimeUtils.getAge(wife.getDeath()) : 0;
                     result = "wife " + wife.getId() + " " + wife.getDeath();
-                } else {
+                }
+                else {
                     years = (TimeUtils.getAge(wife.getDeath()) - years) > 0 ? TimeUtils.getAge(wife.getDeath()) : years;
                     result = (TimeUtils.getAge(wife.getDeath()) - years) < 0 ? result = "husband " + husband.getId() + husband.getDeath() : "wife" + wife.getId() + "  " + wife.getDeath();
                 }
@@ -374,5 +375,52 @@ public class Checker {
         }
         return null;
     }
+
+    //Zihan Li
+    public String Listlivingsingle(Individual i) throws Exception{
+        String listlivingsingle;
+        long day = 0;
+        if(i.getDeath() == null && i.getBirt() != null){
+            for(Family families : families.values()){
+                if(families.getHusbandID().equals(i.getId())){
+                    day = 0;
+                }
+                else if(families.getWifeID().equals(i.getId())){
+                    day = 0;
+                }
+                //if ((TimeUtils.getAge(dad.getBirt()) - TimeUtils.getAge(eachchildren.getBirt()) >= 80) || (TimeUtils.getAge(mom.getBirt()) - TimeUtils.getAge(eachchildren.getBirt()) >= 60)) {
+                else{
+                    String age = i.getBirt();
+                    day = TimeUtils.getAge(age);
+                }
+            }
+            }
+        if(day>=30 && day !=0) {
+            listlivingsingle = "US31: NAME:" + i.getName() + " ID:" + i.getId() + " is over 30 and have never been married";
+            errList.add("US31: NAME:"+i.getName()+" ID:"+i.getId()+" is over 30 and have never been married");
+            return listlivingsingle;
+        }
+        return null;
+        }
+
+
+
+    //Zihan Li
+    public String Listrecentbirths(Individual i) throws Exception{
+        String recentbirths = "";
+        long day = 0;
+        if(i.getBirt() != null){
+            String birthdate = i.getBirt();
+            day = TimeUtils.getDaysFromDate(birthdate);
+        }
+        System.out.println(day);
+        if(day <=30 && day !=0){
+            recentbirths = "US35: NAME:" + i.getName() + " ID:" + i.getId()+" was born in the last 30 days";
+            errList.add("US35: NAME:"+i.getName()+"ID:"+i.getId()+" was born in the last 30 days");
+            return recentbirths;
+        }
+        return null;
+    }
+
 
 }
