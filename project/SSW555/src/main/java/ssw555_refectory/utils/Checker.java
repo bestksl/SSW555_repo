@@ -59,7 +59,8 @@ public class Checker {
 
         // whole Individuals map test
         for (Individual i : individuals.values()) {
-
+            Listlivingsingle(i);
+            Listrecentbirths(i);
         }
 
         for (Family f : families.values()) {
@@ -388,7 +389,6 @@ public class Checker {
                 else if(families.getWifeID().equals(i.getId())){
                     day = 0;
                 }
-                //if ((TimeUtils.getAge(dad.getBirt()) - TimeUtils.getAge(eachchildren.getBirt()) >= 80) || (TimeUtils.getAge(mom.getBirt()) - TimeUtils.getAge(eachchildren.getBirt()) >= 60)) {
                 else{
                     String age = i.getBirt();
                     day = TimeUtils.getAge(age);
