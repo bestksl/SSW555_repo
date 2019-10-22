@@ -58,10 +58,18 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.Sprint2Test.testTimeUtil">
-    <configuration name="All in SSW555" type="AndroidJUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Sprint2Test.testListrecentdeath_US36" type="AndroidJUnit" temporary="true" nameIsGenerated="true">
       <module name="SSW555" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sprint2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sprint2" />
+      <option name="MAIN_CLASS_NAME" value="sprint2.Sprint2Test" />
+      <option name="METHOD_NAME" value="testListrecentdeath_US36" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -130,6 +138,7 @@
       <list>
         <item itemvalue="JUnit.Sprint2Test.testTimeUtil" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Android JUnit.Sprint2Test.testListrecentdeath_US36" />
         <item itemvalue="JUnit.Sprint1Test.testUniqueFirstName" />
         <item itemvalue="JUnit.Sprint1Test" />
       </list>
