@@ -84,5 +84,4 @@ public class Sprint1Test {
         assertEquals("ERROR: FAMILY: US12: F2:  Mother should be less than 60 years older than her children and father should be less than 80 years older than his children",checker.parentsNotTooOld(families.get("F2")));
         assertNull(checker.parentsNotTooOld(families.get("F3")));
     }
-
 }

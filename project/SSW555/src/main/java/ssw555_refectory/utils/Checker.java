@@ -32,6 +32,7 @@ public class Checker {
             uniqueIdINDI(i);
             checkBirthBeforeDeath(i);
             ageOld(i);
+            Listrecentdeath(i);
         }
 
         for (Family f : families.values()) {
@@ -41,6 +42,7 @@ public class Checker {
             birthAfterParentsMarriges(f);
             parentsNotTooOld(f);
             familyMaleLastName(f);
+            Listlargeagedifferences(f);
 
         }
 
@@ -247,6 +249,48 @@ public class Checker {
 
         return sbs.toString();
     }
-
+    public String Listrecentdeath(Individual i) throws Exception {
+        String deathlist = "";
+        long days = 0;
+        if(i.getDeath() != null)
+        {
+             String deathdate = i.getDeath();
+             days = TimeUtils.getDaysFromDate(deathdate);
+        }
+        System.out.println(days);
+        if(days <= 30 && days != 0)
+        {
+            deathlist = "NAME:"+i.getName() + " ID:" + i.getId() + " has dead in 30 days";
+            errList.add("NAME:"+i.getName() + " ID:" + i.getId() + " has dead in 30 days");
+            return deathlist;
+        }
+        return null;
+    }
+    public String Listlargeagedifferences(Family f) throws Exception {
+        String ret = "";
+        if(f.getDivorced() == null && f.getHusbandID() != null && f.getWifeID() != null)
+        {
+            int Husbandage = 0, Wifeage = 0;
+            for (Individual individuals : individuals.values())
+            {
+                if(individuals.getId().equals(f.getHusbandID()))
+                {
+                    Husbandage = individuals.getDeath() == null ? TimeUtils.getAge(individuals.getBirt()) : TimeUtils.getAge(individuals.getDeath()) - TimeUtils.getAge(individuals.getBirt());
+                }
+                if(individuals.getId().equals(f.getWifeID()))
+                {
+                    Wifeage = individuals.getDeath() == null ? TimeUtils.getAge(individuals.getBirt()) : TimeUtils.getAge(individuals.getDeath()) - TimeUtils.getAge(individuals.getBirt());
+                }
+            }
+            if( Wifeage * 2 <= Husbandage || Husbandage * 2 <= Wifeage)
+            {
+                String str = f.getId().replace(".","");
+                errList.add("The couple in family: "+ str + " has large age different");
+                ret = "The couple in family: "+ str + " has large age different";
+                return ret;
+            }
+        }
+        return null;
+    }
 
 }

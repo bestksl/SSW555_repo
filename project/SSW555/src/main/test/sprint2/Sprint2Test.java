@@ -38,6 +38,16 @@ public class Sprint2Test {
     public void testTimeUtil() throws Exception {
         System.out.println(TimeUtils.getDaysFromDate("19-OCT-2000"));
     }
-
+    @Test
+    public void testListrecentdeath_US36() throws Exception {
+        assertEquals("NAME:Rui Liu ID:I6 has dead in 30 days", checker.Listrecentdeath(individuals.get("I6")));
+        assertNull(checker.checkBirthBeforeDeath(individuals.get("I3")));
+    }
+    @Test
+    public void testListlargeagedifferences_US34() throws Exception {
+        assertEquals("The couple in family: F3 has large age different", checker.Listlargeagedifferences(families.get("F3")));
+        assertEquals("The couple in family: F2 has large age different", checker.Listlargeagedifferences(families.get("F2")));
+        //assertNull(checker.checkBirthBeforeDeath(individuals.get("F1")));
+    }
 
 }
