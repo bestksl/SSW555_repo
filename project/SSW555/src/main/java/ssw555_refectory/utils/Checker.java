@@ -138,15 +138,14 @@ public class Checker {
                 if (years == 0) {
                     years = TimeUtils.getAge(child.getBirt()) - TimeUtils.getAge(wife.getDeath()) < 0 ? TimeUtils.getAge(wife.getDeath()) : 0;
                     result = "wife " + wife.getId() + " " + wife.getDeath();
-                }
-                else {
+                } else {
                     years = (TimeUtils.getAge(wife.getDeath()) - years) > 0 ? TimeUtils.getAge(wife.getDeath()) : years;
                     result = (TimeUtils.getAge(wife.getDeath()) - years) < 0 ? result = "husband " + husband.getId() + husband.getDeath() : "wife" + wife.getId() + "  " + wife.getDeath();
                 }
             }
             if (years != 0) {
-                errList.add("ERROR: FAMILY: US09: child: " + child.getId() + " birth: " + child.getBirt() + " after parents death date " + result);
-                return "ERROR: FAMILY: US09: child: " + child.getId() + " birth: " + child.getBirt() + " after parents death date " + result;
+                errList.add("ERROR: FAMILY: US09: " + f.getId() + ": child: " + child.getId() + " birth: " + child.getBirt() + " after parents death date " + result);
+                return "ERROR: FAMILY: US09: " + f.getId() + " child: " + child.getId() + " birth: " + child.getBirt() + " after parents death date " + result;
             }
         }
 
@@ -379,27 +378,26 @@ public class Checker {
 
 
     //Zihan Li
-    public String US31_Listlivingsingle(Individual i) throws Exception{
+    public String US31_Listlivingsingle(Individual i) throws Exception {
         String listlivingsingle;
         long day = 0;
-        if(i.getDeath() == null && i.getBirt() != null){
-            for(Family families : families.values()){
-                if(families.getHusbandID().equals(i.getId())){
+        if (i.getDeath() == null && i.getBirt() != null) {
+            for (Family families : families.values()) {
+                if (families.getHusbandID().equals(i.getId())) {
                     day = 0;
-                }
-                else if(families.getWifeID().equals(i.getId())){
+                } else if (families.getWifeID().equals(i.getId())) {
                     day = 0;
                 }
                 //if ((TimeUtils.getAge(dad.getBirt()) - TimeUtils.getAge(eachchildren.getBirt()) >= 80) || (TimeUtils.getAge(mom.getBirt()) - TimeUtils.getAge(eachchildren.getBirt()) >= 60)) {
-                else{
+                else {
                     String age = i.getBirt();
                     day = TimeUtils.getAge(age);
                 }
             }
         }
-        if(day>=30 && day !=0) {
+        if (day >= 30 && day != 0) {
             listlivingsingle = "LIST: INDIVIDUAL: US31: NAME:" + i.getName() + " ID:" + i.getId() + " is over 30 and has never been married";
-            errList.add("LIST: INDIVIDUAL: US31: NAME:"+i.getName()+" ID:"+i.getId()+" is over 30 and has never been married");
+            errList.add("LIST: INDIVIDUAL: US31: NAME:" + i.getName() + " ID:" + i.getId() + " is over 30 and has never been married");
             return listlivingsingle;
         }
         return null;
@@ -407,17 +405,17 @@ public class Checker {
 
 
     //Zihan Li
-    public String US35_Listrecentbirths(Individual i) throws Exception{
+    public String US35_Listrecentbirths(Individual i) throws Exception {
         String recentbirths = "";
         long day = 0;
-        if(i.getBirt() != null){
+        if (i.getBirt() != null) {
             String birthdate = i.getBirt();
             day = TimeUtils.getDaysFromDate(birthdate);
         }
         System.out.println(day);
-        if(day <=30 && day !=0){
-            recentbirths = "LIST: INDIVIDUAL: US35: NAME:" + i.getName() + " ID:" + i.getId()+" was born in the last 30 days";
-            errList.add("LIST: INDIVIDUAL: US35: NAME:"+i.getName()+" ID:"+i.getId()+" was born in the last 30 days");
+        if (day <= 30 && day != 0) {
+            recentbirths = "LIST: INDIVIDUAL: US35: NAME:" + i.getName() + " ID:" + i.getId() + " was born in the last 30 days";
+            errList.add("LIST: INDIVIDUAL: US35: NAME:" + i.getName() + " ID:" + i.getId() + " was born in the last 30 days");
             return recentbirths;
         }
         return null;
