@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e9f2759-f5a0-4f3a-a101-cfe9af30a1b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/Sprint3/Sprint3Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +37,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/test/sprint2/Sprint2Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/FileUtils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
@@ -45,11 +54,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/Main.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/test/Sprint3/Sprint3Test.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+              <caret line="17" column="65" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,6 +113,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>i3</find>
@@ -111,6 +139,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" />
         <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/test/Sprint3/Sprint3Test.java" />
       </list>
     </option>
   </component>
@@ -189,6 +218,14 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="sprint2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="Sprint3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -317,13 +354,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12122000" />
+    <option name="totallyTimeSpent" value="12470000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26495728" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26495728" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -331,7 +368,7 @@
       <window_info anchor="bottom" id="Metrics" order="0" weight="0.4010204" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32857144" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.4993895" visible="true" weight="0.32959184" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4993895" visible="true" weight="0.32959184" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -440,8 +477,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/sprint2/Sprint2Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/Sprint3/Sprint3Test.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+          <caret line="17" column="65" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
