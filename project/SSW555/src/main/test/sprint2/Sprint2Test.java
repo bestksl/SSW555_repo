@@ -34,21 +34,17 @@ public class Sprint2Test {
 
     }
 
-    @Test
-    public void testTimeUtil() throws Exception {
-        System.out.println(TimeUtils.getDaysFromDate("19-OCT-2000"));
-    }
 
     //Zihan Li
     @Test
-    public void testUS31() throws Exception{
+    public void testUS31() throws Exception {
         assertEquals("LIST: INDIVIDUAL: US31: NAME:Rui Liu ID:I6 is over 30 and has never been married", checker.US31_Listlivingsingle(individuals.get("I6")));
         assertNull(checker.US31_Listlivingsingle(individuals.get("I7")));
     }
 
     //Zihan Li
     @Test
-    public void testUS35() throws Exception{
+    public void testUS35() throws Exception {
         assertEquals("LIST: INDIVIDUAL: US35: NAME:Han Li ID:I4 was born in the last 30 days", checker.US35_Listrecentbirths((individuals.get("I4"))));
         assertNull(checker.US35_Listrecentbirths(individuals.get("I6")));
     }
@@ -64,4 +60,20 @@ public class Sprint2Test {
         //assertNull(checker.checkBirthBeforeDeath(individuals.get("F1")));
     }
 */
+
+    // Haoxuan Li
+    @Test
+    public void testUS09() throws Exception {
+        assertEquals("ERROR: FAMILY: US09: F2 child: I2 birth: 14-NOV-2016 after parents death date wife I7 14-OCT-2010", checker.US09_BirthBeforeDeathOfParents((families.get("F2"))));
+        assertNull(checker.US09_BirthBeforeDeathOfParents(families.get("F1")));
+    }
+
+    // Haoxuan Li
+    @Test
+    public void testUS10() throws Exception {
+        assertEquals("ERROR: FAMILY: US10: F1: wife Marriage before 14, birthday: 14-APR-1990 Marriage date: 5-MAR-1992", checker.US10_MarriageAfter14((families.get("F1"))));
+        assertNull(checker.US10_MarriageAfter14(families.get("F2")));
+    }
+
+
 }
