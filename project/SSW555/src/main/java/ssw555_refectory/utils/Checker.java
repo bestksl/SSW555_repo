@@ -65,6 +65,7 @@ public class Checker {
         for (Family f : families.values()) {
             US09_BirthBeforeDeathOfParents(f);
             US10_MarriageAfter14(f);
+
         }
 
 
@@ -134,7 +135,7 @@ public class Checker {
             }
             if (wife.getDeath() != null) {
                 if (years == 0) {
-                    years = TimeUtils.getAge(wife.getDeath());
+                    years = TimeUtils.getAge(child.getBirt()) - TimeUtils.getAge(wife.getDeath()) < 0 ? TimeUtils.getAge(wife.getDeath()) : 0;
                     result = "wife " + wife.getId() + " " + wife.getDeath();
                 } else {
                     years = (TimeUtils.getAge(wife.getDeath()) - years) > 0 ? TimeUtils.getAge(wife.getDeath()) : years;
@@ -335,44 +336,39 @@ public class Checker {
         }
         return null;
     }
+
     public String Listrecentdeath(Individual i) throws Exception {
         String deathlist = "";
         long days = 0;
-        if(i.getDeath() != null)
-        {
+        if (i.getDeath() != null) {
             String deathdate = i.getDeath();
             days = TimeUtils.getDaysFromDate(deathdate);
         }
         System.out.println(days);
-        if(days <= 30 && days != 0)
-        {
-            deathlist = "US36: NAME:"+i.getName() + " ID:" + i.getId() + " has dead in 30 days";
-            errList.add("US36: NAME:"+i.getName() + " ID:" + i.getId() + " has dead in 30 days");
+        if (days <= 30 && days != 0) {
+            deathlist = "US36: NAME:" + i.getName() + " ID:" + i.getId() + " has dead in 30 days";
+            errList.add("US36: NAME:" + i.getName() + " ID:" + i.getId() + " has dead in 30 days");
             return deathlist;
         }
         return null;
     }
+
     public String Listlargeagedifferences(Family f) throws Exception {
         String ret = "";
-        if(f.getDivorced() == null && f.getHusbandID() != null && f.getWifeID() != null)
-        {
+        if (f.getDivorced() == null && f.getHusbandID() != null && f.getWifeID() != null) {
             int Husbandage = 0, Wifeage = 0;
-            for (Individual individuals : individuals.values())
-            {
-                if(individuals.getId().equals(f.getHusbandID()))
-                {
+            for (Individual individuals : individuals.values()) {
+                if (individuals.getId().equals(f.getHusbandID())) {
                     Husbandage = individuals.getDeath() == null ? TimeUtils.getAge(individuals.getBirt()) : TimeUtils.getAge(individuals.getDeath()) - TimeUtils.getAge(individuals.getBirt());
                 }
-                if(individuals.getId().equals(f.getWifeID()))
-                {
+                if (individuals.getId().equals(f.getWifeID())) {
                     Wifeage = individuals.getDeath() == null ? TimeUtils.getAge(individuals.getBirt()) : TimeUtils.getAge(individuals.getDeath()) - TimeUtils.getAge(individuals.getBirt());
                 }
             }
-            if( Wifeage * 2 <= Husbandage || Husbandage * 2 <= Wifeage)
-            {
-                String str = f.getId().replace(".","");
-                errList.add("US34: The couple in family: "+ str + " has large age different");
-                ret = "US34: The couple in family: "+ str + " has large age different";
+            if (Wifeage * 2 <= Husbandage || Husbandage * 2 <= Wifeage) {
+                String str = f.getId().replace(".", "");
+                errList.add("US34: The couple in family: " + str + " has large age different");
+                ret = "US34: The couple in family: " + str + " has large age different";
                 return ret;
             }
         }
