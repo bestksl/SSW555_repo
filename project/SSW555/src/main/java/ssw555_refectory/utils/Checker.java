@@ -7,7 +7,7 @@ import java.security.spec.RSAOtherPrimeInfo;
 import java.util.*;
 
 public class Checker {
-    private Map<String, Individual> individuals;
+    private static Map<String, Individual> individuals;
     private Map<String, Family> families;
     private static List<String> errList = new ArrayList<>();
 
@@ -38,6 +38,7 @@ public class Checker {
             uniqueIdINDI(i);
             US03_checkBirthBeforeDeath(i);
             US07_ageOld(i);
+            US36_recentdeath(i);
         }
 
         for (Family f : families.values()) {
@@ -47,6 +48,7 @@ public class Checker {
             birthAfterParentsMarriges(f);
             US12_parentsNotTooOld(f);
             familyMaleLastName(f);
+            US34_Listlargeagedifferences(f);
 
         }
 
@@ -338,7 +340,7 @@ public class Checker {
         return null;
     }
 
-    public String Listrecentdeath(Individual i) throws Exception {
+    public static String US36_recentdeath(Individual i) throws Exception {
         String deathlist = "";
         long days = 0;
         if (i.getDeath() != null) {
@@ -347,14 +349,14 @@ public class Checker {
         }
         System.out.println(days);
         if (days <= 30 && days != 0) {
-            deathlist = "US36: NAME:" + i.getName() + " ID:" + i.getId() + " has dead in 30 days";
-            errList.add("US36: NAME:" + i.getName() + " ID:" + i.getId() + " has dead in 30 days");
+            deathlist = "LIST: INDIVIDUAL: US36: NAME:" + i.getName() + " ID:" + i.getId() + " has dead in 30 days";
+            errList.add("LIST: INDIVIDUAL: US36: NAME:" + i.getName() + " ID:" + i.getId() + " has dead in 30 days");
             return deathlist;
         }
         return null;
     }
 
-    public String Listlargeagedifferences(Family f) throws Exception {
+    public static String US34_Listlargeagedifferences(Family f) throws Exception {
         String ret = "";
         if (f.getDivorced() == null && f.getHusbandID() != null && f.getWifeID() != null) {
             int Husbandage = 0, Wifeage = 0;
@@ -368,8 +370,8 @@ public class Checker {
             }
             if (Wifeage * 2 <= Husbandage || Husbandage * 2 <= Wifeage) {
                 String str = f.getId().replace(".", "");
-                errList.add("US34: The couple in family: " + str + " has large age different");
-                ret = "US34: The couple in family: " + str + " has large age different";
+                errList.add("LIST: FAMILY: US34: The couple in family: " + str + " has large age different");
+                ret = "LIST: FAMILY: US34: The couple in family: " + str + " has large age different";
                 return ret;
             }
         }
