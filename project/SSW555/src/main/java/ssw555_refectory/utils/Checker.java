@@ -66,6 +66,7 @@ public class Checker {
         for (Family f : families.values()) {
             US09_BirthBeforeDeathOfParents(f);
             US10_MarriageAfter14(f);
+
         }
 
 
@@ -135,7 +136,7 @@ public class Checker {
             }
             if (wife.getDeath() != null) {
                 if (years == 0) {
-                    years = TimeUtils.getAge(wife.getDeath());
+                    years = TimeUtils.getAge(child.getBirt()) - TimeUtils.getAge(wife.getDeath()) < 0 ? TimeUtils.getAge(wife.getDeath()) : 0;
                     result = "wife " + wife.getId() + " " + wife.getDeath();
                 } else {
                     years = (TimeUtils.getAge(wife.getDeath()) - years) > 0 ? TimeUtils.getAge(wife.getDeath()) : years;
@@ -336,6 +337,7 @@ public class Checker {
         }
         return null;
     }
+
     public String US_36Listrecentdeath(Individual i) throws Exception {
         String deathlist = "";
         long days = 0;
@@ -349,6 +351,7 @@ public class Checker {
         {
             deathlist = "ERROR: INDIVIDUAL: US36: "+i.getName() + " ID:" + i.getId() + " has dead in 30 days";
             errList.add("ERROR: INDIVIDUAL: US36: "+i.getName() + " ID:" + i.getId() + " has dead in 30 days");
+            System.out.println("666");
             return deathlist;
         }
         return null;
@@ -372,8 +375,8 @@ public class Checker {
             if( Wifeage * 2 <= Husbandage || Husbandage * 2 <= Wifeage)
             {
                 String str = f.getId().replace(".","");
-                errList.add("ERROR: FAMILY:: US34: The couple in family: "+ str + " has large age different");
-                ret = "ERROR: FAMILY:: US34: The couple in family: "+ str + " has large age different";
+                errList.add("ERROR: FAMILY: US34: The couple in family: "+ str + " has large age different");
+                ret = "ERROR: FAMILY: US34: The couple in family: "+ str + " has large age different";
                 return ret;
             }
         }
