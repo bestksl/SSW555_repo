@@ -40,7 +40,7 @@ public class Sprint2Test {
     }
 
     //Zihan Li
-  /*  @Test
+    @Test
     public void testUS31() throws Exception{
         assertEquals("LIST: INDIVIDUAL: US31: NAME:Rui Liu ID:I6 is over 30 and has never been married", checker.US31_Listlivingsingle(individuals.get("I6")));
         assertNull(checker.US31_Listlivingsingle(individuals.get("I7")));
