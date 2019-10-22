@@ -64,6 +64,7 @@ public class Checker {
 
         for (Family f : families.values()) {
             US09_BirthBeforeDeathOfParents(f);
+            US10_MarriageAfter14(f);
         }
 
 
@@ -129,12 +130,12 @@ public class Checker {
             String result = "";
             if (husband.getDeath() != null) {
                 years = TimeUtils.getAge(husband.getDeath());
-                result = "husband " + husband.getId() +" "+ husband.getDeath();
+                result = "husband " + husband.getId() + " " + husband.getDeath();
             }
             if (wife.getDeath() != null) {
                 if (years == 0) {
                     years = TimeUtils.getAge(wife.getDeath());
-                    result = "wife " + wife.getId() +" "+ wife.getDeath();
+                    result = "wife " + wife.getId() + " " + wife.getDeath();
                 } else {
                     years = (TimeUtils.getAge(wife.getDeath()) - years) > 0 ? TimeUtils.getAge(wife.getDeath()) : years;
                     result = (TimeUtils.getAge(wife.getDeath()) - years) < 0 ? result = "husband " + husband.getId() + husband.getDeath() : "wife" + wife.getId() + "  " + wife.getDeath();
@@ -143,6 +144,35 @@ public class Checker {
             if (years != 0) {
                 errList.add("ERROR: FAMILY: US09: child: " + child.getId() + " birth: " + child.getBirt() + " after parents death date " + result);
                 return "ERROR: FAMILY: US09: child: " + child.getId() + " birth: " + child.getBirt() + " after parents death date " + result;
+            }
+        }
+
+        return null;
+    }
+
+    // Haoxuan Li
+    public String US10_MarriageAfter14(Family f) throws Exception {
+        Individual husband = individuals.get(f.getHusbandID());
+        Individual wife = individuals.get(f.getWifeID());
+
+        if (f.getMarried() == null) {
+            return null;
+        } else {
+            if (husband.getBirt() != null) {
+                if (TimeUtils.getAge(husband.getBirt()) - TimeUtils.getAge(f.getMarried()) > 0 && TimeUtils.getAge(husband.getBirt()) - TimeUtils.getAge(f.getMarried()) < 14) {
+                    errList.add("ERROR: FAMILY: US10: " + f.getId() + ": husband Marriage before 14, birthday: " + husband.getBirt() + " Marriage date: " +
+                            f.getMarried());
+                    return "ERROR: FAMILY: US10: " + f.getId() + ": husband Marriage before 14, birthday: " + husband.getBirt() + " Marriage date: " +
+                            f.getMarried();
+                }
+            }
+            if (wife.getBirt() != null) {
+                if (TimeUtils.getAge(wife.getBirt()) - TimeUtils.getAge(f.getMarried()) < 14) {
+                    errList.add("ERROR: FAMILY: US10: " + f.getId() + ": wife Marriage before 14, birthday: " + wife.getBirt() + " Marriage date: "
+                            + f.getMarried());
+                    return "ERROR: FAMILY: US10: " + f.getId() + ": wife Marriage before 14, birthday: " + wife.getBirt() + " Marriage date: "
+                            + f.getMarried();
+                }
             }
         }
 
