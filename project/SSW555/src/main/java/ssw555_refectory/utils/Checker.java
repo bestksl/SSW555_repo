@@ -30,13 +30,13 @@ public class Checker {
 
         for (Individual i : individuals.values()) {
             uniqueIdINDI(i);
-            checkBirthBeforeDeath(i);
+            US03_checkBirthBeforeDeath(i);
             ageOld(i);
         }
 
         for (Family f : families.values()) {
             uniqueIdFAM(f);
-            uniqueFirstname(f);
+            US25_uniqueFirstname(f);
             checkMarrige(f);
             birthAfterParentsMarriges(f);
             parentsNotTooOld(f);
@@ -48,21 +48,21 @@ public class Checker {
         return errList.size() == 0;
     }
 
-    //Haoxuan Li
-    public String checkBirthBeforeDeath(Individual i) throws Exception {
+    // Haoxuan Li
+    public String US03_checkBirthBeforeDeath(Individual i) throws Exception {
         if (i.getBirt() != null && i.getDeath() != null) {
             if (!(TimeUtils.getAge(i.getBirt()) - TimeUtils.getAge(i.getDeath()) >= 0)) {
-                errList.add("ERROR: INDIVIDUAL: US03: "+i.getId() + " "+i.getName()+
-                        "'s birth date "+i.getBirt()+ " occurs after death dates "+i.getDeath());
-                return "ERROR: INDIVIDUAL: US03: "+i.getId() + " "+i.getName()+
-                        "'s birth date "+i.getBirt()+ " occurs after death dates "+i.getDeath();
+                errList.add("ERROR: INDIVIDUAL: US03: " + i.getId() + " " + i.getName() +
+                        "'s birth date " + i.getBirt() + " occurs after death dates " + i.getDeath());
+                return "ERROR: INDIVIDUAL: US03: " + i.getId() + " " + i.getName() +
+                        "'s birth date " + i.getBirt() + " occurs after death dates " + i.getDeath();
             }
         }
         return null;
     }
 
-    //Haoxuan Li
-    public String uniqueFirstname(Family f) {
+    // Haoxuan Li
+    public String US25_uniqueFirstname(Family f) {
         Set<String> nameSet = new HashSet<>();
         List<String> idList = new ArrayList<>();
 
@@ -89,6 +89,25 @@ public class Checker {
         return null;
     }
 
+    // Haoxuan Li
+    public String US09_BirthBeforeDeathOfParents(Family f) throws Exception {
+        if (f.getMarried() == null || f.getChildren().size() == 0) {
+            return null;
+        } else {
+            for (String childId : f.getChildren()) {
+                Individual child = individuals.get(childId);
+                if (child == null || child.getBirt() == null) {
+                    return null;
+                }
+                if ((TimeUtils.getDaysFromDate(f.getMarried()) - TimeUtils.getDaysFromDate(child.getBirt())) > 0) {
+                    errList.add("ERROR: FAMILY: US09: child" + child.getId() + " birth:" + child.getBirt() + " before Marriage " + f.getMarried());
+                    return "ERROR: FAMILY: US09: child" + child.getId() + " birth:" + child.getBirt() + " before Marriage " + f.getMarried();
+                }
+            }
+        }
+        return null;
+    }
+
     // Jeff
     public String checkMarrige(Family f) throws Exception {
         if (f.getMarried() == null || f.getDivorced() == null) {
@@ -98,8 +117,8 @@ public class Checker {
         int MarriageData = TimeUtils.getAge(f.getMarried());
 
         if (DivorceData > MarriageData) {
-            errList.add("ERROR: FAMILY: US04: "+ f.getId() + " Divorce:"+f.getDivorced()+ " before Marriage "+f.getMarried());
-            return "ERROR: FAMILY: US04: "+ f.getId() + " Divorce:"+f.getDivorced()+ " before Marriage "+f.getMarried();
+            errList.add("ERROR: FAMILY: US04: " + f.getId() + " Divorce:" + f.getDivorced() + " before Marriage " + f.getMarried());
+            return "ERROR: FAMILY: US04: " + f.getId() + " Divorce:" + f.getDivorced() + " before Marriage " + f.getMarried();
         }
         return null;
     }
@@ -116,15 +135,47 @@ public class Checker {
             Individual eachChild = individuals.get(child);
             int age = TimeUtils.getAge(eachChild.getBirt());
             if (age >= marriagePeriod) {
-                errList.add("ERROR: FAMILY: US08: Child "+ eachChild.getName() + " born "+eachChild.getBirt()+" before Marriage on " + f.getMarried());
-                sb.append("ERROR: FAMILY: US08: Child "+ eachChild.getName() + " born "+eachChild.getBirt()+" before Marriage on " + f.getMarried() + " || ");
+                errList.add("ERROR: FAMILY: US08: Child " + eachChild.getName() + " born " + eachChild.getBirt() + " before Marriage on " + f.getMarried());
+                sb.append("ERROR: FAMILY: US08: Child " + eachChild.getName() + " born " + eachChild.getBirt() + " before Marriage on " + f.getMarried() + " || ");
             }
         }
-        if(sb.length() == 0) return null;
+        if (sb.length() == 0) return null;
         String res = sb.toString();
         sb.setLength(0);
         return res;
 
+    }
+
+    // Jeff
+    public String UniqueNameAndBirthdate() {
+        Map<String, List<Individual>> map = new HashMap<>();
+        StringBuilder sbs = new StringBuilder();
+        for (Map.Entry<String, Individual> entry : individuals.entrySet()) {
+            Individual each = entry.getValue();
+            String nameAndBirth = entry.getValue().getName() + "" + entry.getValue().getBirt();
+            List<Individual> cur = map.get(nameAndBirth);
+            if (map.containsKey(nameAndBirth)) {
+                cur.add(each);
+                map.put(nameAndBirth, cur);
+            } else {
+                cur = new ArrayList<Individual>();
+                cur.add(each);
+                map.put(nameAndBirth, cur);
+            }
+        }
+        for (Map.Entry<String, List<Individual>> entry : map.entrySet()) {
+            if (entry.getValue().size() > 1) {
+
+                StringBuilder sb = new StringBuilder();
+                for (Individual each : entry.getValue()) {
+                    sb.append(each.getId() + " ");
+                }
+                errList.add("ERROR: INDIVIDUAL: US23: name and birth " + entry.getKey() + "appear in " + sb.toString());
+                sbs.append("ERROR: INDIVIDUAL: US23: name and birth " + entry.getKey() + "appear in " + sb.toString() + "||");
+            }
+        }
+
+        return sbs.toString();
     }
 
     public static void printErr() {
@@ -134,7 +185,7 @@ public class Checker {
     }
 
 
-    public String familyMaleLastName(Family f)  throws Exception {
+    public String familyMaleLastName(Family f) throws Exception {
         HashMap<String, String> hash_setINDI = new HashMap<>();
         HashMap<String, String> hash_setSEX = new HashMap<>();
         String Fname;
@@ -149,15 +200,13 @@ public class Checker {
         }
         for (Individual individuals : individuals.values()) {
             for (int j = 0; j < Sname.size(); j++) {
-                if(individuals.getId().equals(Sname.get(j)))
-                {
+                if (individuals.getId().equals(Sname.get(j))) {
                     childLastname = individuals.getLastName();
                     childgender = individuals.getGender();
-                    if(childgender.equals("M") && !childLastname.equals(fatherLastname))
-                    {
-                        String str = f.getId().replace(".","");
-                        errList.add("ERROR: FAMILY: US16: " + str + "  The last name for Male person in a family "+ Fname +" and "+ individuals.getId() + " is not the same!");
-                        return "ERROR: FAMILY: US16: " + str + "  The last name for Male person in a family "+ Fname +" and "+ individuals.getId() + " is not the same!";
+                    if (childgender.equals("M") && !childLastname.equals(fatherLastname)) {
+                        String str = f.getId().replace(".", "");
+                        errList.add("ERROR: FAMILY: US16: " + str + "  The last name for Male person in a family " + Fname + " and " + individuals.getId() + " is not the same!");
+                        return "ERROR: FAMILY: US16: " + str + "  The last name for Male person in a family " + Fname + " and " + individuals.getId() + " is not the same!";
                     }
                 }
             }
@@ -165,20 +214,20 @@ public class Checker {
         return null;
     }
 
-    public String uniqueIdINDI(Individual i)  throws Exception {
-        if (i.getId().startsWith(".")){
-            String str = i.getId().replace(".","");
+    public String uniqueIdINDI(Individual i) throws Exception {
+        if (i.getId().startsWith(".")) {
+            String str = i.getId().replace(".", "");
             errList.add("ERROR: INDIVIDUAL: US22: " + str + "  individual ID is not unique");
             return "ERROR: INDIVIDUAL: US22: " + str + "  individual ID is not unique";
         }
         return null;
     }
 
-    public String uniqueIdFAM(Family f)  throws Exception {
-        if (f.getId().startsWith(".")){
-            String str = f.getId().replace(".","");
+    public String uniqueIdFAM(Family f) throws Exception {
+        if (f.getId().startsWith(".")) {
+            String str = f.getId().replace(".", "");
             errList.add("ERROR: FAMILY: US22 " + str + "  family ID is not unique");
-            return  "ERROR: FAMILY: US22: " + str + "  family ID is not unique";
+            return "ERROR: FAMILY: US22: " + str + "  family ID is not unique";
         }
         return null;
     }
@@ -187,8 +236,8 @@ public class Checker {
     public String ageOld(Individual i) throws Exception {
         if (i.getBirt() != null) {
             if ((i.getDeath() == null ? TimeUtils.getAge(i.getBirt()) : TimeUtils.getAge(i.getBirt()) - TimeUtils.getAge(i.getDeath())) >= 150) {
-                errList.add("ERROR: INDIVIDUAL: US07: "+i.getId() + ":  "+i.getName()+" should less than 150 years old");
-                return "ERROR: INDIVIDUAL: US07: "+i.getId() + ":  "+i.getName()+" should less than 150 years old";
+                errList.add("ERROR: INDIVIDUAL: US07: " + i.getId() + ":  " + i.getName() + " should less than 150 years old");
+                return "ERROR: INDIVIDUAL: US07: " + i.getId() + ":  " + i.getName() + " should less than 150 years old";
             }
             return null;
         }
@@ -206,46 +255,14 @@ public class Checker {
             Individual eachchildren = individuals.get(child);
             if (eachchildren.getBirt() != null) {
                 if ((TimeUtils.getAge(dad.getBirt()) - TimeUtils.getAge(eachchildren.getBirt()) >= 80) || (TimeUtils.getAge(mom.getBirt()) - TimeUtils.getAge(eachchildren.getBirt()) >= 60)) {
-                    errList.add("ERROR: FAMILY: US12: "+f.getId() + ":  Mother should be less than 60 years older than her children and father should be less than 80 years older than his children");
-                    return "ERROR: FAMILY: US12: "+f.getId() + ":  Mother should be less than 60 years older than her children and father should be less than 80 years older than his children";
+                    errList.add("ERROR: FAMILY: US12: " + f.getId() + ":  Mother should be less than 60 years older than her children and father should be less than 80 years older than his children");
+                    return "ERROR: FAMILY: US12: " + f.getId() + ":  Mother should be less than 60 years older than her children and father should be less than 80 years older than his children";
                 }
 
             }
 
         }
         return null;
-    }
-
-    // Jeff
-    public String UniqueNameAndBirthdate(){
-        Map<String, List<Individual>> map = new HashMap<>();
-        StringBuilder sbs = new StringBuilder();
-        for (Map.Entry<String,Individual> entry : individuals.entrySet()) {
-            Individual each = entry.getValue();
-            String nameAndBirth = entry.getValue().getName()+""+entry.getValue().getBirt();
-            List<Individual> cur = map.get(nameAndBirth);
-            if(map.containsKey(nameAndBirth)){
-                cur.add(each);
-                map.put(nameAndBirth, cur);
-            }else{
-                cur = new ArrayList<Individual>();
-                cur.add(each);
-                map.put(nameAndBirth, cur);
-            }
-        }
-        for (Map.Entry<String,List<Individual>> entry : map.entrySet()) {
-            if(entry.getValue().size() > 1){
-
-                StringBuilder sb = new StringBuilder();
-                for(Individual each: entry.getValue()){
-                    sb.append(each.getId()+" ");
-                }
-                errList.add("ERROR: INDIVIDUAL: US23: name and birth "+entry.getKey()+"appear in "+sb.toString());
-                sbs.append("ERROR: INDIVIDUAL: US23: name and birth "+entry.getKey()+"appear in "+sb.toString()+"||");
-            }
-        }
-
-        return sbs.toString();
     }
 
 

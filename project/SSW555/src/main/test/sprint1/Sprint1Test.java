@@ -16,15 +16,15 @@ import static org.junit.Assert.*;
  * @version created date：2019-09-28 18:49
  */
 public class Sprint1Test {
-    private Finder finder = new Finder("src/main/java/ssw555_refectory/wrong.ged");
+    private Finder finder = new Finder("src/main/java/ssw555_refectory/Sprint1_test.ged");
     private Map<String, Individual> individuals = finder.getIndividuals();
     private Map<String, Family> families = finder.getFamilies();
     private Checker checker = new Checker(individuals, families);
 
     @Test
-    public void testCheckBirthBeforeDeath() throws Exception {
-        assertEquals("ERROR: INDIVIDUAL: US03: I7 Jie Deng's birth date 5-MAR-2006 occurs after death dates 14-JUL-1985", checker.checkBirthBeforeDeath(individuals.get("I7")));
-        assertNull(checker.checkBirthBeforeDeath(individuals.get("I6")));
+    public void US03_testCheckBirthBeforeDeath() throws Exception {
+        assertEquals("ERROR: INDIVIDUAL: US03: I7 Jie Deng's birth date 5-MAR-2006 occurs after death dates 14-JUL-1985", checker.US03_checkBirthBeforeDeath(individuals.get("I7")));
+        assertNull(checker.US03_checkBirthBeforeDeath(individuals.get("I6")));
     }
 
     @Test
@@ -35,10 +35,10 @@ public class Sprint1Test {
     }
 
     @Test
-    public void testUniqueFirstName(){
-        assertEquals("ERROR: FAMILY: US03: F1:  family member's first name should be unique!",checker.uniqueFirstname(families.get("F1")));
-        assertNull(checker.uniqueFirstname(families.get("F2")));
-        assertNull(checker.uniqueFirstname(families.get("F3")));
+    public void US25_testUniqueFirstName() {
+        assertEquals("ERROR: FAMILY: US03: F1:  family member's first name should be unique!", checker.US25_uniqueFirstname(families.get("F1")));
+        assertNull(checker.US25_uniqueFirstname(families.get("F2")));
+        assertNull(checker.US25_uniqueFirstname(families.get("F3")));
     }
 
     @Test
@@ -72,16 +72,16 @@ public class Sprint1Test {
 
 
     @Test
-    public void ageOld()throws Exception{
-        assertEquals("ERROR: INDIVIDUAL: US07: I6:  Rui Liu should less than 150 years old",checker.ageOld(individuals.get("I6")));
+    public void ageOld() throws Exception {
+        assertEquals("ERROR: INDIVIDUAL: US07: I6:  Rui Liu should less than 150 years old", checker.ageOld(individuals.get("I6")));
         assertNull(checker.ageOld(individuals.get("I7")));
         // assertNull(checker.uniqueFirstname(individuals.get("F3")));
     }
 
     @Test
-    public void parentsNotTooOld()throws Exception{
-        assertEquals("ERROR: FAMILY: US12: F1:  Mother should be less than 60 years older than her children and father should be less than 80 years older than his children",checker.parentsNotTooOld(families.get("F1")));
-        assertEquals("ERROR: FAMILY: US12: F2:  Mother should be less than 60 years older than her children and father should be less than 80 years older than his children",checker.parentsNotTooOld(families.get("F2")));
+    public void parentsNotTooOld() throws Exception {
+        assertEquals("ERROR: FAMILY: US12: F1:  Mother should be less than 60 years older than her children and father should be less than 80 years older than his children", checker.parentsNotTooOld(families.get("F1")));
+        assertEquals("ERROR: FAMILY: US12: F2:  Mother should be less than 60 years older than her children and father should be less than 80 years older than his children", checker.parentsNotTooOld(families.get("F2")));
         assertNull(checker.parentsNotTooOld(families.get("F3")));
     }
 
