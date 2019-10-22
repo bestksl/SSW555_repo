@@ -59,7 +59,7 @@ public class Checker {
 
         // whole Individuals map test
         for (Individual i : individuals.values()) {
-            US31_Listlivingsingle(i);
+            //US31_Listlivingsingle(i);
             US35_Listrecentbirths(i);
         }
 
@@ -377,32 +377,7 @@ public class Checker {
         return null;
     }
 
-    //Zihan Li
-    public String US31_Listlivingsingle(Individual i) throws Exception{
-        String listlivingsingle;
-        long day = 0;
-        if(i.getDeath() == null && i.getBirt() != null){
-            for(Family families : families.values()){
-                if(families.getHusbandID().equals(i.getId())){
-                    day = 0;
-                }
-                else if(families.getWifeID().equals(i.getId())){
-                    day = 0;
-                }
-                //if ((TimeUtils.getAge(dad.getBirt()) - TimeUtils.getAge(eachchildren.getBirt()) >= 80) || (TimeUtils.getAge(mom.getBirt()) - TimeUtils.getAge(eachchildren.getBirt()) >= 60)) {
-                else{
-                    String age = i.getBirt();
-                    day = TimeUtils.getAge(age);
-                }
-            }
-        }
-        if(day>=30 && day !=0) {
-            listlivingsingle = "LIST: INDIVIDUAL: US31: NAME:" + i.getName() + " ID:" + i.getId() + " is over 30 and has never been married";
-            errList.add("LIST: INDIVIDUAL: US31: NAME:"+i.getName()+" ID:"+i.getId()+" is over 30 and has never been married");
-            return listlivingsingle;
-        }
-        return null;
-    }
+
 
 
 
