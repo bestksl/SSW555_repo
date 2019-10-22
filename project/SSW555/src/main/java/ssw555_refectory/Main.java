@@ -17,7 +17,8 @@ public class Main {
         if (checker.checkAll()) {
             finder.printFamilies();
             finder.printIndividuals();
-        } else {
+        }
+        else {
             finder.printFamilies();
             finder.printIndividuals();
             Checker.printErr();

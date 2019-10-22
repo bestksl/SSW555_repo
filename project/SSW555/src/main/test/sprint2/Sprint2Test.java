@@ -38,16 +38,30 @@ public class Sprint2Test {
     public void testTimeUtil() throws Exception {
         System.out.println(TimeUtils.getDaysFromDate("19-OCT-2000"));
     }
+
+    //Zihan Li
     @Test
-    public void testListrecentdeath_US36() throws Exception {
-        assertEquals("ERROR: INDIVIDUAL: US36: Jie Deng ID:I7 has dead in 30 days", checker.US_36Listrecentdeath(individuals.get("I7")));
+    public void testUS31() throws Exception{
+        assertEquals("LIST: INDIVIDUAL: US31: NAME:Rui Liu ID:I6 is over 30 and has never been married", checker.US31_Listlivingsingle(individuals.get("I6")));
+        assertNull(checker.US31_Listlivingsingle(individuals.get("I7")));
+    }
+
+    //Zihan Li
+    @Test
+    public void testUS35() throws Exception{
+        assertEquals("LIST: INDIVIDUAL: US35: NAME:Han Li ID:I4 was born in the last 30 days", checker.US35_Listrecentbirths((individuals.get("I4"))));
+        assertNull(checker.US35_Listrecentbirths(individuals.get("I6")));
+    }
+ /*   @Test
+   public void testListrecentdeath_US36() throws Exception {
+        assertEquals("ERROR: INDIVIDUAL: US36: Jie Deng ID:I7 has dead in 30 days", Checker.US36_Listrecentdeath(individuals.get("I7")));
         assertNull(checker.US_36Listrecentdeath(individuals.get("I3")));
     }
     @Test
     public void testListlargeagedifferences_US34() throws Exception {
-        assertEquals("ERROR: FAMILY: US34: The couple in family: F3 has large age different", checker.US_34Listlargeagedifferences(families.get("F3")));
-        assertEquals("ERROR: FAMILY: US34: The couple in family: F2 has large age different", checker.US_34Listlargeagedifferences(families.get("F2")));
+        assertEquals("ERROR: FAMILY: US34: The couple in family: F3 has large age different", Checker.US_34Listlargeagedifferences(families.get("F3")));
+        assertEquals("ERROR: FAMILY: US34: The couple in family: F2 has large age different", Checker.US_34Listlargeagedifferences(families.get("F2")));
         //assertNull(checker.checkBirthBeforeDeath(individuals.get("F1")));
     }
-
+*/
 }

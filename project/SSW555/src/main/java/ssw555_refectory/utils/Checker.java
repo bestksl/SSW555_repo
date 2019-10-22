@@ -45,7 +45,7 @@ public class Checker {
             US25_uniqueFirstname(f);
             checkMarrige(f);
             birthAfterParentsMarriges(f);
-            US_12parentsNotTooOld(f);
+            US12_parentsNotTooOld(f);
             familyMaleLastName(f);
 
         }
@@ -397,8 +397,8 @@ public class Checker {
             }
         }
         if(day>=30 && day !=0) {
-            listlivingsingle = "US31: NAME:" + i.getName() + " ID:" + i.getId() + " is over 30 and have never been married";
-            errList.add("US31: NAME:"+i.getName()+" ID:"+i.getId()+" is over 30 and have never been married");
+            listlivingsingle = "LIST: INDIVIDUAL: US31: NAME:" + i.getName() + " ID:" + i.getId() + " is over 30 and has never been married";
+            errList.add("LIST: INDIVIDUAL: US31: NAME:"+i.getName()+" ID:"+i.getId()+" is over 30 and has never been married");
             return listlivingsingle;
         }
         return null;
@@ -416,8 +416,8 @@ public class Checker {
         }
         System.out.println(day);
         if(day <=30 && day !=0){
-            recentbirths = "US35: NAME:" + i.getName() + " ID:" + i.getId()+" was born in the last 30 days";
-            errList.add("US35: NAME:"+i.getName()+"ID:"+i.getId()+" was born in the last 30 days");
+            recentbirths = "LIST: INDIVIDUAL: US35: NAME:" + i.getName() + " ID:" + i.getId()+" was born in the last 30 days";
+            errList.add("LIST: INDIVIDUAL: US35: NAME:"+i.getName()+" ID:"+i.getId()+" was born in the last 30 days");
             return recentbirths;
         }
         return null;
