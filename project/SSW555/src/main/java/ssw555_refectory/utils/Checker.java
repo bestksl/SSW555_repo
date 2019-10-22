@@ -21,7 +21,13 @@ public class Checker {
         errList.add(errMsg);
     }
 
-    public boolean check() throws Exception {
+    public boolean checkAll() throws Exception {
+        checkSprint1();
+        checkSprint2();
+        return errList.size() == 0;
+    }
+
+    public boolean checkSprint1() throws Exception {
         //如果有不通过的项会将err信息加入到errList
 
         // whole Individuals map test
@@ -42,6 +48,22 @@ public class Checker {
             parentsNotTooOld(f);
             familyMaleLastName(f);
 
+        }
+
+
+        return errList.size() == 0;
+    }
+
+    public boolean checkSprint2() throws Exception {
+        //如果有不通过的项会将err信息加入到errList
+
+        // whole Individuals map test
+        for (Individual i : individuals.values()) {
+
+        }
+
+        for (Family f : families.values()) {
+            US09_BirthBeforeDeathOfParents(f);
         }
 
 
@@ -91,20 +113,39 @@ public class Checker {
 
     // Haoxuan Li
     public String US09_BirthBeforeDeathOfParents(Family f) throws Exception {
-        if (f.getMarried() == null || f.getChildren().size() == 0) {
+
+        Individual husband = individuals.get(f.getHusbandID());
+        Individual wife = individuals.get(f.getWifeID());
+
+        if (husband.getDeath() == null && wife.getDeath() == null) {
             return null;
-        } else {
-            for (String childId : f.getChildren()) {
-                Individual child = individuals.get(childId);
-                if (child == null || child.getBirt() == null) {
-                    return null;
-                }
-                if ((TimeUtils.getDaysFromDate(f.getMarried()) - TimeUtils.getDaysFromDate(child.getBirt())) > 0) {
-                    errList.add("ERROR: FAMILY: US09: child" + child.getId() + " birth:" + child.getBirt() + " before Marriage " + f.getMarried());
-                    return "ERROR: FAMILY: US09: child" + child.getId() + " birth:" + child.getBirt() + " before Marriage " + f.getMarried();
+        }
+        for (String childId : f.getChildren()) {
+            Individual child = individuals.get(childId);
+            if (child == null || child.getBirt() == null) {
+                return null;
+            }
+            int years = 0;
+            String result = "";
+            if (husband.getDeath() != null) {
+                years = TimeUtils.getAge(husband.getDeath());
+                result = "husband " + husband.getId() +" "+ husband.getDeath();
+            }
+            if (wife.getDeath() != null) {
+                if (years == 0) {
+                    years = TimeUtils.getAge(wife.getDeath());
+                    result = "wife " + wife.getId() +" "+ wife.getDeath();
+                } else {
+                    years = (TimeUtils.getAge(wife.getDeath()) - years) > 0 ? TimeUtils.getAge(wife.getDeath()) : years;
+                    result = (TimeUtils.getAge(wife.getDeath()) - years) < 0 ? result = "husband " + husband.getId() + husband.getDeath() : "wife" + wife.getId() + "  " + wife.getDeath();
                 }
             }
+            if (years != 0) {
+                errList.add("ERROR: FAMILY: US09: child: " + child.getId() + " birth: " + child.getBirt() + " after parents death date " + result);
+                return "ERROR: FAMILY: US09: child: " + child.getId() + " birth: " + child.getBirt() + " after parents death date " + result;
+            }
         }
+
         return null;
     }
 
