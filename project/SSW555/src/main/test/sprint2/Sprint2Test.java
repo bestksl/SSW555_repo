@@ -17,7 +17,7 @@ import static org.junit.Assert.*;
  * @version created date：2019-09-28 18:49
  */
 public class Sprint2Test {
-    private Finder finder = new Finder("src/main/java/ssw555_refectory/Sprint1_test.ged");
+    private Finder finder = new Finder("src/main/java/ssw555_refectory/Sprint2_test.ged");
     private Map<String, Individual> individuals = finder.getIndividuals();
     private Map<String, Family> families = finder.getFamilies();
     private Checker checker = new Checker(individuals, families);
@@ -40,13 +40,13 @@ public class Sprint2Test {
     }
     @Test
     public void testListrecentdeath_US36() throws Exception {
-        assertEquals("US36: NAME:Rui Liu ID:I6 has dead in 30 days", checker.Listrecentdeath(individuals.get("I6")));
-        assertNull(checker.Listrecentdeath(individuals.get("I3")));
+        assertEquals("ERROR: INDIVIDUAL: US36: Jie Deng ID:I7 has dead in 30 days", checker.US_36Listrecentdeath(individuals.get("I7")));
+        assertNull(checker.US_36Listrecentdeath(individuals.get("I3")));
     }
     @Test
     public void testListlargeagedifferences_US34() throws Exception {
-        assertEquals("US34: The couple in family: F3 has large age different", checker.Listlargeagedifferences(families.get("F3")));
-        assertEquals("US34: The couple in family: F2 has large age different", checker.Listlargeagedifferences(families.get("F2")));
+        assertEquals("ERROR: FAMILY: US34: The couple in family: F3 has large age different", checker.US_34Listlargeagedifferences(families.get("F3")));
+        assertEquals("ERROR: FAMILY: US34: The couple in family: F2 has large age different", checker.US_34Listlargeagedifferences(families.get("F2")));
         //assertNull(checker.checkBirthBeforeDeath(individuals.get("F1")));
     }
 
