@@ -76,7 +76,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Sprint2Test">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Sprint2Test.testListlargeagedifferences_US34" type="AndroidJUnit" temporary="true" nameIsGenerated="true">
       <module name="SSW555" />
       <extension name="coverage">
@@ -155,9 +155,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.Sprint2Test" />
         <item itemvalue="Android JUnit.Sprint2Test.testListlargeagedifferences_US34" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.Sprint2Test.testUS10" />
         <item itemvalue="JUnit.Sprint2Test.testUS09" />
       </list>

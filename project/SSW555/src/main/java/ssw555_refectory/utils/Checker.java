@@ -347,7 +347,6 @@ public class Checker {
             String deathdate = i.getDeath();
             days = TimeUtils.getDaysFromDate(deathdate);
         }
-        System.out.println(days);
         if (days <= 30 && days != 0) {
             deathlist = "LIST: INDIVIDUAL: US36: NAME:" + i.getName() + " ID:" + i.getId() + " has dead in 30 days";
             errList.add("LIST: INDIVIDUAL: US36: NAME:" + i.getName() + " ID:" + i.getId() + " has dead in 30 days");
@@ -414,7 +413,6 @@ public class Checker {
             String birthdate = i.getBirt();
             day = TimeUtils.getDaysFromDate(birthdate);
         }
-        System.out.println(day);
         if (day <= 30 && day != 0) {
             recentbirths = "LIST: INDIVIDUAL: US35: NAME:" + i.getName() + " ID:" + i.getId() + " was born in the last 30 days";
             errList.add("LIST: INDIVIDUAL: US35: NAME:" + i.getName() + " ID:" + i.getId() + " was born in the last 30 days");
