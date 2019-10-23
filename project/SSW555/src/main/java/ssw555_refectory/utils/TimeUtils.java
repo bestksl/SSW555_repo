@@ -49,9 +49,6 @@ public class TimeUtils {
         if (cal.before(day)) { //出生日期晚于当前时间，无法计算
             return -1;
         }
-        System.out.println((cal.getTimeInMillis() - day.getTime()) / (60 * 60 * 1000 * 24));
-        System.out.println(cal.getTime());
-
         return ((System.currentTimeMillis() - day.getTime()) / (60 * 60 * 1000 * 24));
     }
 }
