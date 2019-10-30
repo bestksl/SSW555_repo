@@ -4,6 +4,7 @@ import ssw555_refectory.bean.Family;
 import ssw555_refectory.bean.Individual;
 
 import java.security.spec.RSAOtherPrimeInfo;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class Checker {
@@ -39,6 +40,7 @@ public class Checker {
             US03_checkBirthBeforeDeath(i);
             US07_ageOld(i);
             US36_recentdeath(i);
+            US38_ListUpcomingBirthdays(i);
         }
 
         for (Family f : families.values()) {
@@ -49,6 +51,7 @@ public class Checker {
             US12_parentsNotTooOld(f);
             familyMaleLastName(f);
             US34_Listlargeagedifferences(f);
+            US05_MarriageBeforeDeath(f);
 
         }
 
@@ -405,7 +408,7 @@ public class Checker {
     }
 
 
-    //Zihan Li
+    // Zihan Li
     public String US35_Listrecentbirths(Individual i) throws Exception {
         String recentbirths = "";
         long day = 0;
@@ -421,5 +424,42 @@ public class Checker {
         return null;
     }
 
+    // Jeff
+    public String US05_MarriageBeforeDeath(Family f) throws Exception{
+        Individual husband = individuals.get(f.getHusbandID());
+        Individual wife = individuals.get(f.getWifeID());
+
+        if(husband != null && husband.getDeath() != null){
+            if(TimeUtils.getAge(f.getMarried()) < TimeUtils.getAge(husband.getDeath())){
+                errList.add("ERROR: FAMILY: US05: " + f.getId() + " Married:" + f.getMarried() + " after Death of " + husband.getName());
+                return "ERROR: FAMILY: US05: " + f.getId() + " Married:" + f.getMarried() + " after Death of " + husband.getName();
+            }
+        }
+
+        if(wife != null && wife.getDeath() != null){
+            if(TimeUtils.getAge(f.getMarried()) < TimeUtils.getAge(wife.getDeath())){
+                errList.add("ERROR: FAMILY: US05: " + f.getId() + " Married:" + f.getMarried() + " after Death of " + wife.getName());
+                return "ERROR: FAMILY: US05: " + f.getId() + " Married:" + f.getMarried() + " after Death of " + wife.getName();
+            }
+        }
+        return "";
+    }
+
+    // Jeff
+    public String US38_ListUpcomingBirthdays(Individual i){
+        String birth = i.getBirt();
+        String [] birthArray = birth.split("-");
+        SimpleDateFormat sdfDate = new SimpleDateFormat("dd-MMM-yyyy");
+        Date now = new Date();
+        String strDate = sdfDate.format(now);
+        String [] nowArray = strDate.split("-");
+        if(birthArray[1].equals(nowArray[1]) && birthArray[2].equals(nowArray[2])){
+            errList.add("LIST: INDIVIDUAL: US38: NAME:" + i.getName() + " ID:" + i.getId() + " will born in this Month");
+            return "LIST: INDIVIDUAL: US38: NAME:" + i.getName() + " ID:" + i.getId() + " will born in this Month";
+        }
+        return "";
+
+
+    }
 
 }

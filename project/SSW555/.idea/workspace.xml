@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6e9f2759-f5a0-4f3a-a101-cfe9af30a1b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint2_test.ged" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint2_test.ged" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/sprint2/Sprint2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/sprint2/Sprint2Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -157,7 +157,6 @@
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.Sprint2Test" />
-        <item itemvalue="Android JUnit.Sprint2Test.testListlargeagedifferences_US34" />
         <item itemvalue="JUnit.Sprint2Test.testUS10" />
         <item itemvalue="JUnit.Sprint2Test.testUS09" />
       </list>
