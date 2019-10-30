@@ -20,8 +20,7 @@ public class TimeUtils {
         Date day = parse(strDate);
         Calendar cal = Calendar.getInstance();
         if (cal.before(day)) { //出生日期晚于当前时间，无法计算
-            throw new IllegalArgumentException(
-                    "The birthDay is before Now.It's unbelievable!");
+            return -1;
         }
         int yearNow = cal.get(Calendar.YEAR);  //当前年份
         int monthNow = cal.get(Calendar.MONTH);  //当前月份

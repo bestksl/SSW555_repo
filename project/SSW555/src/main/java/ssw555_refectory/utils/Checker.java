@@ -424,6 +424,97 @@ public class Checker {
         return null;
     }
 
+//    //Zihan Li
+//    public String US30_Listlivingmarried(Individual i) throws Exception{
+//        String listlivingmarried;
+//        long day = 0;
+//        if (i.getDeath() == null && i.getBirt() != null) {
+//            for (Family families : families.values()) {
+//                if (families.getHusbandID().equals(i.getId())) {
+//                    day = 0;
+//                } else if (families.getWifeID().equals(i.getId())) {
+//                    day = 0;
+//                }
+//                else {
+//                    String age = i.getBirt();
+//                    day = TimeUtils.getAge(age);
+//                }
+//            }
+//        }
+//        if (day >= 30 && day != 0) {
+//            listlivingsingle = "LIST: INDIVIDUAL: US31: NAME:" + i.getName() + " ID:" + i.getId() + " is over 30 and has never been married";
+//            errList.add("LIST: INDIVIDUAL: US31: NAME:" + i.getName() + " ID:" + i.getId() + " is over 30 and has never been married");
+//            return listlivingsingle;
+//        }
+//        return null;
+//    }
+
+    // Haoxuan Li
+    public List<String> US01_DatesBeforeCurrentDate(Family f) throws Exception {
+        Individual husband, wife;
+        Individual childTmp = null;
+        List<String> errList1 = new ArrayList<>();
+        husband = individuals.get(f.getHusbandID());
+        wife = individuals.get(f.getWifeID());
+
+        if (f.getChildren().size() > 0) {
+            List<String> tempList = f.getChildren();
+            tempList.add(husband.getId());
+            tempList.add(wife.getId());
+            for (String id : tempList) {
+                childTmp = individuals.get(id);
+                if (childTmp == null) {
+                    continue;
+                }
+                if (null != childTmp.getBirt() && TimeUtils.getAge(childTmp.getBirt()) == -1) {
+                    errList1.add("ERROR: INDIVIDUAL: US01: " + id + ":  Dates after CurrentDate");
+
+                }
+                if (null != childTmp.getDeath() && TimeUtils.getAge(childTmp.getDeath()) == -1) {
+                    errList1.add("ERROR: INDIVIDUAL: US01: " + id + ":  Dates after CurrentDate");
+                }
+            }
+        }
+
+        //test Divorced date and Marr date
+        if (null != f.getDivorced() && TimeUtils.getAge(f.getDivorced()) == -1) {
+            errList1.add("ERROR: FAMILY: US01: " + f.getId() + ":  Dates after CurrentDate");
+        }
+        if (null != f.getMarried() && TimeUtils.getAge(f.getMarried()) == -1) {
+            errList1.add("ERROR: FAMILY: US01: " + f.getId() + ":  Dates after CurrentDate");
+        }
+        if (errList1.size() > 0) {
+            System.out.println(errList1);
+            errList.addAll(errList1);
+            return errList1;
+        } else {
+            return null;
+        }
+    }
+
+
+    // Haoxuan Li
+    public List<String> US05_DivorceBeforeDeath(Family f) throws Exception {
+        if (f.getDivorced() == null)
+            return null;
+        List<String> errList1 = new ArrayList<>();
+        Individual husb = individuals.get(f.getHusbandID());
+        Individual wife = individuals.get(f.getHusbandID());
+        if (null != husb.getDeath() && TimeUtils.getAge(husb.getDeath()) - TimeUtils.getAge(f.getDivorced()) > 0) {
+            errList1.add("ERROR: FAMILY: US05: " + f.getId() + "Divorced after husband death");
+        }
+        if (null != wife.getDeath() && TimeUtils.getAge(wife.getDeath()) - TimeUtils.getAge(f.getDivorced()) > 0) {
+            errList1.add("ERROR: FAMILY: US05: " + f.getId() + "Divorced after wife death");
+        }
+        if (errList1.size() > 0) {
+            System.out.println(errList1);
+            errList.addAll(errList1);
+            return errList1;
+        } else {
+            return null;
+        }
+
+    }
     // Jeff
     public String US05_MarriageBeforeDeath(Family f) throws Exception{
         Individual husband = individuals.get(f.getHusbandID());

@@ -2,14 +2,16 @@ package ssw555_refectory.core;
 
 import ssw555_refectory.bean.Family;
 import ssw555_refectory.bean.Individual;
-import ssw555_refectory.utils.Checker;
-import ssw555_refectory.utils.TimeUtils;
 import ssw555_refectory.utils.FileUtils;
+import ssw555_refectory.utils.TimeUtils;
 import ssw555_refectory.utils.tableutils.TextForm;
 import ssw555_refectory.utils.tableutils.TextFormBulider;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author HaoxuanLi  Github:bestksl
@@ -122,7 +124,7 @@ public class Finder {
             e.printStackTrace();
         }
         if (individuals.get(i.getId()) != null) {
-            i.setId("."+i.getId());
+            i.setId("." + i.getId());
             individuals.put(i.getId(), i);
             return;
         }
@@ -180,7 +182,7 @@ public class Finder {
         }
         if (families.get(f.getId()) != null) {
             if (families.get(f.getId()) != null) {
-                f.setId("."+f.getId());
+                f.setId("." + f.getId());
                 families.put(f.getId(), f);
                 return;
             }
