@@ -1,5 +1,6 @@
 package ssw555_refectory;
 
+import ssw555_refectory.bean.Individual;
 import ssw555_refectory.core.Finder;
 import ssw555_refectory.utils.Checker;
 
@@ -11,9 +12,8 @@ public class Main {
 
 
     public static void main(String[] args) throws Exception {
-        Finder finder = new Finder("src/main/java/ssw555_refectory/Sprint2_test.ged");//src/main/java/ssw555_refectory/my.ged
+        Finder finder = new Finder("src/main/java/ssw555_refectory/Sprint3_test.ged");//src/main/java/ssw555_refectory/my.ged
         Checker checker = new Checker(finder.getIndividuals(), finder.getFamilies());
-
         if (checker.checkAll()) {
             finder.printFamilies();
             finder.printIndividuals();
@@ -24,6 +24,6 @@ public class Main {
             Checker.printErr();
 
         }
-    }
+   }
 
 }
