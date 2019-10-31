@@ -36,7 +36,7 @@ public class Sprint1Test {
 
     @Test
     public void US25_testUniqueFirstName() {
-        assertEquals("ERROR: FAMILY: US03: F1:  family member's first name should be unique!", checker.US25_uniqueFirstname(families.get("F1")));
+        assertEquals("ERROR: FAMILY: US25: F1:  family member's first name should be unique!", checker.US25_uniqueFirstname(families.get("F1")));
         assertNull(checker.US25_uniqueFirstname(families.get("F2")));
         assertNull(checker.US25_uniqueFirstname(families.get("F3")));
     }
