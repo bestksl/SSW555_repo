@@ -121,8 +121,8 @@ public class Checker {
             }
         }
         if (!(nameSet.size() == idList.size())) {
-            errList.add("ERROR: FAMILY: US03: " + f.getId() + ":  family member's first name should be unique!");
-            return "ERROR: FAMILY: US03: " + f.getId() + ":  family member's first name should be unique!";
+            errList.add("ERROR: FAMILY: US25: " + f.getId() + ":  family member's first name should be unique!");
+            return "ERROR: FAMILY: US25: " + f.getId() + ":  family member's first name should be unique!";
         }
         return null;
     }
