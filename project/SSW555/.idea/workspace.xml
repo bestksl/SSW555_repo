@@ -3,27 +3,125 @@
   <component name="ChangeListManager">
     <list default="true" id="6e9f2759-f5a0-4f3a-a101-cfe9af30a1b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint2_test.ged" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint2_test.ged" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint3_test.ged" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint3_test.ged" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/core/Finder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/core/Finder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/FileUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/TimeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/TimeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/Sprint3/Sprint3Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/Sprint3/Sprint3Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/sprint2/Sprint2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/sprint2/Sprint2Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/core/Finder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/core/Finder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/FileUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/TimeUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/TimeUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Sprint3/Sprint3Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Sprint3/Sprint3Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sprint2/Sprint2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sprint2/Sprint2Test.class" afterDir="false" />
     </list>
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
-  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3224">
+              <caret line="244" column="43" lean-forward="true" selection-start-line="244" selection-start-column="43" selection-end-line="244" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/test/sprint2/Sprint2Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="704">
+              <caret line="53" column="68" selection-start-line="53" selection-start-column="68" selection-end-line="53" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="59" column="64" lean-forward="true" selection-start-line="59" selection-start-column="64" selection-end-line="59" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/test/Sprint3/Sprint3Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint2_test.ged">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint3_test.ged">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="576">
+              <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/my.ged">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1104">
+              <caret line="69" selection-start-line="69" selection-end-line="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint1_test.ged">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -31,6 +129,13 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>i3</find>
+      <find>i2</find>
+      <find>us23</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -40,6 +145,17 @@
       </map>
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint2_test.ged" />
+        <option value="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" />
+        <option value="$PROJECT_DIR$/src/main/test/sprint2/Sprint2Test.java" />
+        <option value="$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java" />
+      </list>
+    </option>
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -47,9 +163,101 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="210" />
+    <option name="y" value="131" />
+    <option name="width" value="1260" />
+    <option name="height" value="788" />
+  </component>
   <component name="ProjectId" id="1RwmlIbmKr5itasiAeRLEUspdzE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ssw555_refectory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ssw555_refectory" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="sprint2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSW555" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSW555" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="Sprint3" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -59,7 +267,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -78,23 +286,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Sprint2Test.testListlargeagedifferences_US34" type="AndroidJUnit" temporary="true" nameIsGenerated="true">
-      <module name="SSW555" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sprint2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="sprint2" />
-      <option name="MAIN_CLASS_NAME" value="sprint2.Sprint2Test" />
-      <option name="METHOD_NAME" value="testListlargeagedifferences_US34" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.Sprint2Test">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ssw555_refectory.Main" />
       <module name="SSW555" />
@@ -119,6 +311,22 @@
       <option name="PACKAGE_NAME" value="sprint2" />
       <option name="MAIN_CLASS_NAME" value="sprint2.Sprint2Test" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sprint2Test.testTimeUtil" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSW555" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sprint2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sprint2" />
+      <option name="MAIN_CLASS_NAME" value="sprint2.Sprint2Test" />
+      <option name="METHOD_NAME" value="testTimeUtil" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -157,23 +365,13 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.Sprint2Test" />
-        <item itemvalue="Android JUnit.Sprint2Test.testListlargeagedifferences_US34" />
         <item itemvalue="JUnit.Sprint2Test.testUS10" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.Sprint2Test.testUS09" />
+        <item itemvalue="JUnit.Sprint2Test.testTimeUtil" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand />
-          <select />
-        </treeState>
-      </serviceView>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -188,11 +386,77 @@
       <workItem from="1570586685805" duration="816000" />
       <workItem from="1571699514446" duration="2679000" />
       <workItem from="1571769149417" duration="1305000" />
+      <workItem from="1572375291812" duration="647000" />
+      <workItem from="1572376542832" duration="606000" />
+      <workItem from="1572472985002" duration="119000" />
+      <workItem from="1572558570990" duration="477000" />
+      <workItem from="1572559098717" duration="296000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="Sprint2Test_testUS09 - 2019.10.22 at 14h 50m 42s.xml">
+      <configuration name="Sprint2Test.testUS09" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Sprint2Test_testUS09 - 2019.10.22 at 14h 52m 23s.xml">
+      <configuration name="Sprint2Test.testUS09" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Sprint2Test_testUS09 - 2019.10.22 at 14h 55m 21s.xml">
+      <configuration name="Sprint2Test.testUS09" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Sprint2Test_testUS09 - 2019.10.22 at 14h 55m 45s.xml">
+      <configuration name="Sprint2Test.testUS09" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Sprint2Test - 2019.10.22 at 14h 55m 50s.xml">
+      <configuration name="Sprint2Test" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Sprint2Test_testUS10 - 2019.10.22 at 14h 57m 14s.xml">
+      <configuration name="Sprint2Test.testUS10" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Sprint2Test_testUS10 - 2019.10.22 at 14h 57m 40s.xml">
+      <configuration name="Sprint2Test.testUS10" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Sprint2Test - 2019.10.22 at 14h 57m 43s.xml">
+      <configuration name="Sprint2Test" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13658000" />
+    <option name="totallyTimeSpent" value="15803000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24725275" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="UI Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Metrics" order="0" weight="0.4010204" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32857144" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.4993895" visible="true" weight="0.32959184" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50061053" side_tool="true" weight="0.32959184" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="12" visible="true" weight="0.32959184" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32959184" />
+      <window_info anchor="bottom" id="Dependency Viewer" order="14" visible="true" weight="0.32959184" />
+      <window_info anchor="bottom" id="Inspection Results" order="15" weight="0.32959184" />
+      <window_info anchor="bottom" id="Statistic" order="16" weight="0.4030612" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" x="96" y="105" width="1480" height="850" id="DSM" order="7" type="FLOATING" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -203,6 +467,12 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -223,5 +493,157 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/FileUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/sprint2/Sprint2Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="704">
+          <caret line="53" column="68" selection-start-line="53" selection-start-column="68" selection-end-line="53" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/Sprint3/Sprint3Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint2_test.ged">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint3_test.ged">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/my.ged">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1104">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint1_test.ged">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3224">
+          <caret line="244" column="43" lean-forward="true" selection-start-line="244" selection-start-column="43" selection-end-line="244" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="59" column="64" lean-forward="true" selection-start-line="59" selection-start-column="64" selection-end-line="59" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>SSW555</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
