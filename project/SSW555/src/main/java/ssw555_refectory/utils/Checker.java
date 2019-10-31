@@ -22,13 +22,13 @@ public class Checker {
     }
 
     public boolean checkAll() throws Exception {
-        checkSprint1();
-        checkSprint2();
+        //checkSprint1();
+        //checkSprint2();
         checkSprint3();
         return errList.size() == 0;
     }
 
-    public boolean checkSprint1() throws Exception {
+    private boolean checkSprint1() throws Exception {
         //如果有不通过的项会将err信息加入到errList
 
         // whole Individuals map test
@@ -75,13 +75,14 @@ public class Checker {
         return errList.size() == 0;
     }
 
-    public boolean checkSprint3() throws Exception{
-        for (Individual i : individuals.values()){
+    private boolean checkSprint3() throws Exception {
+        for (Individual i : individuals.values()) {
             US30_Listlivingmarried(i);
             US02_Birthbeforemarriage(i);
         }
-        for(Family f : families.values()){
-
+        for (Family f : families.values()) {
+            US01_DatesBeforeCurrentDate(f);
+            US06_DivorceBeforeDeath(f);
         }
         return errList.size() == 0;
     }
@@ -399,14 +400,13 @@ public class Checker {
                     day = 0;
                 } else if (families.getWifeID().equals(i.getId())) {
                     day = 0;
-                }
-                else {
+                } else {
                     String age = i.getBirt();
                     day = TimeUtils.getAge(age);
                 }
             }
         }
-        if (day >= 30 ) {
+        if (day >= 30) {
             listlivingsingle = "LIST: INDIVIDUAL: US31: NAME:" + i.getName() + " ID:" + i.getId() + " is over 30 and has never been married";
             errList.add("LIST: INDIVIDUAL: US31: NAME:" + i.getName() + " ID:" + i.getId() + " is over 30 and has never been married");
             return listlivingsingle;
@@ -434,36 +434,30 @@ public class Checker {
     // Haoxuan Li
     public List<String> US01_DatesBeforeCurrentDate(Family f) throws Exception {
         Individual husband, wife;
-        Individual childTmp = null;
+        Individual indiTemp = null;
         List<String> errList1 = new ArrayList<>();
-        husband = individuals.get(f.getHusbandID());
-        wife = individuals.get(f.getWifeID());
-
-        if (f.getChildren().size() > 0) {
-            List<String> tempList = f.getChildren();
-            tempList.add(husband.getId());
-            tempList.add(wife.getId());
-            for (String id : tempList) {
-                childTmp = individuals.get(id);
-                if (childTmp == null) {
-                    continue;
-                }
-                if (null != childTmp.getBirt() && TimeUtils.getAge(childTmp.getBirt()) == -1) {
-                    errList1.add("ERROR: INDIVIDUAL: US01: " + id + ":  Dates after CurrentDate");
-
-                }
-                if (null != childTmp.getDeath() && TimeUtils.getAge(childTmp.getDeath()) == -1) {
-                    errList1.add("ERROR: INDIVIDUAL: US01: " + id + ":  Dates after CurrentDate");
-                }
+        List<String> tempList = f.getChildren();
+        tempList.add(f.getHusbandID());
+        tempList.add(f.getWifeID());
+        for (String id : tempList) {
+            indiTemp = individuals.get(id);
+            if (indiTemp == null) {
+                continue;
+            }
+            if (null != indiTemp.getBirt() && TimeUtils.getAge(indiTemp.getBirt()) < 0) {
+                errList1.add("ERROR: INDIVIDUAL: US01: " + id +" "+ indiTemp.getBirt()+ ": Birth Dates after CurrentDate");
+            }
+            if (null != indiTemp.getDeath() && TimeUtils.getAge(indiTemp.getDeath()) <0) {
+                errList1.add("ERROR: INDIVIDUAL: US01: " + id +" "+ indiTemp.getDeath()+  ": Death Dates after CurrentDate");
             }
         }
 
         //test Divorced date and Marr date
         if (null != f.getDivorced() && TimeUtils.getAge(f.getDivorced()) == -1) {
-            errList1.add("ERROR: FAMILY: US01: " + f.getId() + ":  Dates after CurrentDate");
+            errList1.add("ERROR: FAMILY: US01: " + f.getId() + ":Divorced  Dates after CurrentDate");
         }
         if (null != f.getMarried() && TimeUtils.getAge(f.getMarried()) == -1) {
-            errList1.add("ERROR: FAMILY: US01: " + f.getId() + ":  Dates after CurrentDate");
+            errList1.add("ERROR: FAMILY: US01: " + f.getId() + ":Married  Dates after CurrentDate");
         }
         if (errList1.size() > 0) {
             System.out.println(errList1);
@@ -476,17 +470,17 @@ public class Checker {
 
 
     // Haoxuan Li
-    public List<String> US05_DivorceBeforeDeath(Family f) throws Exception {
+    public List<String> US06_DivorceBeforeDeath(Family f) throws Exception {
         if (f.getDivorced() == null)
             return null;
         List<String> errList1 = new ArrayList<>();
         Individual husb = individuals.get(f.getHusbandID());
-        Individual wife = individuals.get(f.getHusbandID());
+        Individual wife = individuals.get(f.getWifeID());
         if (null != husb.getDeath() && TimeUtils.getAge(husb.getDeath()) - TimeUtils.getAge(f.getDivorced()) > 0) {
-            errList1.add("ERROR: FAMILY: US05: " + f.getId() + "Divorced after husband death");
+            errList1.add("ERROR: FAMILY: US06: " + f.getId() + " Divorced after husband death");
         }
         if (null != wife.getDeath() && TimeUtils.getAge(wife.getDeath()) - TimeUtils.getAge(f.getDivorced()) > 0) {
-            errList1.add("ERROR: FAMILY: US05: " + f.getId() + "Divorced after wife death");
+            errList1.add("ERROR: FAMILY: US06: " + f.getId() + " Divorced after wife death");
         }
         if (errList1.size() > 0) {
             System.out.println(errList1);
@@ -497,20 +491,21 @@ public class Checker {
         }
 
     }
+
     // Jeff
-    public String US05_MarriageBeforeDeath(Family f) throws Exception{
+    public String US05_MarriageBeforeDeath(Family f) throws Exception {
         Individual husband = individuals.get(f.getHusbandID());
         Individual wife = individuals.get(f.getWifeID());
 
-        if(husband != null && husband.getDeath() != null){
-            if(TimeUtils.getAge(f.getMarried()) < TimeUtils.getAge(husband.getDeath())){
+        if (husband != null && husband.getDeath() != null) {
+            if (TimeUtils.getAge(f.getMarried()) < TimeUtils.getAge(husband.getDeath())) {
                 errList.add("ERROR: FAMILY: US05: " + f.getId() + " Married:" + f.getMarried() + " after Death of " + husband.getName());
                 return "ERROR: FAMILY: US05: " + f.getId() + " Married:" + f.getMarried() + " after Death of " + husband.getName();
             }
         }
 
-        if(wife != null && wife.getDeath() != null){
-            if(TimeUtils.getAge(f.getMarried()) < TimeUtils.getAge(wife.getDeath())){
+        if (wife != null && wife.getDeath() != null) {
+            if (TimeUtils.getAge(f.getMarried()) < TimeUtils.getAge(wife.getDeath())) {
                 errList.add("ERROR: FAMILY: US05: " + f.getId() + " Married:" + f.getMarried() + " after Death of " + wife.getName());
                 return "ERROR: FAMILY: US05: " + f.getId() + " Married:" + f.getMarried() + " after Death of " + wife.getName();
             }
@@ -519,14 +514,14 @@ public class Checker {
     }
 
     // Jeff
-    public String US38_ListUpcomingBirthdays(Individual i){
+    public String US38_ListUpcomingBirthdays(Individual i) {
         String birth = i.getBirt();
-        String [] birthArray = birth.split("-");
+        String[] birthArray = birth.split("-");
         SimpleDateFormat sdfDate = new SimpleDateFormat("dd-MMM-yyyy");
         Date now = new Date();
         String strDate = sdfDate.format(now);
-        String [] nowArray = strDate.split("-");
-        if(birthArray[1].equals(nowArray[1]) && birthArray[2].equals(nowArray[2])){
+        String[] nowArray = strDate.split("-");
+        if (birthArray[1].equals(nowArray[1]) && birthArray[2].equals(nowArray[2])) {
             errList.add("LIST: INDIVIDUAL: US38: NAME:" + i.getName() + " ID:" + i.getId() + " will born in this Month");
             return "LIST: INDIVIDUAL: US38: NAME:" + i.getName() + " ID:" + i.getId() + " will born in this Month";
         }
@@ -534,20 +529,18 @@ public class Checker {
     }
 
     //Zihan Li
-    public String US30_Listlivingmarried(Individual i) throws Exception{
+    public String US30_Listlivingmarried(Individual i) throws Exception {
         String listlivingmarried;
         long day = 0;
         if (i.getDeath() == null && i.getBirt() != null) {
             for (Family families : families.values()) {
                 if (families.getHusbandID().equals(i.getId())) {
-                    String age =  i.getBirt();
+                    String age = i.getBirt();
                     day = TimeUtils.getAge(age);
-                }
-                else if (families.getWifeID().equals(i.getId())) {
-                    String age =  i.getBirt();
+                } else if (families.getWifeID().equals(i.getId())) {
+                    String age = i.getBirt();
                     day = TimeUtils.getAge(age);
-                }
-                else {
+                } else {
                     day = 0;
                 }
             }
@@ -563,7 +556,7 @@ public class Checker {
     //Zihan Li
     public String US02_Birthbeforemarriage(Individual i) throws Exception {
         String birthbeforemarriage;
-        int birth = 0 ;
+        int birth = 0;
         int marriageperiod = 0;
         if (i.getBirt() != null) {
             birth = TimeUtils.getAge(i.getBirt());
@@ -573,9 +566,9 @@ public class Checker {
                 }
             }
         }
-        if(birth < marriageperiod){
-            birthbeforemarriage = "ERROR: INDIVIDUAL: US02: NAME:" + i.getName()+ " ID: "+i.getId()+" birth should occur before marriage";
-            errList.add("ERROR: INDIVIDUAL: US02: NAME:" + i.getName()+ " ID: "+i.getId()+" birth should occur before marriage");
+        if (birth < marriageperiod) {
+            birthbeforemarriage = "ERROR: INDIVIDUAL: US02: NAME:" + i.getName() + " ID: " + i.getId() + " birth should occur before marriage";
+            errList.add("ERROR: INDIVIDUAL: US02: NAME:" + i.getName() + " ID: " + i.getId() + " birth should occur before marriage");
             return birthbeforemarriage;
         }
         return null;
