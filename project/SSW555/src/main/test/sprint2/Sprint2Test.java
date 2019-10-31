@@ -48,18 +48,18 @@ public class Sprint2Test {
         assertEquals("LIST: INDIVIDUAL: US35: NAME:Han Li ID:I4 was born in the last 30 days", checker.US35_Listrecentbirths((individuals.get("I4"))));
         assertNull(checker.US35_Listrecentbirths(individuals.get("I6")));
     }
- /*   @Test
-   public void testListrecentdeath_US36() throws Exception {
-        assertEquals("ERROR: INDIVIDUAL: US36: Jie Deng ID:I7 has dead in 30 days", Checker.US36_Listrecentdeath(individuals.get("I7")));
-        assertNull(checker.US_36Listrecentdeath(individuals.get("I3")));
+    @Test
+    public void testListrecentdeath_US36() throws Exception {
+        assertEquals("LIST: INDIVIDUAL: US36: NAME:Han Li ID:I4 has dead in 30 days", Checker.US36_recentdeath(individuals.get("I4")));
+        assertNull(checker.US36_recentdeath(individuals.get("I3")));
     }
     @Test
     public void testListlargeagedifferences_US34() throws Exception {
-        assertEquals("ERROR: FAMILY: US34: The couple in family: F3 has large age different", Checker.US_34Listlargeagedifferences(families.get("F3")));
-        assertEquals("ERROR: FAMILY: US34: The couple in family: F2 has large age different", Checker.US_34Listlargeagedifferences(families.get("F2")));
+        assertEquals("LIST: FAMILY: US34: The couple in family: F3 has large age different", Checker.US34_Listlargeagedifferences(families.get("F3")));
+        assertEquals("LIST: FAMILY: US34: The couple in family: F2 has large age different", Checker.US34_Listlargeagedifferences(families.get("F2")));
         //assertNull(checker.checkBirthBeforeDeath(individuals.get("F1")));
     }
-*/
+
 
     // Haoxuan Li
     @Test
