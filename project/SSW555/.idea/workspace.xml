@@ -3,15 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="6e9f2759-f5a0-4f3a-a101-cfe9af30a1b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/core/Finder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/core/Finder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/FileUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/TimeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/TimeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/core/Finder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/core/Finder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/FileUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/TimeUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/TimeUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sprint1/Sprint1Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sprint1/Sprint1Test.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,22 +76,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="Sprint2Test.testListlargeagedifferences_US34" type="AndroidJUnit" temporary="true" nameIsGenerated="true">
-      <module name="SSW555" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sprint2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="sprint2" />
-      <option name="MAIN_CLASS_NAME" value="sprint2.Sprint2Test" />
-      <option name="METHOD_NAME" value="testListlargeagedifferences_US34" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ssw555_refectory.Main" />
       <module name="SSW555" />
@@ -104,6 +85,21 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sprint1Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSW555" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sprint1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sprint1" />
+      <option name="MAIN_CLASS_NAME" value="sprint1.Sprint1Test" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -158,8 +154,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.Sprint1Test" />
         <item itemvalue="JUnit.Sprint2Test" />
-        <item itemvalue="Android JUnit.Sprint2Test.testListlargeagedifferences_US34" />
         <item itemvalue="JUnit.Sprint2Test.testUS10" />
         <item itemvalue="JUnit.Sprint2Test.testUS09" />
       </list>
