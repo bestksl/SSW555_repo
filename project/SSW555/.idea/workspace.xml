@@ -4,10 +4,17 @@
     <list default="true" id="6e9f2759-f5a0-4f3a-a101-cfe9af30a1b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint2_test.ged" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint2_test.ged" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint3_test.ged" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint3_test.ged" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/Sprint3/Sprint3Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/Sprint3/Sprint3Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/sprint2/Sprint2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/sprint2/Sprint2Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Sprint3/Sprint3Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Sprint3/Sprint3Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/sprint1/Sprint1Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sprint1/Sprint1Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sprint2/Sprint2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sprint2/Sprint2Test.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +78,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.Sprint3Test">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ssw555_refectory.Main" />
       <module name="SSW555" />
@@ -100,7 +107,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sprint3Test.testUS01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Sprint2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSW555" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sprint2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="sprint2" />
+      <option name="MAIN_CLASS_NAME" value="sprint2.Sprint2Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sprint3Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SSW555" />
       <extension name="coverage">
         <pattern>
@@ -110,8 +132,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="Sprint3" />
       <option name="MAIN_CLASS_NAME" value="Sprint3.Sprint3Test" />
-      <option name="METHOD_NAME" value="testUS01" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -132,29 +153,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sprint3Test.testUS30" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SSW555" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Sprint3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Sprint3" />
-      <option name="MAIN_CLASS_NAME" value="Sprint3.Sprint3Test" />
-      <option name="METHOD_NAME" value="testUS30" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Sprint3Test" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.Sprint2Test" />
         <item itemvalue="JUnit.Sprint1Test" />
         <item itemvalue="JUnit.Sprint3Test.testUS06" />
-        <item itemvalue="JUnit.Sprint3Test.testUS01" />
-        <item itemvalue="JUnit.Sprint3Test.testUS30" />
       </list>
     </recent_temporary>
   </component>
@@ -219,5 +224,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SSW555$Sprint1Test.ic" NAME="Sprint1Test Coverage Results" MODIFIED="1572580727654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>sprint1.*</FILTER>
+    </SUITE>
   </component>
 </project>

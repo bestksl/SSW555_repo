@@ -12,11 +12,12 @@ public class Main {
 
 
     public static void main(String[] args) throws Exception {
-        Finder finder = new Finder("src/main/java/ssw555_refectory/Sprint1_test.ged");//src/main/java/ssw555_refectory/my.ged
+        Finder finder = new Finder("src/main/java/ssw555_refectory/Sprint3_test.ged");//src/main/java/ssw555_refectory/my.ged
         Checker checker = new Checker(finder.getIndividuals(), finder.getFamilies());
+        checker.checkAll(3);
         finder.printFamilies();
         finder.printIndividuals();
-        checker.checkAll();
+
         Checker.printErr();
         }
 

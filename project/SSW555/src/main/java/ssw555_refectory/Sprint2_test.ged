@@ -1,5 +1,17 @@
 0 NOTE Zhimingyuan Liu(Jeff Liu)
 0 HEAD
+0 @I11@ INDI
+1 NAME Jack /Liu/
+1 SEX F
+1 BIRT
+2 DATE 9 NOV 1997
+1 FAMC @F1@
+0 @I10@ INDI
+1 NAME Jeff /Liu/
+1 SEX F
+1 BIRT
+2 DATE 9 MAR 1997
+1 FAMC @F1@
 0 @I1@ INDI
 1 NAME Jeff /Liu/
 1 SEX M
