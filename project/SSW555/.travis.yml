@@ -2,3 +2,4 @@ language: java
 
 jdk:
   - oraclejdk12
+before_script: cd SSW555_repo/project/SSW555
