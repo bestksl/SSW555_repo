@@ -22,52 +22,46 @@ public class Checker {
     }
 
     public boolean checkAll() throws Exception {
-        //checkSprint1();
+        checkSprint1();
         //checkSprint2();
-        checkSprint3();
+        //checkSprint3();
         return errList.size() == 0;
     }
 
     private boolean checkSprint1() throws Exception {
-        //如果有不通过的项会将err信息加入到errList
-
-        // whole Individuals map test
-        UniqueNameAndBirthdate();
-
 
         for (Individual i : individuals.values()) {
-            uniqueIdINDI(i);
+            US22_uniqueIdINDI(i);
             US03_checkBirthBeforeDeath(i);
             US07_ageOld(i);
-            US36_recentdeath(i);
-            US38_ListUpcomingBirthdays(i);
         }
 
         for (Family f : families.values()) {
-            uniqueIdFAM(f);
+            US22_uniqueIdFAM(f);
             US25_uniqueFirstname(f);
-            checkMarrige(f);
-            birthAfterParentsMarriges(f);
+            US04_checkMarrige(f);
+            US08_birthAfterParentsMarriges(f);
             US12_parentsNotTooOld(f);
-            familyMaleLastName(f);
-            US34_Listlargeagedifferences(f);
-            US05_MarriageBeforeDeath(f);
+            US16_familyMaleLastName(f);
         }
         return errList.size() == 0;
     }
 
     public boolean checkSprint2() throws Exception {
-        //如果有不通过的项会将err信息加入到errList
+        US23_UniqueNameAndBirthdate();
 
         // whole Individuals map test
         for (Individual i : individuals.values()) {
             US31_Listlivingsingle(i);
             US35_Listrecentbirths(i);
+            US36_recentdeath(i);
+
         }
 
         for (Family f : families.values()) {
             US09_BirthBeforeDeathOfParents(f);
             US10_MarriageAfter14(f);
+            US34_Listlargeagedifferences(f);
 
         }
 
@@ -79,10 +73,14 @@ public class Checker {
         for (Individual i : individuals.values()) {
             US30_Listlivingmarried(i);
             US02_Birthbeforemarriage(i);
+            US38_ListUpcomingBirthdays(i);
+
         }
         for (Family f : families.values()) {
             US01_DatesBeforeCurrentDate(f);
             US06_DivorceBeforeDeath(f);
+
+
         }
         return errList.size() == 0;
     }
@@ -196,7 +194,7 @@ public class Checker {
     }
 
     // Jeff
-    public String checkMarrige(Family f) throws Exception {
+    public String US04_checkMarrige(Family f) throws Exception {
         if (f.getMarried() == null || f.getDivorced() == null) {
             return null;
         }
@@ -211,7 +209,7 @@ public class Checker {
     }
 
     // Jeff
-    public String birthAfterParentsMarriges(Family f) throws Exception {
+    public String US08_birthAfterParentsMarriges(Family f) throws Exception {
         ArrayList<String> children = f.getChildren();
         if (f.getMarried() == null || f.getChildren().size() == 0) {
             return null;
@@ -234,7 +232,7 @@ public class Checker {
     }
 
     // Jeff
-    public String UniqueNameAndBirthdate() {
+    public String US23_UniqueNameAndBirthdate() {
         Map<String, List<Individual>> map = new HashMap<>();
         StringBuilder sbs = new StringBuilder();
         for (Map.Entry<String, Individual> entry : individuals.entrySet()) {
@@ -272,7 +270,7 @@ public class Checker {
     }
 
 
-    public String familyMaleLastName(Family f) throws Exception {
+    public String US16_familyMaleLastName(Family f) throws Exception {
         HashMap<String, String> hash_setINDI = new HashMap<>();
         HashMap<String, String> hash_setSEX = new HashMap<>();
         String Fname;
@@ -301,7 +299,7 @@ public class Checker {
         return null;
     }
 
-    public String uniqueIdINDI(Individual i) throws Exception {
+    public String US22_uniqueIdINDI(Individual i) throws Exception {
         if (i.getId().startsWith(".")) {
             String str = i.getId().replace(".", "");
             errList.add("ERROR: INDIVIDUAL: US22: " + str + "  individual ID is not unique");
@@ -310,7 +308,7 @@ public class Checker {
         return null;
     }
 
-    public String uniqueIdFAM(Family f) throws Exception {
+    public String US22_uniqueIdFAM(Family f) throws Exception {
         if (f.getId().startsWith(".")) {
             String str = f.getId().replace(".", "");
             errList.add("ERROR: FAMILY: US22 " + str + "  family ID is not unique");
