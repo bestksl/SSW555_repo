@@ -1,5 +1,6 @@
 language: java
-mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-mvn test -B
+script: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+        mvn test -B
 jdk:
   - oraclejdk12
+xcode_project: SSW555_repo.project.SSW555
