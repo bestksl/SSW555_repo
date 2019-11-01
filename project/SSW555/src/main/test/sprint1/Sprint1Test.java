@@ -28,7 +28,7 @@ public class Sprint1Test {
     }
 
     @Test
-    public void testCheckMarrige() throws Exception {
+    public void US04_testCheckMarrige() throws Exception {
         assertEquals("ERROR: FAMILY: US04: F1 Divorce:5-MAR-1990 before Marriage 5-MAR-1992", checker.US04_checkMarrige(families.get("F1")));
         assertNull(checker.US04_checkMarrige(families.get("F2")));
         assertNull(checker.US04_checkMarrige(families.get("F3")));
@@ -42,16 +42,14 @@ public class Sprint1Test {
     }
 
     @Test
-    // Jeff User story Test: Marriage Date
-    public void TestBirthAfterParentsMarriges() throws Exception {
+    public void US08_TestBirthAfterParentsMarriges() throws Exception {
         assertEquals("ERROR: FAMILY: US08: Child Duan Xiao born 14-APR-1938 before Marriage on 6-MAY-2016 || ", checker.US08_birthAfterParentsMarriges(families.get("F2")));
         assertNull(checker.US08_birthAfterParentsMarriges(families.get("F1")));
         assertNull(checker.US08_birthAfterParentsMarriges(families.get("F3")));
     }
 
-    //Shiwei Ding
     @Test
-    public void TestUniqueID() throws Exception {
+    public void US22_TestUniqueID() throws Exception {
         assertEquals("ERROR: INDIVIDUAL: US22: I2  individual ID is not unique", checker.US22_uniqueIdINDI(individuals.get(".I2")));
         assertEquals("ERROR: FAMILY: US22: F3  family ID is not unique", checker.US22_uniqueIdFAM(families.get(".F3")));
         assertNull(checker.US22_uniqueIdINDI(individuals.get("I3")));
@@ -62,14 +60,12 @@ public class Sprint1Test {
         assertNull(checker.US22_uniqueIdFAM(families.get("F2")));
     }
 
-    // Shiwei Ding
     @Test
-    public void TestMaleLastname() throws Exception {
+    public void US16_TestMaleLastname() throws Exception {
         assertEquals("ERROR: FAMILY: US16: F1  The last name for Male person in a family I2 and I4 is not the same!", checker.US16_familyMaleLastName(families.get("F1")));
         assertEquals("ERROR: FAMILY: US16: F3  The last name for Male person in a family I2 and I4 is not the same!", checker.US16_familyMaleLastName(families.get("F3")));
         assertNull(checker.US16_familyMaleLastName(families.get("F2")));
     }
-
 
     @Test
     public void US07_ageOld() throws Exception {
