@@ -65,4 +65,12 @@ public class Sprint3Test {
         assertEquals("LIST: INDIVIDUAL: US38: NAME:Jack Liu ID:I9 will born in this Month", checker.US38_ListUpcomingBirthdays(individuals.get("I9")));
         assertNull(checker.US38_ListUpcomingBirthdays(individuals.get("I7")));
     }
+    @Test
+    public void testUS28() throws Exception {
+        assertEquals("LIST: FAMILY: US_28: In family F3 the age order for child is I7 age: 65 I4 age: 11 ", checker.US28_Ordersibelingbyage(families.get("F3")));
+    }
+    @Test
+    public void testUS29() throws Exception {
+        assertEquals("LIST: INDIVIDUAL: US29: Name: Hao Liu ID: I2 Name: Jie Deng ID: I7 has been decreaced", checker.US29_Listdecrease());
+    }
 }
