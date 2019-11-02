@@ -72,15 +72,18 @@ public class Checker {
         return errList.size() == 0;
     }
     private boolean checkSprint3() throws Exception {
+        US29_Listdecrease();
         for (Individual i : individuals.values()) {
             US30_Listlivingmarried(i);
             US02_Birthbeforemarriage(i);
             US38_ListUpcomingBirthdays(i);
+
         }
         for (Family f : families.values()) {
             US01_DatesBeforeCurrentDate(f);
             US06_DivorceBeforeDeath(f);
             US05_MarriageBeforeDeath(f);
+            US28_Ordersibelingbyage(f);
         }
         return errList.size() == 0;
     }
@@ -536,5 +539,51 @@ public class Checker {
             return birthbeforemarriage;
         }
         return null;
+    }
+    //Shiwei Ding
+    public String US28_Ordersibelingbyage(Family f) throws Exception {
+        ArrayList<String> Sname = new ArrayList<>();
+        ArrayList<Integer> Agelist = new ArrayList<>();
+        ArrayList<String> Result = new ArrayList<>();
+        String orderlist = "";
+        Sname = f.getChildren();
+        for (Individual individuals : individuals.values()) {
+            for (int i = 0; i < Sname.size(); i++) {
+                if (individuals.getId().equals(Sname.get(i))) {
+                    if (Agelist.size() == 0) {
+                        Agelist.add(Integer.valueOf(individuals.getAge()));
+                        Result.add(individuals.getId());
+                    } else {
+                        for (int j = 0; j < Agelist.size(); j++) {
+                            if (Agelist.get(j) > Integer.valueOf(individuals.getAge())) {
+                                continue;
+                            } else {
+                                Agelist.add(j, Integer.valueOf(individuals.getAge()));
+                                Result.add(j, individuals.getId());
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        orderlist = "LIST: FAMILY: US_28: In family " + f.getId() + " the age order for child is ";
+        for(int i = 0; i < Result.size(); i++){
+            orderlist = orderlist + Result.get(i) + " age: " + Agelist.get(i) + " ";
+        }
+        errList.add(orderlist);
+        return orderlist;
+    }
+
+    public String US29_Listdecrease() throws Exception {
+        String declist = "LIST: INDIVIDUAL: US29:";
+        for (Individual i : individuals.values()) {
+            if (i.getDeath() != null) {
+                declist = declist + " Name: " + i.getName() + " ID: " + i.getId();
+            }
+        }
+        declist = declist + " has been decreaced";
+        errList.add(declist);
+        return declist;
     }
 }

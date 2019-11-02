@@ -79,6 +79,22 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.Sprint3Test">
+    <configuration name="Sprint3Test.testUS28" type="AndroidJUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSW555" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Sprint3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Sprint3" />
+      <option name="MAIN_CLASS_NAME" value="Sprint3.Sprint3Test" />
+      <option name="METHOD_NAME" value="testUS28" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ssw555_refectory.Main" />
       <module name="SSW555" />
@@ -88,36 +104,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Sprint1Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SSW555" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sprint1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="sprint1" />
-      <option name="MAIN_CLASS_NAME" value="sprint1.Sprint1Test" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Sprint2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SSW555" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sprint2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="sprint2" />
-      <option name="MAIN_CLASS_NAME" value="sprint2.Sprint2Test" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -137,7 +123,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sprint3Test.testUS06" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Sprint3Test.testUS28" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SSW555" />
       <extension name="coverage">
         <pattern>
@@ -147,7 +133,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="Sprint3" />
       <option name="MAIN_CLASS_NAME" value="Sprint3.Sprint3Test" />
-      <option name="METHOD_NAME" value="testUS06" />
+      <option name="METHOD_NAME" value="testUS28" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sprint3Test.testUS29" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSW555" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Sprint3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Sprint3" />
+      <option name="MAIN_CLASS_NAME" value="Sprint3.Sprint3Test" />
+      <option name="METHOD_NAME" value="testUS29" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -156,10 +158,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.Sprint3Test" />
+        <item itemvalue="JUnit.Sprint3Test.testUS28" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.Sprint2Test" />
-        <item itemvalue="JUnit.Sprint1Test" />
-        <item itemvalue="JUnit.Sprint3Test.testUS06" />
+        <item itemvalue="Android JUnit.Sprint3Test.testUS28" />
+        <item itemvalue="JUnit.Sprint3Test.testUS29" />
       </list>
     </recent_temporary>
   </component>
