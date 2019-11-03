@@ -3,18 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6e9f2759-f5a0-4f3a-a101-cfe9af30a1b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint2_test.ged" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint2_test.ged" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint3_test.ged" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint3_test.ged" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/test/Sprint3/Sprint3Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/Sprint3/Sprint3Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/sprint1/Sprint1Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/sprint2/Sprint2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/sprint2/Sprint2Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Sprint3/Sprint3Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Sprint3/Sprint3Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/sprint1/Sprint1Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sprint1/Sprint1Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/sprint2/Sprint2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sprint2/Sprint2Test.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -123,6 +112,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Sprint3Test.testUS06" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSW555" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Sprint3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Sprint3" />
+      <option name="MAIN_CLASS_NAME" value="Sprint3.Sprint3Test" />
+      <option name="METHOD_NAME" value="testUS06" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Sprint3Test.testUS28" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SSW555" />
       <extension name="coverage">
@@ -139,29 +144,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sprint3Test.testUS29" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SSW555" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Sprint3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Sprint3" />
-      <option name="MAIN_CLASS_NAME" value="Sprint3.Sprint3Test" />
-      <option name="METHOD_NAME" value="testUS29" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.Sprint3Test" />
+        <item itemvalue="JUnit.Sprint3Test.testUS06" />
         <item itemvalue="JUnit.Sprint3Test.testUS28" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Android JUnit.Sprint3Test.testUS28" />
-        <item itemvalue="JUnit.Sprint3Test.testUS29" />
       </list>
     </recent_temporary>
   </component>
@@ -194,6 +183,7 @@
       <workItem from="1572558570990" duration="477000" />
       <workItem from="1572559098717" duration="296000" />
       <workItem from="1572561486952" duration="3378000" />
+      <workItem from="1572747091619" duration="171000" />
     </task>
     <servers />
   </component>

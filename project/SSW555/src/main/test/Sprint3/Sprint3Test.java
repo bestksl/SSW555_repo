@@ -41,6 +41,7 @@ public class Sprint3Test {
     @Test
     public void testUS06() throws Exception {
         List<String> l = new ArrayList<>();
+        l.add("ERROR: FAMILY: US06: F1 Divorced after husband death");
         l.add("ERROR: FAMILY: US06: F1 Divorced after wife death");
         assertEquals(l, checker.US06_DivorceBeforeDeath(families.get("F1")));
         assertNull(checker.US06_DivorceBeforeDeath(families.get("F3")));
