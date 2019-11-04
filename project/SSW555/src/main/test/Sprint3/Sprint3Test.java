@@ -60,7 +60,7 @@ public class Sprint3Test {
         assertEquals("ERROR: FAMILY: US05: F1 Married:5-MAR-1992 after Death of Hao Liu", checker.US05_MarriageBeforeDeath(families.get("F1")));
         assertNull(checker.US05_MarriageBeforeDeath(families.get("F2")));
     }
-
+    // retest
     @Test
     public void testUS38() throws Exception {
         assertEquals("LIST: INDIVIDUAL: US38: NAME:Jack Liu ID:I9 will born in this Month", checker.US38_ListUpcomingBirthdays(individuals.get("I9")));
