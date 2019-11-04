@@ -329,7 +329,7 @@ public class Checker {
 
         return null;
     }
-    public String US27_IncludeIndividualAges(Individual i){
+    public String US27_IncludeIndividualAges(Individual i) throws Exception{
         if(i.getBirt() == null || i.getAge().length() == 0){
             errList.add("ERROR: INDIVIDUAL: US27: "+i.getName()+" with ID: "+i.getId()+" has no age");
             return "ERROR: INDIVIDUAL: US27: "+i.getName()+" with ID: "+i.getId()+" has no age";
@@ -485,7 +485,7 @@ public class Checker {
         }
         return null;
     }
-    public String US38_ListUpcomingBirthdays(Individual i) {
+    public String US38_ListUpcomingBirthdays(Individual i) throws Exception {
         String birth = i.getBirt();
         String[] birthArray = birth.split("-");
         SimpleDateFormat sdfDate = new SimpleDateFormat("dd-MMM-yyyy");
