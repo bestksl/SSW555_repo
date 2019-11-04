@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6e9f2759-f5a0-4f3a-a101-cfe9af30a1b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint3_test.ged" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint3_test.ged" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/Sprint3/Sprint3Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/Sprint3/Sprint3Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Sprint3/Sprint3Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Sprint3/Sprint3Test.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -216,6 +217,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/test/Sprint3/Sprint3Test.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/SSW555$Sprint1Test.ic" NAME="Sprint1Test Coverage Results" MODIFIED="1572580727654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

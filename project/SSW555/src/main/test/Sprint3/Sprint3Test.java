@@ -52,7 +52,7 @@ public class Sprint3Test {
         List<String> l = new ArrayList<>();
         l.add("ERROR: INDIVIDUAL: US01: I1 9-MAR-2997: Birth Dates after CurrentDate");
         assertEquals(l, checker.US01_DatesBeforeCurrentDate(families.get("F1")));
-        assertNull(checker.US01_DatesBeforeCurrentDate(families.get("F2")));
+        assertNull(checker.US01_DatesBeforeCurrentDate(families.get("F3")));
     }
 
     @Test
@@ -63,7 +63,7 @@ public class Sprint3Test {
     // retest
     @Test
     public void testUS38() throws Exception {
-        assertEquals("LIST: INDIVIDUAL: US38: NAME:Jack Liu ID:I9 will born in this Month", checker.US38_ListUpcomingBirthdays(individuals.get("I9")));
+        assertEquals("LIST: INDIVIDUAL: US38: NAME:Rui Liu ID:I6 will born in this Month", checker.US38_ListUpcomingBirthdays(individuals.get("I6")));
         assertNull(checker.US38_ListUpcomingBirthdays(individuals.get("I7")));
     }
     @Test
