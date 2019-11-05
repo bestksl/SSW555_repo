@@ -16,6 +16,7 @@ public class Checker {
         this.families = familys;
     }
 
+
     public boolean checkAll(int num) throws Exception {
         switch(num) {
             case 1:
@@ -487,15 +488,23 @@ public class Checker {
     }
     public String US38_ListUpcomingBirthdays(Individual i) throws Exception {
         String birth = i.getBirt();
-        String[] birthArray = birth.split("-");
-        SimpleDateFormat sdfDate = new SimpleDateFormat("dd-MMM-yyyy");
-        Date now = new Date();
-        String strDate = sdfDate.format(now);
-        String[] nowArray = strDate.split("-");
-        if (birthArray[1].equalsIgnoreCase(nowArray[1]) && birthArray[2].equalsIgnoreCase(nowArray[2])) {
+
+        long num = TimeUtils.getDaysInfuture(birth);
+        if(num < 30 && num > 0 ){
+//        String[] birthArray = birth.split("-");
+//        SimpleDateFormat sdfDate = new SimpleDateFormat("dd-MMM-yyyy",Locale.ENGLISH);
+//
+//        Date now = new Date();
+//        String strDate = sdfDate.format(now);
+//
+//        String[] nowArray = strDate.split("-");
+//        System.out.println(Arrays.toString(nowArray));
+
+        //if (birthArray[1].equalsIgnoreCase(nowArray[1]) && birthArray[2].equalsIgnoreCase(nowArray[2])) {
             errList.add("LIST: INDIVIDUAL: US38: NAME:" + i.getName() + " ID:" + i.getId() + " will born in this Month");
             return "LIST: INDIVIDUAL: US38: NAME:" + i.getName() + " ID:" + i.getId() + " will born in this Month";
         }
+        System.out.println("User story 38 birth day = " + birth);
         return null;
     }
     public String US30_Listlivingmarried(Individual i) throws Exception {

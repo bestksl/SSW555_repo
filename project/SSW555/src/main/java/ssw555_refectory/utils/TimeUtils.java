@@ -19,7 +19,7 @@ public class TimeUtils {
     public static int getAge(String strDate) throws Exception {
         Date day = parse(strDate);
         Calendar cal = Calendar.getInstance();
-        if (cal.before(day)) { //出生日期晚于当前时间，无法计算
+        if (day.getTime() > System.currentTimeMillis()) { //出生日期晚于当前时间，无法计算
             return -1;
         }
         int yearNow = cal.get(Calendar.YEAR);  //当前年份
@@ -45,9 +45,19 @@ public class TimeUtils {
     public static long getDaysFromDate(String strDate) throws Exception {
         Date day = parse(strDate);
         Calendar cal = Calendar.getInstance();
-        if (cal.before(day)) { //出生日期晚于当前时间，无法计算
+
+
+        if(day.getTime() > System.currentTimeMillis()){
             return -1;
         }
         return ((System.currentTimeMillis() - day.getTime()) / (60 * 60 * 1000 * 24));
+    }
+
+    public static long getDaysInfuture(String strDate) throws Exception {
+        Date day = parse(strDate);
+        Calendar cal = Calendar.getInstance();
+
+        return ((day.getTime() - System.currentTimeMillis()) / (60 * 60 * 1000 * 24));
+
     }
 }
