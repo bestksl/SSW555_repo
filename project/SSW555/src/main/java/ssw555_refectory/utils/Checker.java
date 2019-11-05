@@ -439,7 +439,6 @@ public class Checker {
             errList1.add("ERROR: FAMILY: US01: " + f.getId() + ":Married  Dates after CurrentDate");
         }
         if (errList1.size() > 0) {
-            System.out.println(errList1);
             errList.addAll(errList1);
             return errList1;
         } else {
@@ -459,7 +458,6 @@ public class Checker {
             errList1.add("ERROR: FAMILY: US06: " + f.getId() + " Divorced after wife death");
         }
         if (errList1.size() > 0) {
-            System.out.println(errList1);
             errList.addAll(errList1);
             return errList1;
         } else {
@@ -488,23 +486,11 @@ public class Checker {
     }
     public String US38_ListUpcomingBirthdays(Individual i) throws Exception {
         String birth = i.getBirt();
-
         long num = TimeUtils.getDaysInfuture(birth);
         if(num < 30 && num > 0 ){
-//        String[] birthArray = birth.split("-");
-//        SimpleDateFormat sdfDate = new SimpleDateFormat("dd-MMM-yyyy",Locale.ENGLISH);
-//
-//        Date now = new Date();
-//        String strDate = sdfDate.format(now);
-//
-//        String[] nowArray = strDate.split("-");
-//        System.out.println(Arrays.toString(nowArray));
-
-        //if (birthArray[1].equalsIgnoreCase(nowArray[1]) && birthArray[2].equalsIgnoreCase(nowArray[2])) {
             errList.add("LIST: INDIVIDUAL: US38: NAME:" + i.getName() + " ID:" + i.getId() + " will born in this Month");
             return "LIST: INDIVIDUAL: US38: NAME:" + i.getName() + " ID:" + i.getId() + " will born in this Month";
         }
-        System.out.println("User story 38 birth day = " + birth);
         return null;
     }
     public String US30_Listlivingmarried(Individual i) throws Exception {
@@ -549,7 +535,6 @@ public class Checker {
         }
         return null;
     }
-    //Shiwei Ding
     public String US28_Ordersibelingbyage(Family f) throws Exception {
         ArrayList<String> Sname = new ArrayList<>();
         ArrayList<Integer> Agelist = new ArrayList<>();
@@ -583,7 +568,6 @@ public class Checker {
         errList.add(orderlist);
         return orderlist;
     }
-
     public String US29_Listdecrease() throws Exception {
         String declist = "LIST: INDIVIDUAL: US29:";
         for (Individual i : individuals.values()) {
