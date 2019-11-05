@@ -89,7 +89,7 @@ public class Checker {
         return errList.size() == 0;
     }
 
-    // Sprint 1, eight user stories
+    // Sprint 1, eight user stories ---------------------------------------------------------------------------------------------------------------------
     public String US12_parentsNotTooOld(Family f) throws Exception {
         ArrayList<String> children = f.getChildren();
         String father = f.getHusbandID();
@@ -236,7 +236,7 @@ public class Checker {
     }
 
 
-    // Sprint 2, eight user stories
+    // Sprint 2, eight user stories ---------------------------------------------------------------------------------------------------------------------
     public String US23_UniqueNameAndBirthdate() {
         Map<String, List<Individual>> map = new HashMap<>();
         StringBuilder sbs = new StringBuilder();
@@ -410,7 +410,7 @@ public class Checker {
     }
 
 
-    // Sprint 3, eight user stories
+    // Sprint 3, eight user stories ---------------------------------------------------------------------------------------------------------------------
     public List<String> US01_DatesBeforeCurrentDate(Family f) throws Exception {
         Individual husband, wife;
         Individual indiTemp = null;
