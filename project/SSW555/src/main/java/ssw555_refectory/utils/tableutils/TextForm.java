@@ -14,39 +14,17 @@ import org.apache.commons.lang3.StringUtils;
 
 public class TextForm {
 
-    /**
-     * 左边距
-     */
     int paddingL = 1;
-
-    /**
-     * 右边距
-     */
     int paddingR = 1;
 
-    /**
-     * 标题
-     */
     List<String> title = new ArrayList<>();
 
-    /**
-     * 数据
-     */
     List<List<String>> datas = new ArrayList<>();
 
-    /**
-     * 最大列数
-     */
     int maxCol = 0;
 
-    /**
-     * 每个单元格最大字符数
-     */
-    int colMaxLength = 13;
+    int colMaxLength = 19;
 
-    /**
-     * 表格组成符号
-     */
     char separator = '.';
 
     private TextForm() {
@@ -57,9 +35,6 @@ public class TextForm {
     }
 
 
-    /**
-     * 格式化输出表格
-     */
     public void printFormat() {
         List<List<String>> formData = new ArrayList<>();
         formData.add(title);
@@ -105,12 +80,6 @@ public class TextForm {
         }
     }
 
-    /**
-     * 找到每一列最大的长度
-     *
-     * @param formData
-     * @return
-     */
     private Map<Integer, Integer> colMaxLength(List<List<String>> formData) {
         Map<Integer, Integer> map = new HashMap<>();
         for (List<String> formDatum : formData) {
@@ -137,12 +106,7 @@ public class TextForm {
         return map;
     }
 
-    /**
-     * 找到每一列从右开始最小的空格长度
-     *
-     * @param formData
-     * @return
-     */
+
     private Map<Integer, Integer> colMinBlankLength(List<List<String>> formData) {
         Map<Integer, Integer> map = new HashMap<>();
         for (List<String> formDatum : formData) {
@@ -171,12 +135,7 @@ public class TextForm {
         return map;
     }
 
-    /**
-     * 获取中文数量
-     *
-     * @param val
-     * @return
-     */
+
     private int getChineseNum(String val) {
         if (val == null) {
             val = "null";
