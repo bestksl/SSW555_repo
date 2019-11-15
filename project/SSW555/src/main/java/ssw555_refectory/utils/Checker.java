@@ -28,6 +28,9 @@ public class Checker {
             case 3:
                 checkSprint3();
                 break;
+            case 4:
+                checkSprint4();
+                break;
         }
         return errList.size() == 0;
     }
@@ -85,6 +88,16 @@ public class Checker {
             US06_DivorceBeforeDeath(f);
             US05_MarriageBeforeDeath(f);
             US28_Ordersibelingbyage(f);
+        }
+        return errList.size() == 0;
+    }
+
+    private boolean checkSprint4() throws Exception{
+//        for(Individual i : individuals.values()){
+//
+//        }
+        for(Family f : families.values()){
+            US33_Listorphans(f);
         }
         return errList.size() == 0;
     }
@@ -579,4 +592,47 @@ public class Checker {
         errList.add(declist);
         return declist;
     }
+
+
+//Sprint4 eight user stories
+
+    //Zihan Li
+    public String US33_Listorphans(Family f) throws Exception{
+        String listorphans;
+        int birth = 100;
+        int husbanddead = 0;
+        int wifedead = 0;
+        String name = null ;
+        String id = null;
+        ArrayList<String> children = f.getChildren();
+        for (String child : children) {
+            Individual eachchildren = individuals.get(child);
+            name = eachchildren.getName();
+            id = eachchildren.getId();
+            birth = TimeUtils.getAge(eachchildren.getBirt());
+        }
+        if(birth < 18){
+            for(Individual individuals : individuals.values()){
+                if(f.getHusbandID().equals(individuals.getId())){
+                    if(individuals.getDeath() != null){
+                        husbanddead = 1;
+                    }
+                }
+            }
+            for(Individual individuals : individuals.values()){
+                if(f.getWifeID().equals(individuals.getId())){
+                    if(individuals.getDeath() != null){
+                        wifedead = 1;
+                    }
+                }
+            }
+            if(husbanddead == 1 && wifedead == 1){
+                listorphans = "LIST: INDIVIDUAL: US33: NAME: " + name + " ID: " + id + " is an orphan children";
+                errList.add("LIST: INDIVIDUAL: US33: NAME: " + name + " ID: " + id + " is an orphan children");
+                return  listorphans;
+            }
+        }
+        return null;
+    }
+
 }
