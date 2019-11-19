@@ -91,13 +91,17 @@ public class Checker {
         }
         return errList.size() == 0;
     }
-
     private boolean checkSprint4() throws Exception{
 //        for(Individual i : individuals.values()){
 //
 //        }
         for(Family f : families.values()){
             US33_Listorphans(f);
+            US14_MutipleBirth(f);
+            if(f.getId().equals("F1")) {
+                US15_FeverThan15(f);
+            }
+
         }
         return errList.size() == 0;
     }
@@ -634,5 +638,48 @@ public class Checker {
         }
         return null;
     }
+
+    //Jeff
+    public String US14_MutipleBirth(Family f) throws  Exception{
+        ArrayList<String> children = f.getChildren();
+
+        Map<String, Integer> map = new HashMap<>();
+        for (String child : children) {
+            Individual eachchildren = individuals.get(child);
+            String age = eachchildren.getAge();
+            Integer count =  map.get(age);
+            if(count == null){
+                map.put(age, 1);
+            }else{
+                map.put(age, count+1);
+            }
+        }
+
+        for (Map.Entry<String,Integer> entry : map.entrySet()) {
+            if (entry.getValue() > 5) {
+                errList.add("ERROR: FAMILY: US14: FAMILY: "
+                        + f.getId() + " ID: have more than five siblings with same date of bith");
+                return "ERROR: FAMILY: US14: FAMILY: "
+                        + f.getId() + " ID: have more than five siblings with same date of bith";
+
+            }
+        }
+        return null;
+
+    }
+    //Jeff
+    public String US15_FeverThan15(Family f) throws  Exception {
+        ArrayList<String> children = f.getChildren();
+        if(children.size() > 15){
+            errList.add("ERROR: FAMILY: US15: FAMILY: "
+                    + f.getId() + " ID: have more than 15 siblings");
+            return "ERROR: FAMILY: US15: FAMILY: "
+                    + f.getId() + " ID: have more than 15 siblings";
+        }
+
+        return null;
+    }
+
+
 
 }

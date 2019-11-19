@@ -9,6 +9,5 @@
         <module name="SSW555" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="12" />
   </component>
 </project>

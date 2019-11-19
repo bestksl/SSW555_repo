@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6e9f2759-f5a0-4f3a-a101-cfe9af30a1b7" name="Default Changelist" comment="">
+    <list default="true" id="fe9bc727-787c-4df0-9386-9f6e15180f8d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/test/Sprint4/Sprint4Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint4_test.ged" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint4_test.ged" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/bean/Family.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/bean/Family.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/bean/Individual.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/bean/Individual.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/core/Finder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/core/Finder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/FileUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/FileUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/TimeUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/TimeUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/ValidArguemnts$ValidArguemnt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/ValidArguemnts$ValidArguemnt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/ValidArguemnts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/ValidArguemnts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/tableutils/TextForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/tableutils/TextForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/tableutils/TextFormBulider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/tableutils/TextFormBulider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Sprint3/Sprint3Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Sprint3/Sprint3Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sprint1/Sprint1Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sprint1/Sprint1Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/sprint2/Sprint2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/sprint2/Sprint2Test.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -22,47 +36,27 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>38</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$/../.." value="master" />
-      </map>
-    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
+        <option name="jdkForImporter" value="12" />
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
-  </component>
-  <component name="ProjectId" id="1RwmlIbmKr5itasiAeRLEUspdzE" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1ToshihlmHjKFDqDMKKeINHFpGH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/ssw555_refectory" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.VCS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/ssw555_refectory" />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Sprint4" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -77,7 +71,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.Sprint4Test">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ssw555_refectory.Main" />
       <module name="SSW555" />
@@ -91,172 +85,67 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sprint1Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Sprint4 in SSW555" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="SSW555" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sprint1.*" />
+          <option name="PATTERN" value="Sprint4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="sprint1" />
-      <option name="MAIN_CLASS_NAME" value="sprint1.Sprint1Test" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="Sprint4" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sprint2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Sprint4Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SSW555" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="sprint2.*" />
+          <option name="PATTERN" value="Sprint4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="sprint2" />
-      <option name="MAIN_CLASS_NAME" value="sprint2.Sprint2Test" />
+      <option name="PACKAGE_NAME" value="Sprint4" />
+      <option name="MAIN_CLASS_NAME" value="Sprint4.Sprint4Test" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Sprint3Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SSW555" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Sprint3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Sprint3" />
-      <option name="MAIN_CLASS_NAME" value="Sprint3.Sprint3Test" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Sprint3Test.testUS06" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SSW555" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Sprint3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Sprint3" />
-      <option name="MAIN_CLASS_NAME" value="Sprint3.Sprint3Test" />
-      <option name="METHOD_NAME" value="testUS06" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Sprint4Test" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.Sprint3Test" />
-        <item itemvalue="JUnit.Sprint2Test" />
-        <item itemvalue="JUnit.Sprint1Test" />
-        <item itemvalue="JUnit.Sprint3Test.testUS06" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand />
-          <select />
-        </treeState>
-      </serviceView>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6e9f2759-f5a0-4f3a-a101-cfe9af30a1b7" name="Default Changelist" comment="" />
-      <created>1570586681112</created>
+      <changelist id="fe9bc727-787c-4df0-9386-9f6e15180f8d" name="Default Changelist" comment="" />
+      <created>1574137903764</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1570586681112</updated>
-      <workItem from="1570586685805" duration="816000" />
-      <workItem from="1571699514446" duration="2679000" />
-      <workItem from="1571769149417" duration="1305000" />
-      <workItem from="1572375291812" duration="647000" />
-      <workItem from="1572376542832" duration="606000" />
-      <workItem from="1572472985002" duration="119000" />
-      <workItem from="1572558570990" duration="477000" />
-      <workItem from="1572559098717" duration="296000" />
-      <workItem from="1572561486952" duration="3378000" />
-      <workItem from="1572747091619" duration="171000" />
+      <updated>1574137903764</updated>
     </task>
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="Sprint3Test - 2019.11.04 at 20h 25m 14s.xml">
-      <configuration name="Sprint3Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Sprint1Test - 2019.11.04 at 20h 28m 55s.xml">
-      <configuration name="Sprint1Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Sprint2Test - 2019.11.04 at 20h 29m 01s.xml">
-      <configuration name="Sprint2Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Sprint1Test - 2019.11.04 at 20h 30m 24s.xml">
-      <configuration name="Sprint1Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Sprint2Test - 2019.11.04 at 20h 30m 28s.xml">
-      <configuration name="Sprint2Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Sprint3Test - 2019.11.04 at 20h 30m 32s.xml">
-      <configuration name="Sprint3Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Sprint3Test - 2019.11.04 at 20h 30m 58s.xml">
-      <configuration name="Sprint3Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Sprint3Test - 2019.11.04 at 20h 43m 14s.xml">
-      <configuration name="Sprint3Test" configurationId="JUnit" />
-    </history-entry>
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2451000" />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SSW555$Sprint1Test.ic" NAME="Sprint1Test Coverage Results" MODIFIED="1572580727654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>sprint1.*</FILTER>
-    </SUITE>
   </component>
 </project>
