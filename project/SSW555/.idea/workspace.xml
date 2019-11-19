@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6e9f2759-f5a0-4f3a-a101-cfe9af30a1b7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint4_test.ged" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/Sprint4_test.ged" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssw555_refectory/utils/Checker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" afterDir="false" />
     </list>
@@ -155,7 +156,6 @@
       <list>
         <item itemvalue="JUnit.Sprint4Test" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Android JUnit.Sprint4Test.testUS17" />
         <item itemvalue="JUnit.Sprint3Test" />
         <item itemvalue="JUnit.Sprint2Test" />
       </list>
