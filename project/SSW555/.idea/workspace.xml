@@ -42,10 +42,6 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
-  </component>
   <component name="ProjectId" id="1RwmlIbmKr5itasiAeRLEUspdzE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -61,6 +57,9 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Sprint4" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/ssw555_refectory" />
     </key>
@@ -77,7 +76,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.Sprint4Test">
+    <configuration name="Sprint4Test.testUS17" type="AndroidJUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSW555" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Sprint4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Sprint4" />
+      <option name="MAIN_CLASS_NAME" value="Sprint4.Sprint4Test" />
+      <option name="METHOD_NAME" value="testUS17" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ssw555_refectory.Main" />
       <module name="SSW555" />
@@ -87,21 +102,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Sprint1Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SSW555" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sprint1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="sprint1" />
-      <option name="MAIN_CLASS_NAME" value="sprint1.Sprint1Test" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -136,29 +136,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sprint3Test.testUS06" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Sprint4Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SSW555" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Sprint3.*" />
+          <option name="PATTERN" value="Sprint4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Sprint3" />
-      <option name="MAIN_CLASS_NAME" value="Sprint3.Sprint3Test" />
-      <option name="METHOD_NAME" value="testUS06" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="Sprint4" />
+      <option name="MAIN_CLASS_NAME" value="Sprint4.Sprint4Test" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Sprint4Test" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Android JUnit.Sprint4Test.testUS17" />
         <item itemvalue="JUnit.Sprint3Test" />
         <item itemvalue="JUnit.Sprint2Test" />
-        <item itemvalue="JUnit.Sprint1Test" />
-        <item itemvalue="JUnit.Sprint3Test.testUS06" />
       </list>
     </recent_temporary>
   </component>
@@ -194,32 +193,6 @@
       <workItem from="1572747091619" duration="171000" />
     </task>
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="Sprint3Test - 2019.11.04 at 20h 25m 14s.xml">
-      <configuration name="Sprint3Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Sprint1Test - 2019.11.04 at 20h 28m 55s.xml">
-      <configuration name="Sprint1Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Sprint2Test - 2019.11.04 at 20h 29m 01s.xml">
-      <configuration name="Sprint2Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Sprint1Test - 2019.11.04 at 20h 30m 24s.xml">
-      <configuration name="Sprint1Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Sprint2Test - 2019.11.04 at 20h 30m 28s.xml">
-      <configuration name="Sprint2Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Sprint3Test - 2019.11.04 at 20h 30m 32s.xml">
-      <configuration name="Sprint3Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Sprint3Test - 2019.11.04 at 20h 30m 58s.xml">
-      <configuration name="Sprint3Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Sprint3Test - 2019.11.04 at 20h 43m 14s.xml">
-      <configuration name="Sprint3Test" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="2451000" />

@@ -18,7 +18,7 @@ public class Checker {
 
 
     public boolean checkAll(int num) throws Exception {
-        switch(num) {
+        switch (num) {
             case 1:
                 checkSprint1();
                 break;
@@ -34,6 +34,7 @@ public class Checker {
         }
         return errList.size() == 0;
     }
+
     public static void printErr() {
         for (String err : errList) {
             System.out.println(err);
@@ -58,6 +59,7 @@ public class Checker {
         }
         return errList.size() == 0;
     }
+
     public boolean checkSprint2() throws Exception {
         // In order to check the listing ages for each member
         individuals.get("I11").setAge("");
@@ -75,6 +77,7 @@ public class Checker {
         }
         return errList.size() == 0;
     }
+
     private boolean checkSprint3() throws Exception {
         US29_Listdecrease();
         for (Individual i : individuals.values()) {
@@ -92,12 +95,14 @@ public class Checker {
         return errList.size() == 0;
     }
 
-    private boolean checkSprint4() throws Exception{
+    private boolean checkSprint4() throws Exception {
 //        for(Individual i : individuals.values()){
 //
 //        }
-        for(Family f : families.values()){
+        for (Family f : families.values()) {
             US33_Listorphans(f);
+            US17_Nomarriagetodecendent(f);
+            US18_Sibilingsshouldnotmarried(f);
         }
         return errList.size() == 0;
     }
@@ -122,6 +127,7 @@ public class Checker {
         }
         return null;
     }
+
     public String US04_checkMarrige(Family f) throws Exception {
         if (f.getMarried() == null || f.getDivorced() == null) {
             return null;
@@ -135,6 +141,7 @@ public class Checker {
         }
         return null;
     }
+
     public String US03_checkBirthBeforeDeath(Individual i) throws Exception {
         if (i.getBirt() != null && i.getDeath() != null) {
             if (!(TimeUtils.getAge(i.getBirt()) - TimeUtils.getAge(i.getDeath()) >= 0)) {
@@ -146,6 +153,7 @@ public class Checker {
         }
         return null;
     }
+
     public String US08_birthAfterParentsMarriges(Family f) throws Exception {
         ArrayList<String> children = f.getChildren();
         if (f.getMarried() == null || f.getChildren().size() == 0) {
@@ -167,6 +175,7 @@ public class Checker {
         return res;
 
     }
+
     public String US07_ageOld(Individual i) throws Exception {
         if (i.getBirt() != null) {
             if ((i.getDeath() == null ? TimeUtils.getAge(i.getBirt()) : TimeUtils.getAge(i.getBirt()) - TimeUtils.getAge(i.getDeath())) >= 150) {
@@ -177,6 +186,7 @@ public class Checker {
         }
         return null;
     }
+
     public String US25_uniqueFirstname(Family f) {
         Set<String> nameSet = new HashSet<>();
         List<String> idList = new ArrayList<>();
@@ -203,6 +213,7 @@ public class Checker {
         }
         return null;
     }
+
     public String US16_familyMaleLastName(Family f) throws Exception {
         HashMap<String, String> hash_setINDI = new HashMap<>();
         HashMap<String, String> hash_setSEX = new HashMap<>();
@@ -231,6 +242,7 @@ public class Checker {
         }
         return null;
     }
+
     public String US22_uniqueIdINDI(Individual i) throws Exception {
         if (i.getId().startsWith(".")) {
             String str = i.getId().replace(".", "");
@@ -239,6 +251,7 @@ public class Checker {
         }
         return null;
     }
+
     public String US22_uniqueIdFAM(Family f) throws Exception {
         if (f.getId().startsWith(".")) {
             String str = f.getId().replace(".", "");
@@ -280,6 +293,7 @@ public class Checker {
 
         return sbs.toString();
     }
+
     public String US09_BirthBeforeDeathOfParents(Family f) throws Exception {
 
         Individual husband = individuals.get(f.getHusbandID());
@@ -316,6 +330,7 @@ public class Checker {
 
         return null;
     }
+
     public String US10_MarriageAfter14(Family f) throws Exception {
         Individual husband = individuals.get(f.getHusbandID());
         Individual wife = individuals.get(f.getWifeID());
@@ -343,13 +358,15 @@ public class Checker {
 
         return null;
     }
-    public String US27_IncludeIndividualAges(Individual i) throws Exception{
-        if(i.getBirt() == null || i.getAge().length() == 0){
-            errList.add("ERROR: INDIVIDUAL: US27: "+i.getName()+" with ID: "+i.getId()+" has no age");
-            return "ERROR: INDIVIDUAL: US27: "+i.getName()+" with ID: "+i.getId()+" has no age";
+
+    public String US27_IncludeIndividualAges(Individual i) throws Exception {
+        if (i.getBirt() == null || i.getAge().length() == 0) {
+            errList.add("ERROR: INDIVIDUAL: US27: " + i.getName() + " with ID: " + i.getId() + " has no age");
+            return "ERROR: INDIVIDUAL: US27: " + i.getName() + " with ID: " + i.getId() + " has no age";
         }
         return null;
     }
+
     public String US31_Listlivingsingle(Individual i) throws Exception {
         String listlivingsingle;
         long day = 0;
@@ -372,6 +389,7 @@ public class Checker {
         }
         return null;
     }
+
     public String US35_Listrecentbirths(Individual i) throws Exception {
         String recentbirths = "";
         long day = 0;
@@ -386,6 +404,7 @@ public class Checker {
         }
         return null;
     }
+
     public static String US36_recentdeath(Individual i) throws Exception {
         String deathlist = "";
         long days = 0;
@@ -400,6 +419,7 @@ public class Checker {
         }
         return null;
     }
+
     public static String US34_Listlargeagedifferences(Family f) throws Exception {
         String ret = "";
         if (f.getDivorced() == null && f.getHusbandID() != null && f.getWifeID() != null) {
@@ -437,10 +457,10 @@ public class Checker {
                 continue;
             }
             if (null != indiTemp.getBirt() && TimeUtils.getAge(indiTemp.getBirt()) < 0) {
-                errList1.add("ERROR: INDIVIDUAL: US01: " + id +" "+ indiTemp.getBirt()+ ": Birth Dates after CurrentDate");
+                errList1.add("ERROR: INDIVIDUAL: US01: " + id + " " + indiTemp.getBirt() + ": Birth Dates after CurrentDate");
             }
-            if (null != indiTemp.getDeath() && TimeUtils.getAge(indiTemp.getDeath()) <0) {
-                errList1.add("ERROR: INDIVIDUAL: US01: " + id +" "+ indiTemp.getDeath()+  ": Death Dates after CurrentDate");
+            if (null != indiTemp.getDeath() && TimeUtils.getAge(indiTemp.getDeath()) < 0) {
+                errList1.add("ERROR: INDIVIDUAL: US01: " + id + " " + indiTemp.getDeath() + ": Death Dates after CurrentDate");
             }
         }
 
@@ -458,6 +478,7 @@ public class Checker {
             return null;
         }
     }
+
     public List<String> US06_DivorceBeforeDeath(Family f) throws Exception {
         if (f.getDivorced() == null)
             return null;
@@ -478,6 +499,7 @@ public class Checker {
         }
 
     }
+
     public String US05_MarriageBeforeDeath(Family f) throws Exception {
         Individual husband = individuals.get(f.getHusbandID());
         Individual wife = individuals.get(f.getWifeID());
@@ -497,15 +519,17 @@ public class Checker {
         }
         return null;
     }
+
     public String US38_ListUpcomingBirthdays(Individual i) throws Exception {
         String birth = i.getBirt();
         long num = TimeUtils.getDaysInfuture(birth);
-        if(num < 30 && num > 0 ){
+        if (num < 30 && num > 0) {
             errList.add("LIST: INDIVIDUAL: US38: NAME:" + i.getName() + " ID:" + i.getId() + " will born in this Month");
             return "LIST: INDIVIDUAL: US38: NAME:" + i.getName() + " ID:" + i.getId() + " will born in this Month";
         }
         return null;
     }
+
     public String US30_Listlivingmarried(Individual i) throws Exception {
         String listlivingmarried;
         long day = 0;
@@ -529,6 +553,7 @@ public class Checker {
         }
         return null;
     }
+
     public String US02_Birthbeforemarriage(Individual i) throws Exception {
         String birthbeforemarriage;
         int birth = 0;
@@ -548,6 +573,7 @@ public class Checker {
         }
         return null;
     }
+
     public String US28_Ordersibelingbyage(Family f) throws Exception {
         ArrayList<String> Sname = new ArrayList<>();
         ArrayList<Integer> Agelist = new ArrayList<>();
@@ -575,12 +601,13 @@ public class Checker {
             }
         }
         orderlist = "LIST: FAMILY: US_28: In family " + f.getId() + " the age order for child is ";
-        for(int i = 0; i < Result.size(); i++){
+        for (int i = 0; i < Result.size(); i++) {
             orderlist = orderlist + Result.get(i) + " age: " + Agelist.get(i) + " ";
         }
         errList.add(orderlist);
         return orderlist;
     }
+
     public String US29_Listdecrease() throws Exception {
         String declist = "LIST: INDIVIDUAL: US29:";
         for (Individual i : individuals.values()) {
@@ -597,12 +624,12 @@ public class Checker {
 //Sprint4 eight user stories
 
     //Zihan Li
-    public String US33_Listorphans(Family f) throws Exception{
+    public String US33_Listorphans(Family f) throws Exception {
         String listorphans;
         int birth = 100;
         int husbanddead = 0;
         int wifedead = 0;
-        String name = null ;
+        String name = null;
         String id = null;
         ArrayList<String> children = f.getChildren();
         for (String child : children) {
@@ -611,28 +638,130 @@ public class Checker {
             id = eachchildren.getId();
             birth = TimeUtils.getAge(eachchildren.getBirt());
         }
-        if(birth < 18){
-            for(Individual individuals : individuals.values()){
-                if(f.getHusbandID().equals(individuals.getId())){
-                    if(individuals.getDeath() != null){
+        if (birth < 18) {
+            for (Individual individuals : individuals.values()) {
+                if (f.getHusbandID().equals(individuals.getId())) {
+                    if (individuals.getDeath() != null) {
                         husbanddead = 1;
                     }
                 }
             }
-            for(Individual individuals : individuals.values()){
-                if(f.getWifeID().equals(individuals.getId())){
-                    if(individuals.getDeath() != null){
+            for (Individual individuals : individuals.values()) {
+                if (f.getWifeID().equals(individuals.getId())) {
+                    if (individuals.getDeath() != null) {
                         wifedead = 1;
                     }
                 }
             }
-            if(husbanddead == 1 && wifedead == 1){
+            if (husbanddead == 1 && wifedead == 1) {
                 listorphans = "LIST: INDIVIDUAL: US33: NAME: " + name + " ID: " + id + " is an orphan children";
                 errList.add("LIST: INDIVIDUAL: US33: NAME: " + name + " ID: " + id + " is an orphan children");
-                return  listorphans;
+                return listorphans;
             }
         }
         return null;
     }
 
+    public String US17_Nomarriagetodecendent(Family f) throws Exception {
+        String ret = "";
+        String pf = f.getHusbandID();
+        String pm = f.getWifeID();
+        String Sname = "";
+        for (String childId : f.getChildren()) {
+            if (childId == null) {
+                break;
+            }
+            if (childId.equals(pf)) {
+                Sname = "ERROR: FAMILY: US_17: In family " + f.getId() + " Mother " + pm + " married his children " + childId + " in family " + f.getId();
+                errList.add(Sname);
+                ret = ret + Sname;
+                Sname = "";
+            }
+            if (childId.equals(pm)) {
+                Sname = "ERROR: FAMILY: US_17: In family " + f.getId() + " Father " + pf + " married her children " + childId + " in family " + f.getId();
+                errList.add(Sname);
+                ret = ret + Sname;
+                Sname = "";
+            }
+            for (Family f0 : families.values()) {
+                String pf0 = f0.getHusbandID();
+                String pm0 = f0.getWifeID();
+                if (pf0.equals(childId) && pm0.equals(pm)) {
+                    Sname = "ERROR: FAMILY: US_17: In family " + f.getId() + " Mother " + pm + " married his children " + childId + " in family " + f0.getId();
+                    errList.add(Sname);
+                    ret = ret + Sname;
+                    Sname = "";
+                }
+                if (pm0.equals(childId) && pf0.equals(pf)) {
+                    Sname = "ERROR: FAMILY: US_17: In family " + f.getId() + " Father " + pf + " married her children " + childId + " in family " + f0.getId();
+                    errList.add(Sname);
+                    ret = ret + Sname;
+                    Sname = "";
+                }
+            }
+            for (Family f1 : families.values()) {
+                String pf1 = f1.getHusbandID();
+                String pm1 = f1.getWifeID();
+                if (childId.equals(pf1) || childId.equals(pm1)) {
+                    for (String childId1 : f1.getChildren()) {
+                        if (childId1.equals(pf)) {
+                            Sname = "ERROR: FAMILY: US_17: In family " + f.getId() + " GrandMather " + pm + " married his grandchildren " + childId1 + " in family " + f1.getId();
+                            errList.add(Sname);
+                            ret = ret + Sname;
+                            Sname = "";
+                        }
+                        if (childId1.equals(pm)) {
+                            Sname = "ERROR: FAMILY: US_17: In family " + f.getId() + " GrandFather " + pf + " married her grandchildren " + childId1 + " in family " + f1.getId();
+                            errList.add(Sname);
+                            ret = ret + Sname;
+                            Sname = "";
+                        }
+
+                    }
+                }
+            }
+        }
+        if(ret == ""){
+            return null;
+        } else {
+            return ret;
+        }
+    }
+
+    public String US18_Sibilingsshouldnotmarried(Family f) throws Exception {
+        String result = "", target1 = "", target2 = "", ret = "";
+        int mark = 0;
+        ArrayList<String> Sibileing = new ArrayList<>();
+        for (String childId : f.getChildren()) {
+            if (childId == null) {
+                break;
+            }
+            Sibileing.add(childId);
+
+        }
+        for (Family f1 : families.values()) {
+            mark = 0;
+            for (String ch : Sibileing) {
+                if (f1.getHusbandID().equals(ch)) {
+                    mark++;
+                    target1 = ch;
+                }
+                if (f1.getWifeID().equals(ch)) {
+                    mark++;
+                    target2 = ch;
+                }
+            }
+            if (mark == 2) {
+                result = "ERROR: FAMILY: US_18: In family " + f.getId() + " the sibiling " + target1 + " and " + target2 + " cannot marry!";
+                if (ret == null) {
+                    ret = result;
+                } else {
+                    ret = ret + result;
+                }
+                errList.add(ret);
+                return ret;
+            }
+        }
+        return null;
+    }
 }
