@@ -105,6 +105,8 @@ public class Checker {
             US18_Sibilingsshouldnotmarried(f);
             US14_MutipleBirth(f);
             US15_FeverThan15(f);
+            US21_CorrectGenderForRole(f);
+            US39_ListUpcomingAnniversaries(f);
         }
         return errList.size() == 0;
     }
@@ -723,7 +725,7 @@ public class Checker {
                 }
             }
         }
-        if(ret == ""){
+        if (ret == "") {
             return null;
         } else {
             return ret;
@@ -768,22 +770,22 @@ public class Checker {
     }
 
     //Jeff
-    public String US14_MutipleBirth(Family f) throws  Exception{
+    public String US14_MutipleBirth(Family f) throws Exception {
         ArrayList<String> children = f.getChildren();
 
         Map<String, Integer> map = new HashMap<>();
         for (String child : children) {
             Individual eachchildren = individuals.get(child);
             String age = eachchildren.getAge();
-            Integer count =  map.get(age);
-            if(count == null){
+            Integer count = map.get(age);
+            if (count == null) {
                 map.put(age, 1);
-            }else{
-                map.put(age, count+1);
+            } else {
+                map.put(age, count + 1);
             }
         }
 
-        for (Map.Entry<String,Integer> entry : map.entrySet()) {
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
             if (entry.getValue() > 5) {
                 errList.add("ERROR: FAMILY: US14: FAMILY: "
                         + f.getId() + " ID: have more than five siblings with same date of bith");
@@ -795,10 +797,11 @@ public class Checker {
         return null;
 
     }
+
     //Jeff
-    public String US15_FeverThan15(Family f) throws  Exception {
+    public String US15_FeverThan15(Family f) throws Exception {
         ArrayList<String> children = f.getChildren();
-        if(children.size() > 15){
+        if (children.size() > 15) {
             errList.add("ERROR: FAMILY: US15: FAMILY: "
                     + f.getId() + " ID: have more than 15 siblings");
             return "ERROR: FAMILY: US15: FAMILY: "
@@ -808,4 +811,31 @@ public class Checker {
         return null;
     }
 
+
+    public String US21_CorrectGenderForRole(Family f) {
+        Individual husband = individuals.get(f.getHusbandID());
+        Individual wife = individuals.get(f.getWifeID());
+        List<String> tempList = new ArrayList<>();
+        if (null != husband.getGender() && husband.getGender().equals("F")) {
+            errList.add("ERROR: INDIVIDUAL: US21: NAME:" + husband.getName() + " ID: " + husband.getId() + " gender should be male");
+            tempList.add("ERROR: INDIVIDUAL: US21: NAME:" + husband.getName() + " ID: " + husband.getId() + " gender should be male");
+        }
+        if (null != wife.getGender() && wife.getGender().equals("M")) {
+            errList.add("ERROR: INDIVIDUAL: US21: NAME:" + wife.getName() + " ID: " + wife.getId() + " gender should be female");
+            tempList.add("ERROR: INDIVIDUAL: US21: NAME:" + wife.getName() + " ID: " + wife.getId() + " gender should be female");
+        }
+        return tempList.toString();
+    }
+
+    public String US39_ListUpcomingAnniversaries(Family f) throws Exception {
+        String date = f.getMarried();
+        if (date != null) {
+            long num = TimeUtils.getDaysInfuture(f.getMarried());
+            if (0 < num && num < 30) {
+                errList.add("LIST: Family: US39: Family:" + f.getId() + " Upcoming Anniversaries: " + f.getMarried());
+                return "LIST: Family: US39: Family:" + f.getId() + " Upcoming Anniversaries: " + f.getMarried();
+            }
+        }
+        return null;
+    }
 }

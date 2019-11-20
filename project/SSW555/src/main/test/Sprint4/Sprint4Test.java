@@ -28,6 +28,7 @@ public class Sprint4Test {
         assertEquals("ERROR: FAMILY: US_17: In family F2 GrandFather I6 married her grandchildren I8 in family F3", checker.US17_Nomarriagetodecendent(families.get("F2")));
         assertNull(checker.US17_Nomarriagetodecendent(families.get("F1")));
     }
+
     @Test
     public void testUS18() throws Exception {
         assertEquals("ERROR: FAMILY: US_18: In family F3 the sibiling I4 and I7 cannot marry!", checker.US18_Sibilingsshouldnotmarried(families.get("F3")));
@@ -40,11 +41,30 @@ public class Sprint4Test {
         assertEquals("ERROR: FAMILY: US14: FAMILY: F1 ID: have more than five siblings with same date of bith", checker.US14_MutipleBirth(families.get("F1")));
         assertNull(checker.US14_MutipleBirth(families.get("F3")));
     }
+
     // Jeff
     @Test
     public void testUS15() throws Exception {
         assertEquals("ERROR: FAMILY: US15: FAMILY: F1 ID: have more than 15 siblings", checker.US15_FeverThan15(families.get("F1")));
         assertNull(checker.US15_FeverThan15(families.get("F3")));
+    }
+
+    //Haoxuan Li
+    @Test
+    public void testUS21() {
+        List<String> l = new ArrayList<>();
+        l.add("ERROR: INDIVIDUAL: US21: NAME:Jeff Liu ID: I1 gender should be female");
+        assertEquals(l.toString(), checker.US21_CorrectGenderForRole(families.get("F9")));
+        assertEquals("[]",checker.US21_CorrectGenderForRole(families.get("F1")));
+    }
+
+    //Haoxuan Li
+    @Test
+    public void testUS39() throws Exception {
+        List<String> l = new ArrayList<>();
+        l.add("LIST: Family: US39: Family:F8 Upcoming Anniversaries: 18-DEC-2019");
+        assertEquals(l.get(0),checker.US39_ListUpcomingAnniversaries(families.get("F8")));
+        assertNull(checker.US39_ListUpcomingAnniversaries(families.get("F1")));
     }
 
 }
