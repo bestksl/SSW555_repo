@@ -107,6 +107,7 @@ public class Checker {
             US15_FeverThan15(f);
             US21_CorrectGenderForRole(f);
             US39_ListUpcomingAnniversaries(f);
+            US37_Listrecentsurvivors(f);
         }
         return errList.size() == 0;
     }
@@ -641,30 +642,94 @@ public class Checker {
             name = eachchildren.getName();
             id = eachchildren.getId();
             birth = TimeUtils.getAge(eachchildren.getBirt());
-        }
-        if (birth < 18) {
-            for (Individual individuals : individuals.values()) {
-                if (f.getHusbandID().equals(individuals.getId())) {
-                    if (individuals.getDeath() != null) {
-                        husbanddead = 1;
+
+            if (birth < 18) {
+                for (Individual individuals : individuals.values()) {
+                    if (f.getHusbandID().equals(individuals.getId())) {
+                        if (individuals.getDeath() != null) {
+                            husbanddead = 1;
+                        }
                     }
                 }
-            }
-            for (Individual individuals : individuals.values()) {
-                if (f.getWifeID().equals(individuals.getId())) {
-                    if (individuals.getDeath() != null) {
-                        wifedead = 1;
+                for (Individual individuals : individuals.values()) {
+                    if (f.getWifeID().equals(individuals.getId())) {
+                        if (individuals.getDeath() != null) {
+                            wifedead = 1;
+                        }
                     }
                 }
-            }
-            if (husbanddead == 1 && wifedead == 1) {
-                listorphans = "LIST: INDIVIDUAL: US33: NAME: " + name + " ID: " + id + " is an orphan children";
-                errList.add("LIST: INDIVIDUAL: US33: NAME: " + name + " ID: " + id + " is an orphan children");
-                return listorphans;
+                if (husbanddead == 1 && wifedead == 1) {
+                    listorphans = "LIST: INDIVIDUAL: US33: NAME: " + name + " ID: " + id + " is an orphan children";
+                    errList.add("LIST: INDIVIDUAL: US33: NAME: " + name + " ID: " + id + " is an orphan children");
+                    return listorphans;
+                }
             }
         }
         return null;
     }
+
+    //Zihan Li
+    public String US37_Listrecentsurvivors(Family f) throws Exception{
+        String listrecentsurvivors = "";
+        String id = "";
+        ArrayList<String> children = f.getChildren();
+        for (Individual individualss : individuals.values()){
+            if (f.getHusbandID().equals(individualss.getId())) {
+                if (individualss.getDeath() != null && (TimeUtils.getAge(individualss.getDeath()) < 30)) {
+                    for (Individual individualsss : individuals.values()) {
+                        if (f.getWifeID().equals(individualsss.getId())) {
+                            if (individualsss.getDeath() == null ) {
+                                listrecentsurvivors = "List: INDIVIDUAL: US37: the following are living spouses and descendants of " + individualss.getId() + " : " + individualsss.getId();
+                                errList.add("List: INDIVIDUAL: US37: the following are living spouses and descendants of " + individualss.getId() + " : " + individualsss.getId());
+                            }
+                                for (String child : children){
+                                    Individual eachildren = individuals.get(child);
+                                    id = eachildren.getId();
+                                    if (eachildren.getDeath() == null){
+                                        listrecentsurvivors = listrecentsurvivors + id;
+                                        errList.add(id);
+                                    }
+                                }
+
+                            return listrecentsurvivors;
+                        }
+                    }
+                }
+                else
+                    break;
+            }
+        }
+        for (Individual individualss : individuals.values()){
+            if (f.getWifeID().equals(individualss.getId())){
+                if (individualss.getDeath() != null && (TimeUtils.getAge(individualss.getDeath()) < 30)){
+                    for (Individual individualsss : individuals.values()){
+                        if (f.getHusbandID().equals(individualsss.getId())){
+                            if (individualsss.getDeath() == null) {
+                                listrecentsurvivors = "List: INDIVIDUAL: US37: the following are living spouses and descendants of " + individualss.getId() + " : " + individualsss.getId();
+                                errList.add("List: INDIVIDUAL: US37: the following are living spouses and descendants of " + individualss.getId() + " : " + individualsss.getId());
+                            }
+
+                                for (String child : children){
+                                    Individual eachildren = individuals.get(child);
+                                    id = eachildren.getId();
+                                    if (eachildren.getDeath() == null){
+                                        listrecentsurvivors = listrecentsurvivors + id;
+                                        errList.add(id);
+                                    }
+                                }
+
+                            return listrecentsurvivors;
+                        }
+                    }
+                }
+                else
+                    break;
+            }
+        }
+        return null;
+    }
+
+
 
     public String US17_Nomarriagetodecendent(Family f) throws Exception {
         String ret = "";
