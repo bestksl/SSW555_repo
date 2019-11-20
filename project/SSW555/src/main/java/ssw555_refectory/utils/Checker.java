@@ -729,7 +729,7 @@ public class Checker {
         return null;
     }
 
-
+    //Shiwei Ding
 
     public String US17_Nomarriagetodecendent(Family f) throws Exception {
         String ret = "";
@@ -796,6 +796,8 @@ public class Checker {
             return ret;
         }
     }
+
+    //Shiwei Ding
 
     public String US18_Sibilingsshouldnotmarried(Family f) throws Exception {
         String result = "", target1 = "", target2 = "", ret = "";
