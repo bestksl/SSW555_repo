@@ -45,7 +45,7 @@ public class Sprint2Test {
 
     @Test
     public void testUS35() throws Exception {
-        assertEquals("LIST: INDIVIDUAL: US35: NAME:Han Li ID:I4 was born in the last 30 days", checker.US35_Listrecentbirths((individuals.get("I4"))));
+        assertEquals("LIST: INDIVIDUAL: US35: NAME:Li Sheng ID:I9 was born in the last 30 days", checker.US35_Listrecentbirths((individuals.get("I9"))));
         assertNull(checker.US35_Listrecentbirths(individuals.get("I6")));
     }
 
