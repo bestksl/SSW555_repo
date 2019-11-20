@@ -36,17 +36,17 @@ public class Sprint4Test {
         assertEquals("LIST: INDIVIDUAL: US33: NAME: Jeff Liu ID: I1 is an orphan children",checker.US33_Listorphans(families.get("F1")));
         assertNull(checker.US33_Listorphans(families.get("F2")));
     }
-
+    //Shiwei Ding
     @Test
     public void testUS17() throws Exception {
         assertEquals("ERROR: FAMILY: US_17: In family F2 GrandFather I6 married her grandchildren I8 in family F3", checker.US17_Nomarriagetodecendent(families.get("F2")));
-        assertNull(checker.US17_Nomarriagetodecendent(families.get("F1")));
+        assertNull(checker.US17_Nomarriagetodecendent(families.get("F5")));
     }
-
+    //Shiwei Ding
     @Test
     public void testUS18() throws Exception {
-        assertEquals("ERROR: FAMILY: US_18: In family F3 the sibiling I4 and I7 cannot marry!", checker.US18_Sibilingsshouldnotmarried(families.get("F3")));
-        assertNull(checker.US18_Sibilingsshouldnotmarried(families.get("F1")));
+        assertEquals("ERROR: FAMILY: US_18: In family F1 the sibiling I15 and I1 cannot marry!", checker.US18_Sibilingsshouldnotmarried(families.get("F1")));
+        assertNull(checker.US18_Sibilingsshouldnotmarried(families.get("F7")));
     }
 
     // Jeff
