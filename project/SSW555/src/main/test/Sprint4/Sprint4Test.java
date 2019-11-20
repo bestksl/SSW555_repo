@@ -23,6 +23,20 @@ public class Sprint4Test {
     private Map<String, Family> families = finder.getFamilies();
     private Checker checker = new Checker(individuals, families);
 
+    //Zihan Li
+    @Test
+    public void testUS37() throws  Exception{
+        assertEquals("List: INDIVIDUAL: US37: the following are living spouses and descendants of I2 : I5I4I8",checker.US37_Listrecentsurvivors(families.get("F3")));
+        assertNull(checker.US37_Listrecentsurvivors(families.get("F6")));
+    }
+
+    //Zihan Li
+    @Test
+    public void testUS33() throws Exception{
+        assertEquals("LIST: INDIVIDUAL: US33: NAME: Jeff Liu ID: I1 is an orphan children",checker.US33_Listorphans(families.get("F1")));
+        assertNull(checker.US33_Listorphans(families.get("F2")));
+    }
+
     @Test
     public void testUS17() throws Exception {
         assertEquals("ERROR: FAMILY: US_17: In family F2 GrandFather I6 married her grandchildren I8 in family F3", checker.US17_Nomarriagetodecendent(families.get("F2")));
@@ -66,5 +80,6 @@ public class Sprint4Test {
         assertEquals(l.get(0),checker.US39_ListUpcomingAnniversaries(families.get("F8")));
         assertNull(checker.US39_ListUpcomingAnniversaries(families.get("F1")));
     }
+
 
 }
