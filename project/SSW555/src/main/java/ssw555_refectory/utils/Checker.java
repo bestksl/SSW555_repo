@@ -680,20 +680,21 @@ public class Checker {
                         if (f.getWifeID().equals(individualsss.getId())) {
                             if (individualsss.getDeath() == null ) {
                                 listrecentsurvivors = "List: INDIVIDUAL: US37: the following are living spouses and descendants of " + individualss.getId() + " : " + individualsss.getId();
-                                errList.add("List: INDIVIDUAL: US37: the following are living spouses and descendants of " + individualss.getId() + " : " + individualsss.getId());
                             }
-                                for (String child : children){
-                                    Individual eachildren = individuals.get(child);
-                                    id = eachildren.getId();
-                                    if (eachildren.getDeath() == null){
-                                        listrecentsurvivors = listrecentsurvivors + id;
-                                        errList.add(id);
-                                    }
+                            for (String child : children){
+                                Individual eachildren = individuals.get(child);
+                                id = eachildren.getId();
+                                if (eachildren.getDeath() == null){
+                                    if(listrecentsurvivors == "")
+                                        listrecentsurvivors = "List: INDIVIDUAL: US37: the following are living spouses and descendants of " + individualss.getId() + " : " + id;
+                                    else
+                                        listrecentsurvivors = listrecentsurvivors+id;
                                 }
-
-                            return listrecentsurvivors;
+                            }
                         }
                     }
+                    errList.add(listrecentsurvivors);
+                    return listrecentsurvivors;
                 }
                 else
                     break;
@@ -706,21 +707,22 @@ public class Checker {
                         if (f.getHusbandID().equals(individualsss.getId())){
                             if (individualsss.getDeath() == null) {
                                 listrecentsurvivors = "List: INDIVIDUAL: US37: the following are living spouses and descendants of " + individualss.getId() + " : " + individualsss.getId();
-                                errList.add("List: INDIVIDUAL: US37: the following are living spouses and descendants of " + individualss.getId() + " : " + individualsss.getId());
                             }
 
-                                for (String child : children){
-                                    Individual eachildren = individuals.get(child);
-                                    id = eachildren.getId();
-                                    if (eachildren.getDeath() == null){
-                                        listrecentsurvivors = listrecentsurvivors + id;
-                                        errList.add(id);
-                                    }
+                            for (String child : children){
+                                Individual eachildren = individuals.get(child);
+                                id = eachildren.getId();
+                                if (eachildren.getDeath() == null){
+                                    if(listrecentsurvivors == "")
+                                        listrecentsurvivors = "List: INDIVIDUAL: US37: the following are living spouses and descendants of " + individualss.getId() + " : " + id;
+                                    else
+                                        listrecentsurvivors = listrecentsurvivors+id;
                                 }
-
-                            return listrecentsurvivors;
+                            }
                         }
                     }
+                    errList.add(listrecentsurvivors);
+                    return listrecentsurvivors;
                 }
                 else
                     break;
