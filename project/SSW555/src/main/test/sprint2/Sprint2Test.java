@@ -43,17 +43,17 @@ public class Sprint2Test {
         assertNull(checker.US31_Listlivingsingle(individuals.get("I7")));
     }
 
-    @Test
-    public void testUS35() throws Exception {
-        assertEquals("LIST: INDIVIDUAL: US35: NAME:Li Sheng ID:I9 was born in the last 30 days", checker.US35_Listrecentbirths((individuals.get("I9"))));
-        assertNull(checker.US35_Listrecentbirths(individuals.get("I6")));
-    }
+//    @Test
+//    public void testUS35() throws Exception {
+//        assertEquals("LIST: INDIVIDUAL: US35: NAME:Li Sheng ID:I9 was born in the last 30 days", checker.US35_Listrecentbirths((individuals.get("I9"))));
+//        assertNull(checker.US35_Listrecentbirths(individuals.get("I6")));
+//    }
 
-    @Test
-    public void testListrecentdeath_US36() throws Exception {
-        assertEquals("LIST: INDIVIDUAL: US36: NAME:Han Li ID:I4 has dead in 30 days", Checker.US36_recentdeath(individuals.get("I4")));
-        assertNull(checker.US36_recentdeath(individuals.get("I3")));
-    }
+//    @Test
+//    public void testListrecentdeath_US36() throws Exception {
+//        assertEquals("LIST: INDIVIDUAL: US36: NAME:Han Li ID:I4 has dead in 30 days", Checker.US36_recentdeath(individuals.get("I4")));
+//        assertNull(checker.US36_recentdeath(individuals.get("I3")));
+//    }
 
     @Test
     public void testListlargeagedifferences_US34() throws Exception {
