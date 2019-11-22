@@ -7,7 +7,6 @@
     <groupId>SSW555</groupId>
     <artifactId>SSW555</artifactId>
     <version>1.0-SNAPSHOT</version>
-
     <dependencies>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -21,10 +20,12 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-        <properties>
-            <maven.compiler.target>1.8</maven.compiler.target>
-            <maven.compiler.source>1.8</maven.compiler.source>
-        </properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <mainClass>ssw555_refectory.Main</mainClass>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+    </properties>
     <build>
         <plugins>
             <plugin>
@@ -33,7 +34,7 @@
                     <archive>
                         <manifest>
                             <!-- 你也可以在这里自己写MainClass -->
-                            <mainClass>ssw555_refectory.Main</mainClass>
+                            <mainClass>${groupId}.${mainClass}</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
