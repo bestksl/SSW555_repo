@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="sprint1.Sprint1Test" time="0.133" errors="0" skipped="0">
+<testsuite tests="8" failures="0" name="sprint1.Sprint1Test" time="0.135" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="12.0.2+10"/>
@@ -62,12 +62,12 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="sprint1.Sprint1Test" name="US08_TestBirthAfterParentsMarriges" time="0.086"/>
-  <testcase classname="sprint1.Sprint1Test" name="US12_parentsNotTooOld" time="0.009"/>
-  <testcase classname="sprint1.Sprint1Test" name="US03_testCheckBirthBeforeDeath" time="0.014"/>
-  <testcase classname="sprint1.Sprint1Test" name="US25_testUniqueFirstName" time="0.005"/>
-  <testcase classname="sprint1.Sprint1Test" name="US16_TestMaleLastname" time="0.003"/>
-  <testcase classname="sprint1.Sprint1Test" name="US07_ageOld" time="0.009"/>
-  <testcase classname="sprint1.Sprint1Test" name="US04_testCheckMarrige" time="0.004"/>
+  <testcase classname="sprint1.Sprint1Test" name="US08_TestBirthAfterParentsMarriges" time="0.091"/>
+  <testcase classname="sprint1.Sprint1Test" name="US12_parentsNotTooOld" time="0.01"/>
+  <testcase classname="sprint1.Sprint1Test" name="US03_testCheckBirthBeforeDeath" time="0.012"/>
+  <testcase classname="sprint1.Sprint1Test" name="US25_testUniqueFirstName" time="0.004"/>
+  <testcase classname="sprint1.Sprint1Test" name="US16_TestMaleLastname" time="0.005"/>
+  <testcase classname="sprint1.Sprint1Test" name="US07_ageOld" time="0.007"/>
+  <testcase classname="sprint1.Sprint1Test" name="US04_testCheckMarrige" time="0.003"/>
   <testcase classname="sprint1.Sprint1Test" name="US22_TestUniqueID" time="0.003"/>
 </testsuite>

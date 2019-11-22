@@ -2,9 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e9f2759-f5a0-4f3a-a101-cfe9af30a1b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/commons-lang3-3.8.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/hamcrest-core-1.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-4.13-beta-1.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSW555-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSW555-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/SSW555-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/SSW555-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/bean/Family.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/bean/Individual.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/core/Finder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/Checker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/FileUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/TimeUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/ValidArguemnts$ValidArguemnt.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/ValidArguemnts.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/tableutils/TextForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ssw555_refectory/utils/tableutils/TextFormBulider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Sprint3.Sprint3Test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Sprint3.Sprint3Test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/Sprint4.Sprint4Test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/Sprint4.Sprint4Test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Sprint3.Sprint3Test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Sprint3.Sprint3Test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Sprint4.Sprint4Test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Sprint4.Sprint4Test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-sprint1.Sprint1Test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-sprint1.Sprint1Test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-sprint2.Sprint2Test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-sprint2.Sprint2Test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/sprint1.Sprint1Test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/sprint1.Sprint1Test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/sprint2.Sprint2Test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/sprint2.Sprint2Test.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,18 +75,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/ssw555_refectory" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\githubCode\SSW555_repo\project\SSW555\lib" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Sprint4" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\githubCode\SSW555_repo\project\SSW555\lib" />
       <recent name="$PROJECT_DIR$/src/main/java/ssw555_refectory" />
     </key>
   </component>
@@ -79,7 +106,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Sprint1Test">
+  <component name="RunManager" selected="JUnit.Sprint4Test">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ssw555_refectory.Main" />
       <module name="SSW555" />
@@ -123,21 +150,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sprint3Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SSW555" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Sprint3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Sprint3" />
-      <option name="MAIN_CLASS_NAME" value="Sprint3.Sprint3Test" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Sprint4Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SSW555" />
       <extension name="coverage">
@@ -153,13 +165,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Sprint4Test.testUS37" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSW555" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Sprint4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Sprint4" />
+      <option name="MAIN_CLASS_NAME" value="Sprint4.Sprint4Test" />
+      <option name="METHOD_NAME" value="testUS37" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Sprint1Test" />
-        <item itemvalue="JUnit.Sprint2Test" />
-        <item itemvalue="JUnit.Sprint3Test" />
         <item itemvalue="JUnit.Sprint4Test" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.Sprint4Test.testUS37" />
+        <item itemvalue="JUnit.Sprint1Test" />
+        <item itemvalue="JUnit.Sprint2Test" />
       </list>
     </recent_temporary>
   </component>
